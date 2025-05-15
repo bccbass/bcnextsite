@@ -1,15 +1,15 @@
+      {" "}
 import { DocumentTextIcon } from "@sanity/icons";
 import { defineArrayMember, defineField, defineType } from "sanity";
-import { blockContentType } from "./blockContentType";
 
-type PdfFile = {
-  title: string;
-  url: string;
-};
+// type PdfFile = {
+//   title: string;
+//   url: string;
+// };
 
-export const postType = defineType({
-  name: "post",
-  title: "Post",
+export const sectionType = defineType({
+  name: "section",
+  title: "Section",
   type: "document",
   icon: DocumentTextIcon,
   fields: [
@@ -26,14 +26,7 @@ export const postType = defineType({
       validation: (rule) =>
         rule.required().error(`Required to generate a page on the website`),
     }),
-    // defineField({
-    // 	name: "category",
-    // 	type: "string",
-    // 	options: {
-    // 		list: [ "composition", "project", "arrangement"],
-    // 		layout: "radio",
-    // 	},
-    // }),
+
     defineField({
       name: "sortOrder",
       type: "number",
@@ -113,17 +106,7 @@ export const postType = defineType({
           name: "media",
           type: "object",
           fields: [
-            // {
-            // 	name: "platform",
-            // 	title: "Platform",
-            // 	type: "string",
-            // 	options: {
-            // 		list: [
-            // 			{ title: "YouTube", value: "youtube" },
-            // 			{ title: "Soundcloud", value: "soundcloud" },
-            // 		],
-            // 	},
-            // },
+
             {
               name: "title",
               title: "Video Title",
@@ -255,19 +238,3 @@ export const postType = defineType({
     },
   },
 });
-
-// options: {
-//                 list: [
-//                   { title: "Spotify", value: "spotify" },
-//                   { title: "Apple Music", value: "appleMusic" },
-//                   { title: "YouTube", value: "youtube" },
-//                   { title: "Soundcloud", value: "soundcloud" },
-//                 ],
-//               },
-//             },
-
-//             {
-//               name: "URL",
-//               title: "Media URL",
-//               type: "url",
-//             },

@@ -1,8 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
-const Footer = () => {
+import Socials from '../Socials'
+
+const Footer = async () => {
+
   return (
-    <footer className='w-screen bg-accent text-white'>
+    <footer className='w-screen bg-primary text-white'>
         <div className="flex justify-around mx-auto px-10 md:px-20 py-16 md:py-20 gap-16 flex-wrap max-w-7xl ">
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-8 flex-1  ">
                 <h4 className='font-semibold uppercase text-xl font-feature'>Section</h4>
@@ -10,7 +13,8 @@ const Footer = () => {
                 <Link href={'/'}>Home</Link>
                 <Link href={'/'}>About</Link>
                 <Link href={'/'}>Explore</Link>
-                <Link href={'/'}>Thoughts</Link>
+                <Link href={'/'}>Process</Link>
+                <Link href={'/'}>Studio</Link>
                 <Link href={'/'}>Contact</Link>
             </div>
             </div>
@@ -36,6 +40,7 @@ const Footer = () => {
             </div>
             </div>
         </div>
+        <Socials />
         <p className='w-full text-center text-xs md:text-sm uppercase' >Benjamin Campbell © 2025</p>
     </footer>
   )

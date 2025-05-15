@@ -9,9 +9,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: #3b82f6;
+  --color-primary: #2596be;
   --color-secondary: #f97316;
-  --color-accent: #9333ea;
+  --color-accent: #f93fb0;
   --font-sans: var(--font-sans);
   --font-feature: var(--font-feature);
 }
@@ -37,11 +37,11 @@ body {
 }
 
 .section {
-  @apply w-full px-8 py-32 bg-background max-w-7xl mx-auto;
+  @apply w-full px-8 md:px-20 pb-42 bg-background max-w-6xl mx-auto;
 }
 
 .section-title {
-  @apply text-3xl md:text-4xl lg:text-5xl;
+  @apply text-3xl font-feature font-semibold tracking-[6] uppercase md:text-4xl lg:text-5xl;
 }
 
 .theme-button {

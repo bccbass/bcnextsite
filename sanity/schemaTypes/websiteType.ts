@@ -54,6 +54,7 @@ export default defineType({
 									{ title: "LinkedIn", value: "linkedin" },
 									{ title: "GitHub", value: "github" },
 									{ title: "YouTube", value: "youtube" },
+									{ title: "Spotify", value: "spotify" },
 								],
 							},
 						},

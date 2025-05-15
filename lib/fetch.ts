@@ -1,5 +1,5 @@
 /** @format */
-import { Project, WebsiteData, SocialsData } from "./types";
+import { Post, Section, WebsiteData, SocialsData } from "./types";
 
 import { createClient, groq } from "next-sanity";
 
@@ -11,9 +11,21 @@ export const sanityClient = createClient({
 });
 
 // Example function to fetch projects
-export async function getProjects(): Promise<Project[]> {
+export async function getPosts(): Promise<Post[]> {
   return await sanityClient.fetch(groq`
     *[_type == "post"] | order(sortOrder asc) {
+      _id,
+      title,
+      sortOrder,
+      slug,
+      description,
+      "imageUrl": mainImage,
+    }
+  `);
+}
+export async function getSections(): Promise<Section[]> {
+  return await sanityClient.fetch(groq`
+    *[_type == "section"] | order(sortOrder asc) {
       _id,
       title,
       sortOrder,

@@ -2,7 +2,25 @@
 import type { PortableTextBlock } from "@sanity/types";
 
 
-export interface Project {
+export interface Post {
+    _id: string;
+    title: string;
+    slug: {
+      current: string;
+    };
+    description: string;
+    imageUrl: string;
+    sortOrder: number;
+    categories: string[];
+    body: "block";
+    displayBodySecondary: boolean;
+    bodySecondary: "block";
+    albums: object[];
+    pdfMedia: object[];
+    mediaLinks: object[];
+  }
+  
+export interface Section {
     _id: string;
     title: string;
     slug: {

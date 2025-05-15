@@ -1,26 +1,30 @@
-import React from 'react'
-import Hero from '@/components/sections/Hero'
-import About from '@/components/sections/About'
-import Footer from '@/components/sections/Footer'
+import React from "react";
+import Hero from "@/components/sections/Hero";
+import About from "@/components/sections/About";
+import Explore from "@/components/sections/Explore";
+import Process from "@/components/sections/Process";
+import ImageFeature from "@/components/sections/ImageFeature";
+import Footer from "@/components/sections/Footer";
 import { getWebsiteData } from "@/lib/fetch";
 
-
 const page = async () => {
-
   const websiteData = await getWebsiteData();
-  console.log('data',  websiteData.briefBiography)
-
 
   return (
     <div
-    // style={{backgroundImage: 'url(/vintage-wallpaper.webp)'}}
-    className='flex flex-col'>
+      // style={{backgroundImage: 'url(/vintage-wallpaper.webp)'}}
+      className="flex  flex-col"
+    >
       <Hero />
       <About briefBiography={websiteData.briefBiography} />
-      <Footer/>
+      <ImageFeature imgUrl="https://res.cloudinary.com/dyb9ascpy/image/upload/v1747204590/WebAssets/t96v0r1hwc6ofzlbdnlj.jpg" />
 
+      <Explore />
+      <ImageFeature imgUrl="https://res.cloudinary.com/dyb9ascpy/image/upload/v1747185772/WebAssets/BenAndAngelica_lygs3g.webp" />
+      <Process />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;
