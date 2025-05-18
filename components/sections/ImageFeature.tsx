@@ -18,7 +18,7 @@ const ImageFeature = ({imgUrl}:{imgUrl: string}) => {
           opacity,
           y,
           backgroundImage: `url('${imgUrl}')`,
-          backgroundPosition: "top",
+          backgroundPosition: "center",
           backgroundSize: "cover",
         }}
       />

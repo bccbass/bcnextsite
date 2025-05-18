@@ -37,7 +37,7 @@ body {
 }
 
 .section {
-  @apply w-full px-8 md:px-20 pb-42 bg-background max-w-6xl mx-auto;
+  @apply w-full px-8 xl:px-0 pb-42 bg-background max-w-7xl mx-auto;
 }
 
 .section-title {
@@ -45,7 +45,11 @@ body {
 }
 
 .theme-button {
-  @apply w-fit my-2 mb-1 px-6 rounded-none  border-neutral-600 text-neutral-700 bg-white py-1 text-center  outline transition-all duration-300 hover:bg-neutral-700 hover:text-white lg:text-lg;
+  @apply w-fit my-2 mb-1 px-6 rounded-none   text-neutral-700 bg-white py-1 text-center  outline transition-all duration-300 hover:bg-accent hover:outline-secondary hover:text-white lg:text-lg;
+}
+
+.pdf-button {
+  @apply w-full my-4 mb-1 px-6 rounded-xs text-neutral-100 bg-accent py-1 text-center  outline-3  transition-all duration-300 hover:bg-primary  border-2 border-pink-200 outline-pink-500 hover:border-cyan-500 hover:outline-cyan-700 lg:text-xl;
 }
 
 .row-centered {

@@ -51,3 +51,10 @@ export interface Section {
     url: string;
   }
   
+  export interface CategoriesData {
+    _id: string;
+    title: string;
+    slug: string;
+    description: string;
+  }
+  

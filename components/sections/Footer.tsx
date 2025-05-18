@@ -11,22 +11,22 @@ const Footer = async () => {
                 <h4 className='font-semibold uppercase text-xl font-feature'>Section</h4>
                 <div className="flex flex-col gap-2">
                 <Link href={'/'}>Home</Link>
-                <Link href={'/'}>About</Link>
-                <Link href={'/'}>Explore</Link>
-                <Link href={'/'}>Process</Link>
-                <Link href={'/'}>Studio</Link>
-                <Link href={'/'}>Contact</Link>
+                <Link href={'/about'}>About</Link>
+                <Link href={'/#explore'}>Explore</Link>
+                <Link href={'/process'}>Process</Link>
+                <Link href={'/studio'}>Studio</Link>
+                <Link href={'/#contact'}>Contact</Link>
             </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-8 flex-1  ">
                 <h4 className='font-semibold uppercase text-xl font-feature'>Explore</h4>
                 <div className="flex flex-col gap-2">
-                
-                <Link href={'/'}>Bass</Link>
-                <Link href={'/'}>Production</Link>
-                <Link href={'/'}>Assembly</Link>
-                <Link href={'/'}>BATTAB</Link>
-                <Link href={'/'}>Kimono Dragon</Link>
+                {/* This should most likely be dynamically generated from sections */}
+                <Link href={'/bass'}>Bass</Link>
+                <Link href={'/production'}>Production</Link>
+                <Link href={'/assembly'}>Assembly</Link>
+                <Link href={'/battab'}>BATTAB</Link>
+                <Link href={'/kimono-dragon'}>Kimono Dragon</Link>
             </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-8 flex-1  ">

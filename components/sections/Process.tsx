@@ -1,10 +1,10 @@
 import React from "react";
-import { getPosts } from "@/lib/fetch";
+import { getPostsPreview } from "@/lib/fetch";
 import Link from "next/link";
 import PostPreview from "../PostPreview";
 
 const Process = async () => {
-  const sections = await getPosts();
+  const posts = await getPostsPreview();
 
   return (
     <div className="flex flex-col gap-16 section pt-16">
@@ -25,13 +25,13 @@ const Process = async () => {
         </div>
       </div>
       <div className="pt-12 flex  flex-wrap justify-center w-full gap-16 sm:gap-8 ">
-        {sections.map((section, i) => (
+        {posts.map((post, i) => (
           <PostPreview
-            key={section._id}
-            title={section.title}
-            slug={section.slug.current}
-            image={section.imageUrl}
-            description={section.description}
+            key={post._id}
+            title={post.title}
+            slug={post.slug.current}
+            image={post.imageUrl}
+            description={post.description}
             i={i}
           />
         ))}

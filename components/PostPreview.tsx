@@ -35,7 +35,7 @@ const PostPreview = ({
         </div>
    
       </div>
-           <Link className=" theme-button self-center " href={"/" + slug}>
+           <Link className=" theme-button self-center " href={"/process/" + slug}>
           {" "}
           More
         </Link>
