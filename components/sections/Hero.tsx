@@ -11,7 +11,7 @@ const Hero = () => {
     target: ref,
   });
   const scrollOpacity = useTransform(scrollYProgress, [0, 0.85], [1, 0]);
-  const y = useTransform(scrollYProgress, [0, 1], [0, 700]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, 550]);
   return (
     <motion.div
       style={{ opacity: scrollOpacity }}
@@ -19,7 +19,7 @@ const Hero = () => {
       className="w-screen flex  h-screen top-0  -z-10"
     >
       <motion.div
-        className=" bg-neutral-100/60   w-screen p-8 top-0 left-0 absolute backdrop-blur-lg"
+        className=" bg-primary/40   w-screen p-8 md:py-12 top-0 left-0 absolute backdrop-blur-lg"
         style={{
           y,
         }}

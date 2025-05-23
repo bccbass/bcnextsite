@@ -40,13 +40,13 @@ const AlbumLinks = ({ albumLinks }: AlbumLinksProps) => {
           href={link.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="mb-2 flex w-4/5 items-center justify-between rounded-sm bg-secondary px-4 py-2 text-white hover:opacity-90"
+          className="mb-2 flex w-4/5 items-center justify-between rounded-sm bg-primary px-4 py-2 text-white hover:opacity-90"
         >
-          <div className="flex items-center gap-6 font-semibold">
+          <div className="flex text-neutral-100 items-center gap-6 font-semibold">
             {iconsMap[link.platform]} {link.platform}{" "}
           </div>
 
-          <GoLinkExternal size={"1.5rem"} />
+          <GoLinkExternal className="text-neutral-100" size={"1.5rem"} />
         </Link>
       ))}
     </div>

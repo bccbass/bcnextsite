@@ -9,7 +9,7 @@ const Explore = async () => {
     const sections = await getSections()
 
     return (
-    <div className='section flex md:flex-col flex-wrap justify-center items-center w-full gap-16 md:gap-30'>
+    <div className=' flex flex-col md:flex-row flex-wrap justify-center items-center pb-36 md:pb-48'>
       {  sections.map((section, i) => <Section key={section._id} title={section.title} slug={section.slug.current} image={section.imageUrl} description={section.description} i={i}/>
         )
 }

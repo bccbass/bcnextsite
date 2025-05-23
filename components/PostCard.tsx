@@ -1,7 +1,7 @@
 import React from "react";
 import SanityImage from "./SanityImage";
 import Link from "next/link";
-type PostPreviewProps = {
+type PostCardProps = {
   title: string;
   image: string;
   description: string;
@@ -9,16 +9,16 @@ type PostPreviewProps = {
   i: number;
 };
 
-const PostPreview = ({
+const PostCard = ({
   title,
   image,
   description,
   slug,
   i,
-}: PostPreviewProps) => {
+}: PostCardProps) => {
   return (
     <div
-      className={`flex flex-col max-w-72  w-7/8 md:w-full gap-2 border border-neutral-300 justify-between items-center  px-4 py-4 `}
+      className={`flex flex-col max-w-72  w-7/8 md:w-full gap-2 border bg-white border-neutral-300 justify-between items-center  px-4 py-4 `}
     >
       <div className="flex flex-col items-center gap-2">
         <div className=" w-full  sm:w-60 ">
@@ -43,4 +43,4 @@ const PostPreview = ({
   );
 };
 
-export default PostPreview;
+export default PostCard;

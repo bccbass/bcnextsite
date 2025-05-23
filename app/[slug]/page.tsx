@@ -1,6 +1,6 @@
 import React from "react";
 import { notFound } from "next/navigation";
-import { sanityClient } from "@/lib/fetch";
+import { sanityClient, getSlugs } from "@/lib/fetch";
 import PageWrapper from "@/components/PageWrapper";
 import MediaCarousel from "@/components/MediaCarousel";
 import Albums from "@/components/Albums";
@@ -12,10 +12,10 @@ import ProjectBody from "@/components/ProjectBody";
 import ProjectBodySecondary from "@/components/ProjectBodySecondary";
 
 export async function generateStaticParams() {
-  const posts = await sanityClient.fetch(`*[_type == "posts"]{ slug }`);
+  const sections = await getSlugs("section");
 
-  return posts.map((post: { slug: { current: string } }) => ({
-    slug: post.slug.current, // Ensures proper structure
+  return sections.map((section: { slug: { current: string } }) => ({
+    slug: section.slug.current, // Ensures proper structure
   }));
 }
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
@@ -23,16 +23,16 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
   if (!slug) return notFound();
 
-  const post = await sanityClient.fetch(
-    `*[_type == "post" && slug.current == $slug][0]{
+  const section = await sanityClient.fetch(
+    `*[_type == "section" && slug.current == $slug][0]{
     _id,
-		title,
-		description,
-		mainImage,
-		body,
+        title,
+        description,
+        mainImage,
+        body,
     displayBodySecondary,
     bodySecondary,
-		"slug": slug.current,
+        "slug": slug.current,
     mediaLinks,
     albums,
     projectWebsite,
@@ -44,47 +44,47 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
     { slug: slug }
   );
 
-  if (!post) {
+  if (!section) {
     return notFound();
   }
-  // console.log(project);
-  // const totalAlbums = post.albums ? 1: 0
-  // const videoEmbed = post.mediaLinks && !post.displayBodySecondary ? 1 : 0;
+  // console.log(section);
+  // const totalAlbums = section.albums ? 1: 0
+  // const videoEmbed = section.mediaLinks && !section.displayBodySecondary ? 1 : 0;
   // const totalMediaElements =  totalAlbums + videoEmbed
 
   return (
     <PageWrapper>
       <div className=" flex w-full flex-col items-center justify-between">
         <ProjectExpo
-          mainImage={post.mainImage}
-          title={post.title}
-          description={post.description}
+          mainImage={section.mainImage}
+          title={section.title}
+          description={section.description}
         />
         <ProjectBody
-          title={post.title}
-          description={post.description}
-          body={post.body}
+          title={section.title}
+          description={section.description}
+          body={section.body}
         />
-        {post.mediaLinks && (
-          <MediaModal imgUrl={post.mediaLinks[0].URL}>
-            <MediaCarousel mediaLinks={post.mediaLinks} />
+        {section.mediaLinks && (
+          <MediaModal imgUrl={section.mediaLinks[0].URL}>
+            <MediaCarousel mediaLinks={section.mediaLinks} />
           </MediaModal>
         )}
 
-        {post.albums && <Albums albums={post.albums} />}
-        {post.displayBodySecondary && (
-          <ProjectBodySecondary body={post.bodySecondary} />
+        {section.albums && <Albums albums={section.albums} />}
+        {section.displayBodySecondary && (
+          <ProjectBodySecondary body={section.bodySecondary} />
         )}
 
         <div className="mt-0 flex w-full flex-wrap items-center justify-center ">
-          {post.pdfMedia && <PDFContainer pdfs={post.pdfMedia} />}
-          {post.projectWebsite && (
+          {section.pdfMedia && <PDFContainer pdfs={section.pdfMedia} />}
+          {section.projectWebsite && (
             <Link
-              href={post.projectWebsite}
+              href={section.projectWebsite}
               target="_blank"
               className="square-button max-w-xl"
             >
-              {`${post.title} Website`}
+              {`${section.title} Website`}
             </Link>
           )}
         </div>

@@ -1,5 +1,7 @@
 import React from "react";
 import SanityImage from "./SanityImage";
+import { urlFor } from "../lib/sanityImage";
+
 import Link from "next/link";
 type SectionProps = {
   title: string;
@@ -9,24 +11,33 @@ type SectionProps = {
   i: number;
 };
 
+// const fontSize = (str: string) => str.length < 10 ? 'text-5xl md:text-6xl lg:text-7xl' : 'text-4xl md:text-5xl lg:text-5xl'
+
 const Section = ({ title, image, description, slug, i }: SectionProps) => {
   return (
-    <div className={`flex flex-col  w-7/8 sm:w-3/5 md:w-full max-w-5xl ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6   border-neutral-300 justify-center items-center md:items-start px-6 py-10 `}>
-      <div className="w-70 md:w-xl lg:md:w-xl outline p-0.5 outline-neutral-300">
-        <SanityImage image={image} alt={title} />
+    <Link
+      href={"/" + slug}
+      className={`flex flex-col w-screen  md:w-1/2 lg:w-2/5 max-w-128  h-fit bg-primary justify-center items-center md:items-start `}
+    >
+      <div
+        className="w-screen sm:w-full h-128 overflow-hidden outline-1 outline-neutral-400"
+        style={{
+          backgroundImage: `url(${urlFor(image).width(1200).height(1200).url()})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div
+          className={`flex flex-col ${i % 2 === 0 ? "bg-primary/50" : "bg-accent/50"} backdrop-grayscale-100 backdrop-contrast-150  ease-in-out transition-all hover:backdrop-contrast-75 duration-300 h-full w-full items-center justify-center`}
+        >
+          <h3
+            className={`${i % 2 !== 0 ? "bg-secondary/60" : "bg-emerald-200/60"} relative top-20 text-3xl sm:text-4xl backdrop-blur-3xl backdrop-brightness-50 md:text-4xl w-full   py-12  text-center font-feature tracking-[6] uppercase font-bold  text-white  `}
+          >
+            {title}
+          </h3>
+        </div>
       </div>
-      <div className="flex flex-col items-center   md:items-start">
-      <div className="flex flex-col items-center md:items-start  gap-6 mb-12">
-        <h3 className={` text-3xl section-title md:text-4xl lg:text-5xl text-secondary`}>{title}</h3>
-
-        <p className="prose prose-md md:prose-lg text-neutral-600">{description}</p>
-      </div>
-        <Link className="theme-button self-center my-20 m-12" href={"/" + slug}>
-          {" "}
-          More
-        </Link>
-      </div>
-    </div>
+    </Link>
   );
 };
 

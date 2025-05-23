@@ -14,6 +14,7 @@
   --color-accent: #f93fb0;
   --font-sans: var(--font-sans);
   --font-feature: var(--font-feature);
+  --font-rubik: var(--font-rubik);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -37,7 +38,7 @@ body {
 }
 
 .section {
-  @apply w-full px-8 xl:px-0 pb-42 bg-background max-w-7xl mx-auto;
+  @apply w-full px-8 xl:px-0 pb-10 mb-42  max-w-7xl mx-auto;
 }
 
 .section-title {

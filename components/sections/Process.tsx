@@ -1,17 +1,18 @@
 import React from "react";
 import { getPostsPreview } from "@/lib/fetch";
 import Link from "next/link";
-import PostPreview from "../PostPreview";
+import PostCard from "../PostCard";
+import TitleCard from "../TitleCard";
 
 const Process = async () => {
   const posts = await getPostsPreview();
 
   return (
-    <div className="flex flex-col gap-16 section pt-16">
-      <div className="  flex flex-col md:flex-row gap-6 md:gap-16 lg:gap-20">
-        <h2 className="section-title text-accent ">Process</h2>
+    <div className="flex flex-col gap-16 section pt-16 ">
+      <div className="  bg-primary border border-white outline-2 outline-primary  py-10 px-6  flex flex-col md:flex-row gap-6 md:gap-16 lg:gap-20">
+        <h2 className="section-title text-accent ">Process</h2>{" "}
         <div className="prose prose-lg pretty ">
-          <div>
+          <div className="text-neutral-100">
             A space to share the nuts and bolts of the creative process: works
             in progress, transcriptions, musings and any other elements that
             might be orphaned from a larger collection of work, worthy of its
@@ -24,9 +25,13 @@ const Process = async () => {
           </div>
         </div>
       </div>
-      <div className="pt-12 flex  flex-wrap justify-center w-full gap-16 sm:gap-8 ">
+      <div className="pt-12 flex  flex-wrap justify-between w-full gap-16 sm:gap-8 ">
+        {/* <TitleCard title='Process' description='A space to share the nuts and bolts of the creative process: works
+            in progress, transcriptions, musings and any other elements that
+            might be orphaned from a larger collection of work, worthy of its
+            own domain. To use the parlance of our time: a blog.' /> */}
         {posts.map((post, i) => (
-          <PostPreview
+          <PostCard
             key={post._id}
             title={post.title}
             slug={post.slug.current}

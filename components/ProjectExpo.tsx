@@ -26,11 +26,11 @@ const ProjectExpo = ({ mainImage, title, description }: ProjectProps) => {
   return (
     <div
       key={"project-expo"}
-      className="flex mb-2 w-full flex-col md:flex-row items-center"
+      className="flex mb-2 w-full flex-col md:flex-row items-center justify-center"
     >
       {/* Image */}
-      <motion.div
-        className="w-full md:w-1/2 max-w-lg p-0.5 outline-neutral-400 outline-1"
+      <motion.figure
+        className="w-full md:w-1/2 max-w-lg "
         initial={{ opacity: 0}}
         whileInView={{ opacity: 1}}
         transition={{
@@ -42,13 +42,14 @@ const ProjectExpo = ({ mainImage, title, description }: ProjectProps) => {
 
 
         <Image
-          className="w-full"
-          alt={mainImage.alt}
+          className="w-full p-0.5 outline-neutral-400 outline-1"
+          alt={mainImage.alt ? mainImage.alt : title}
           width={800}
           height={800}
           src={`${urlForMedImg(mainImage)}`}
         />
-      </motion.div>
+        <figcaption className="hidden md:block w-full text-center mt-1 text-sm">{mainImage.alt ? mainImage.alt : ''}</figcaption>
+      </motion.figure>
 
       {/* Title and Description */}
       <motion.div
