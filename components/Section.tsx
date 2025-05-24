@@ -1,5 +1,4 @@
 import React from "react";
-import SanityImage from "./SanityImage";
 import { urlFor } from "../lib/sanityImage";
 
 import Link from "next/link";
@@ -13,7 +12,7 @@ type SectionProps = {
 
 // const fontSize = (str: string) => str.length < 10 ? 'text-5xl md:text-6xl lg:text-7xl' : 'text-4xl md:text-5xl lg:text-5xl'
 
-const Section = ({ title, image, description, slug, i }: SectionProps) => {
+const Section = ({ title, image, slug, i }: SectionProps) => {
   return (
     <Link
       href={"/" + slug}
@@ -28,7 +27,7 @@ const Section = ({ title, image, description, slug, i }: SectionProps) => {
         }}
       >
         <div
-          className={`flex flex-col ${i % 2 === 0 ? "bg-primary/50" : "bg-accent/50"} backdrop-grayscale-100 backdrop-contrast-150  ease-in-out transition-all hover:backdrop-contrast-75 duration-300 h-full w-full items-center justify-center`}
+          className={`flex flex-col ${i % 2 === 0 ? "bg-primary/50" : "bg-accent/50"} backdrop-grayscale-100 backdrop-contrast-100  ease-in-out transition-all hover:backdrop-contrast-150 duration-300 h-full w-full items-center justify-center`}
         >
           <h3
             className={`${i % 2 !== 0 ? "bg-secondary/60" : "bg-emerald-200/60"} relative top-20 text-3xl sm:text-4xl backdrop-blur-3xl backdrop-brightness-50 md:text-4xl w-full   py-12  text-center font-feature tracking-[6] uppercase font-bold  text-white  `}

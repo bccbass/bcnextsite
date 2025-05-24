@@ -37,6 +37,7 @@ export async function getAllPostsPreview(): Promise<PostPreview[]> {
       _id,
       title,
       sortOrder,
+       "categories": categories[]->title,
       slug,
       description,
       "imageUrl": mainImage,
