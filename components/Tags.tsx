@@ -28,6 +28,7 @@ const Tags = ({ categories }: CategoryType) => {
         </Link>
         {categories.map((category) => (
           <Link
+            key={category._id}
             href={"/process?tag=" + category.title}
             className={
               category.title === tag

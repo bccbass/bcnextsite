@@ -1,4 +1,6 @@
-      {" "}
+{
+  (" ");
+}
 import { DocumentTextIcon } from "@sanity/icons";
 import { defineArrayMember, defineField, defineType } from "sanity";
 
@@ -32,7 +34,7 @@ export const sectionType = defineType({
       type: "number",
       description: "The order priority in which this post should be displayed",
       options: {
-        list: [1, 2, 3, 4,5,6,7,8,9,10],
+        list: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
         layout: "radio",
       },
     }),
@@ -52,11 +54,64 @@ export const sectionType = defineType({
       ],
     }),
 
-    defineField({
-      name: "categories",
+{
+      name: "videos",
+      title: "Videos",
+      description: "Media hosted on Cloudinary",
       type: "array",
-      of: [defineArrayMember({ type: "reference", to: { type: "category" } })],
-    }),
+      of: [
+        defineField({
+          name: "category",
+          title: "Category",
+          type: "object",
+          fields: [
+            {
+              name: "category",
+              title: "Category Title",
+              type: "string",
+            },
+
+            {
+              name: "videos",
+              title: "videos",
+              description: "Links to cloudinary videos",
+              type: "array",
+              of: [
+                defineField({
+                  name: "video",
+                  title: "Video",
+                  type: "object",
+                  fields: [
+                    {
+                      name: "title",
+                      title: "Video Title",
+                      type: "string",
+                    },
+                    {
+                      name: "artist",
+                      title: "Artist",
+                      type: "string",
+                    },
+                    {
+                      name: "role",
+                      title: "Role",
+                      type: "string",
+                    },
+                    {
+                      name: "videoThumbnail",
+                      title: "Video Thumbnail",
+                      type: "image",
+                    },
+                    { name: "url", title: "URL", type: "url" },
+                  ],
+                }),
+              ],
+            },
+          ],
+        }),
+      ],
+    },
+
     defineField({
       name: "description",
       description: "A brief description of the project (1-2 sentences)",
@@ -106,7 +161,6 @@ export const sectionType = defineType({
           name: "media",
           type: "object",
           fields: [
-
             {
               name: "title",
               title: "Video Title",
@@ -151,7 +205,7 @@ export const sectionType = defineType({
         }),
       ],
     },
-    {
+        {
       name: "albums",
       title: "Albums",
       description: "Album pop-out with streaming links",

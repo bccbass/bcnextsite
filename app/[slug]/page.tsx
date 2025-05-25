@@ -5,7 +5,8 @@ import PageWrapper from "@/components/PageWrapper";
 import MediaCarousel from "@/components/MediaCarousel";
 import Albums from "@/components/Albums";
 import MediaModal from "@/components/MediaModal";
-import ProjectExpo from "@/components/ProjectExpo";
+// import ProjectExpo from "@/components/ProjectExpo";
+import VideosWrapper from "@/components/VideosWrapper";
 import PDFContainer from "@/components/PDFContainer";
 import Link from "next/link";
 import ProjectBody from "@/components/ProjectBody";
@@ -27,14 +28,16 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
     `*[_type == "section" && slug.current == $slug][0]{
     _id,
         title,
-        description,
+        description, 
         mainImage,
         body,
     displayBodySecondary,
     bodySecondary,
         "slug": slug.current,
     mediaLinks,
+    videos,
     albums,
+    video,
     projectWebsite,
     pdfMedia[] {
       title,
@@ -55,16 +58,22 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   return (
     <PageWrapper>
       <div className=" flex w-full flex-col items-center justify-between">
-        <ProjectExpo
-          mainImage={section.mainImage}
-          title={section.title}
-          description={section.description}
-        />
+        {/* <div className="mx-8 flex w-full max-w-xl flex-col items-center justify-center border-t border-b border-accent/20 py-4 text-center my-8  md:my-6 lg:mx-20 lg:py-8">
+          <h3 className="text-center text-3xl text-accent md:text-5xl lg:text-6xl">
+            {section.title}
+          </h3>
+        </div> */}
+        <div className="py-4 bg-primary w-full">
+        <h2 className="text-3xl p-4 text-white md:text-4xl lg:text-6xl w-full text-center bg-primary font-feature  border-b border-t border-neutral-100">
+          {section.title}
+        </h2>
+        </div>
         <ProjectBody
           title={section.title}
           description={section.description}
           body={section.body}
         />
+        {section.videos && <VideosWrapper videos={section.videos} />}
         {section.mediaLinks && (
           <MediaModal imgUrl={section.mediaLinks[0].URL}>
             <MediaCarousel mediaLinks={section.mediaLinks} />

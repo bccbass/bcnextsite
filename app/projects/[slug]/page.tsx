@@ -60,14 +60,11 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           title={section.title}
           description={section.description}
         /> */}
-                <div className="relative flex w-full h-full justify-center items-center">
+        <div className="relative flex w-full h-full justify-center items-center">
           <div className="mx-8 flex w-full max-w-xl flex-col items-center justify-center border-t border-b border-neutral-400 py-4 text-center md:my-10 lg:mx-20 lg:py-8">
             <h3 className="text-center text-3xl text-neutral-700 md:text-5xl lg:text-6xl">
               {section.title}
             </h3>
-            {/* <p className="block w-full px-2 pt-5 text-xl leading-9 font-light text-neutral-400 italic md:text-2xl">
-              {section.description}
-            </p> */}
           </div>
         </div>
         <ProjectBody
@@ -86,7 +83,6 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
         )}
 
         {section.albums && <Albums albums={section.albums} />}
-
 
         <div className="mt-0 flex w-full flex-wrap items-center justify-center ">
           {section.pdfMedia && <PDFContainer pdfs={section.pdfMedia} />}

@@ -83,6 +83,7 @@ export async function getProjects(): Promise<Project[]> {
       _id,
       title,
       sortOrder,
+      
       slug,
       description,
       "imageUrl": mainImage,
