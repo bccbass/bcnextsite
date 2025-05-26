@@ -19,7 +19,7 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <div
-      className={`flex flex-col  w-7/8 md:w-2/5 max-w-sm justify-between items-center bg-neutral-50 outline outline-neutral-300 drop-shadow-sm backdrop-blur-2xl pb-4`}
+      className={`flex flex-col animate-shadow w-7/8 md:w-2/5 max-w-sm justify-between items-center bg-white outline outline-neutral-300  backdrop-blur-2xl pb-4`}
     >
       <div className="flex flex-col items-center gap-2">
         <div className=" w-full">

@@ -2,8 +2,10 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  --background: #ffffff;
-  --foreground: #6f6f6f;
+  /* --background: #7e7b7b; */
+  --background: #f3f3f3;
+  /* --foreground: #eeeeee; */
+  --foreground: #575757;
 }
 
 @theme inline {
@@ -37,16 +39,34 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
 
+.text-outline {
+  @apply drop-shadow-[0_.8px_.8px_rgba(0,0,0,0.5)];
+}
+
+.text-outline-accent {
+  @apply drop-shadow-[0_.8px_.8px_rgba(249,63,176)];
+}
+
+.text-outline-theme {
+  @apply drop-shadow-[2px_3px_.3px_rgba(249,63,176,.3)]
+}
+
 .section {
   @apply w-full px-8 xl:px-0 pb-10 mb-42  max-w-7xl mx-auto;
 }
 
 .section-title {
-  @apply text-3xl font-feature font-semibold tracking-[6] uppercase md:text-4xl lg:text-5xl;
+  @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,0.7)] text-white font-bold text-4xl  uppercase md:text-6xl lg:text-7xl;
 }
+.section-title-sm {
+  @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,0.7)] text-white font-bold text-5xl  uppercase;
+}
+/* .section-title {
+  @apply text-3xl font-feature font-semibold tracking-[6] uppercase md:text-4xl lg:text-5xl;
+} */
 
 .theme-button {
-  @apply w-fit my-2 mb-1 px-6 rounded-none   text-neutral-700 bg-white py-1 text-center  outline transition-all duration-300 hover:bg-accent hover:outline-secondary hover:text-white lg:text-lg;
+  @apply w-fit my-2 mb-1 px-6 rounded-none   text-neutral-700 bg-white py-1 text-center  outline transition-all duration-300 hover:bg-accent outline-neutral-400 hover:text-white lg:text-lg;
 }
 
 .pdf-button {
@@ -109,3 +129,8 @@ a {
 .prose img {
   @apply  my-6
 }
+
+.animate-shadow {
+  @apply drop-shadow-sm hover:drop-shadow-xl hover:-translate-y-0.5 transition-all duration-300
+}
+

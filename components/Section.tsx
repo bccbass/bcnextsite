@@ -32,7 +32,9 @@ const Section = ({ title, image, slug, i }: SectionProps) => {
           <h3
             className={`${i % 2 !== 0 ? "bg-secondary/60" : "bg-emerald-200/60"} relative top-20 text-3xl sm:text-4xl backdrop-blur-3xl backdrop-brightness-50 md:text-4xl w-full   py-12  text-center font-feature tracking-[6] uppercase font-bold  text-white  `}
           >
+            <p className="section-title-sm">
             {title}
+            </p>
           </h3>
         </div>
       </div>

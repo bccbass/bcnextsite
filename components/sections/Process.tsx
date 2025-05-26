@@ -9,9 +9,8 @@ const Process = async () => {
 
   return (
     <div className="flex flex-col gap-4 section">
-    
-          <div className="flex flex-col justify-center md:flex-row gap-6 md:gap-16 pt-10">
-        <h2 className="section-title   text-accent ">Process</h2>{" "}
+      <div className="flex flex-col justify-center md:flex-row gap-6 md:gap-16 pt-10">
+        <h2 className="section-title    ">Process</h2>{" "}
         {/* <div className="prose prose-lg pretty ">
           <div className="text-neutral-400">
  A space to share the nuts and bolts of the creative process: works
@@ -42,7 +41,7 @@ const Process = async () => {
           </div>
         </div>
       </div> */}
-      <div className="pt-12 flex flex-wrap justify-between w-full gap-16 sm:gap-x-10 gap-y-24 ">
+      <div className="pt-12 flex flex-wrap justify-start  w-full gap-16 sm:gap-x-10 lg:gap-y-20 ">
         {/* <TitleCard title='Process' description='A space to share the nuts and bolts of the creative process: works
             in progress, transcriptions, musings and any other elements that
             might be orphaned from a larger collection of work, worthy of its
@@ -58,7 +57,7 @@ const Process = async () => {
           />
         ))}
       </div>
-      <div className="w-full flex justify-center">
+      <div className="w-full flex justify-center my-16">
         <Link className="theme-button   mx-10" href={"/process"}>
           {" "}
           More Posts
