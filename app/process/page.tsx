@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import PageWrapper from "@/components/PageWrapper";
 import PostCardWrapper from "@/components/PostCardWrapper";
