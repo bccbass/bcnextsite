@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-// import { IoIosCloseCircleOutline } from "react-icons/io";
+import { IoIosCloseCircleOutline } from "react-icons/io";
 
 import { useSearchParams } from "next/navigation";
 
@@ -20,11 +20,12 @@ const Tags = ({ categories }: CategoryType) => {
           href={"/process"}
           className={
             tag == null || tag != "all"
-              ? "active-tag"
-              : "opacity-0"
+              ? "rounded-full py-1 px-2 bg-accent hover:text-white"
+              : "opacity-0 rounded-full py-1 px-2"
           }
         >
           Clear Filter
+          <IoIosCloseCircleOutline className="inline-block ml-1 text-xl" />
         </Link>
         {categories.map((category) => (
           <Link

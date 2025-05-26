@@ -4,8 +4,8 @@
 :root {
   --background: #464646;
   /* --background: #f3f3f3; */
-  /* --foreground: #eeeeee; */
-  --foreground: #575757;
+  --foreground: #eeeeee;
+  /* --foreground: #575757; */
 }
 
 @theme inline {
@@ -110,7 +110,7 @@ body {
 }
 
 a {
-  @apply transition-all duration-300 hover:text-white/70 text-inherit;
+  @apply transition-all duration-300 hover:text-secondary/70 text-inherit;
 }
 
 .prose {
@@ -127,9 +127,9 @@ a {
   @apply underline 
 } */
 
-/* .prose h3, .prose h4, .prose h5 {
-  @apply -mb-6 mt-6 
-} */
+.prose h3, .prose h4, .prose h5 {
+  @apply mt-6  text-neutral-300
+}
 
 .prose ul {
   @apply mx-auto w-fit self-center px-0;

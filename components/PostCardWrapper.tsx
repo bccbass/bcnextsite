@@ -25,7 +25,7 @@ const PostCardWrapper = ({posts}:PostCardWrapperProps) => {
     return (
         filteredPosts.length === 0
           ? <div className="flex justify-center items-center m-auto w-fit h-full">
-              <h1 className="text-2xl md:text-4xl">Sorry, no posts found</h1>
+              <h1 className="text-2xl md:text-4xl">Sorry,  no posts found</h1>
             </div>
           :
      filteredPosts.map((post) => (

@@ -1,20 +1,19 @@
 import React from "react";
 import Badge from "@/components/Badge";
-import welcomeRiver from "../../public/waterfall.webp";
+// import welcomeRiver from "../../public/waterfall.webp";
 
 const Header = () => {
   return (
-      <div
-      
-        style={{
-          backgroundImage: `url(${welcomeRiver.src})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-        }}
-        className="w-screen flex "
-      >
-        <div className=" w-screen py-8 sm:py-16 h-max bg-primary/40 backdrop-blur-lg  p-2 sm:p-8 top-0 left-0 sticky ">
-          <Badge color="text-neutral-100" />
+    <div
+      // style={{
+      //   backgroundImage: `url(${welcomeRiver.src})`,
+      //   backgroundPosition: "center",
+      //   backgroundSize: "cover",
+      // }}
+      className="w-screen flex border-b border-neutral-400"
+    >
+      <div className=" w-screen py-4 sm:py-6 h-max   p-2 sm:px-4 top-0 left-0 sticky ">
+        <Badge color="text-neutral-100" />
       </div>
     </div>
   );

@@ -42,7 +42,7 @@ const ProjectExpo = ({ mainImage, title, description }: ProjectProps) => {
 
 
         <Image
-          className="w-full p-0.5 outline-neutral-400 outline-1"
+          className="w-full p-0.5 outline-neutral-400 outline-4 rounded-2xl"
           alt={mainImage.alt ? mainImage.alt : title}
           width={800}
           height={800}
@@ -64,7 +64,7 @@ const ProjectExpo = ({ mainImage, title, description }: ProjectProps) => {
       >
         <div className="relative z-50 flex w-full items-start h-full justify-center py-8  md:items-center">
           <div className="mx-8 flex w-full max-w-xl flex-col items-center justify-center border-t border-b border-neutral-400 py-4 text-center md:my-10 lg:mx-20 lg:py-8">
-            <h3 className="text-center text-3xl text-neutral-700 md:text-4xl lg:text-5xl">
+            <h3 className="text-center text-3xl text-neutral-300 md:text-4xl lg:text-5xl">
               {title}
             </h3>
             <p className="block w-full px-2 pt-5 text-xl leading-9 font-light text-neutral-400 italic md:text-2xl">
