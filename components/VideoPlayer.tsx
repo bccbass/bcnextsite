@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { useRef } from "react";
+import Image from "next/image";
 // import { isMobile } from "react-device-detect";
 // import { useMediaQuery } from "@uidotdev/usehooks";
 import { urlFor } from "../lib/sanityImage";
@@ -78,7 +79,7 @@ const VideoPlayer = ({ video, isPlaying, setIsPlaying }: VideoPlayerProps) => {
             <p className="text-sm md:text-md ">{video.artist}</p>
             <p className="text-sm md:text-md ">{video.role}</p>
           </div>
-          <img
+          <Image
             onClick={() => setIsPlaying(video.title)}
             src={urlFor(video.videoThumbnail).width(640).height(360).url()}
             alt={video.title}

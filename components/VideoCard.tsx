@@ -3,13 +3,13 @@ import { motion } from "framer-motion";
 // import VideoPlayer from "./VideoPlayer";
 // import WorkCardInfo from "./WorkCardInfo";
 
-type WorkCardProps = {
-  project: {
-    videoID: string;}
-  // isPlaying: string | null;
-  // setIsPlaying: (videoID: string | null) => void;
-}
-const WorkCard = ({ project } : WorkCardProps) => {
+// type WorkCardProps = {
+//   project: {
+//     videoID: string;}
+//   isPlaying: string | null;
+//   setIsPlaying: (videoID: string | null) => void;
+// }
+const WorkCard = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}

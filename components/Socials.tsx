@@ -32,7 +32,7 @@ const iconsMap: Record<string, React.JSX.Element> = {
   spotify: <FaSpotify style={iconStyle} />,
   vimeo: <FaVimeo style={iconStyle} />,
 };
-type SocialType = { platform: string; url: string };
+// type SocialType = { platform: string; url: string };
 
 // type PropsType = { socials: SocialType[] };
 const Socials =async  () => {
