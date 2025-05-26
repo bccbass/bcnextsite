@@ -1,5 +1,5 @@
-'use client'
 import React from "react";
+import { Suspense } from "react";
 import PageWrapper from "@/components/PageWrapper";
 import PostCardWrapper from "@/components/PostCardWrapper";
 import Tags from "@/components/Tags";
@@ -13,6 +13,7 @@ const page = async () => {
 
   return (
     <PageWrapper>
+      <Suspense fallback={<div>Loading...</div>}>
       <div className="">
         < Tags categories={categories} />
 
@@ -31,7 +32,7 @@ const page = async () => {
          < PostCardWrapper posts={posts} />
         </div>
       </div>
-
+</Suspense>
     </PageWrapper>
   );
 };
