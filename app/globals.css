@@ -56,7 +56,7 @@ body {
 }
 
 .section-title {
-  @apply drop-shadow-[0px_0px_1px_rgba(249,63,176)] text-white font-bold text-4xl  uppercase md:text-6xl lg:text-7xl;
+  @apply drop-shadow-[3px_3px_2px_rgba(249,63,176)] text-white font-bold text-4xl  uppercase md:text-6xl lg:text-7xl;
 }
 .section-title-sm {
   @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,0.7)] text-white font-bold text-5xl  uppercase;

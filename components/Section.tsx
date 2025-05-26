@@ -19,7 +19,7 @@ const Section = ({ title, image, slug, i }: SectionProps) => {
       className={`flex flex-col w-screen  md:w-1/2 lg:w-2/5 max-w-128  h-fit bg-primary justify-center items-center md:items-start `}
     >
       <div
-        className="w-screen sm:w-full h-128 overflow-hidden outline-1 outline-neutral-400"
+        className="w-screen sm:w-full h-128 overflow-hidden "
         style={{
           backgroundImage: `url(${urlFor(image).width(1200).height(1200).url()})`,
           backgroundSize: "cover",
