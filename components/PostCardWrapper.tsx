@@ -28,7 +28,7 @@ const PostCardWrapper = ({posts}:PostCardWrapperProps) => {
               <h1 className="text-2xl md:text-4xl">Sorry, no posts found</h1>
             </div>
           :
-     filteredPosts.map((post, i) => (
+     filteredPosts.map((post) => (
             <PostCard
               key={post._id}
               title={post.title}
