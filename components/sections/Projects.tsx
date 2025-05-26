@@ -22,14 +22,13 @@ const Projects = async () => {
         </div>
       </div> */}
       <div className=" flex  flex-wrap justify-center between w-full gap-16 ">
-        {projects.map((project, i) => (
+        {projects.map((project) => (
           <ProjectCard
             key={project._id}
             title={project.title}
             slug={project.slug.current}
             image={project.imageUrl}
             description={project.description}
-            i={i}
           />
         ))}
       </div>

@@ -46,14 +46,13 @@ const Process = async () => {
             in progress, transcriptions, musings and any other elements that
             might be orphaned from a larger collection of work, worthy of its
             own domain. To use the parlance of our time: a blog.' /> */}
-        {posts.map((post, i) => (
+        {posts.map((post) => (
           <PostCard
             key={post._id}
             title={post.title}
             slug={post.slug.current}
             image={post.imageUrl}
             description={post.description}
-            i={i}
           />
         ))}
       </div>

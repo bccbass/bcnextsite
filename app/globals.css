@@ -2,8 +2,8 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  /* --background: #464646;/ */
-  --background: #f3f3f3;
+  --background: #464646;
+  /* --background: #f3f3f3; */
   /* --foreground: #eeeeee; */
   --foreground: #575757;
 }
