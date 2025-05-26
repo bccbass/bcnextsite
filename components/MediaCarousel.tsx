@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperType } from "swiper/types"; // Explicitly import Swiper type
-import Image from "next/image"; 
 
 import {
   Navigation,
@@ -21,7 +20,7 @@ import "swiper/css/effect-fade";
 
 type MediaProps = {
   mediaLinks: {
-    title:string
+    title: string;
     URL: string;
     platform: string;
     description: string;
@@ -53,44 +52,48 @@ const MediaCarousel = ({ mediaLinks }: MediaProps) => {
         className="h-7/10 w-full max-w-3xl mt-4"
       >
         {mediaLinks.map((media, index) => {
-         return (
-           <SwiperSlide key={index} className={`flex justify-center`}>
-             <div className="aspect-video h-full w-full">
-               <ReactPlayer
-                 key={index === activeVid ? "playing" : `vid-${index}`}
-                 modestbranding={1}
-                 controls
-                 url={"https://www.youtube.com/watch?v=" + media.URL}
-                 width="100%"
-                 height="100%"
-                 playing={activeVid === index ? true : false}
-               />
-             </div>
-           </SwiperSlide>
-         );}
-        )}
+          return (
+            <SwiperSlide key={index} className={`flex justify-center`}>
+              <div className="aspect-video h-full w-full">
+                <ReactPlayer
+                  key={index === activeVid ? "playing" : `vid-${index}`}
+                  modestbranding={1}
+                  controls
+                  url={"https://www.youtube.com/watch?v=" + media.URL}
+                  width="100%"
+                  height="100%"
+                  playing={activeVid === index ? true : false}
+                />
+              </div>
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
-    {mediaLinks.length > 1 &&  <Swiper
-        onSwiper={(swiper) => setThumbsSwiper(swiper)}
-        spaceBetween={0}
-        slidesPerView={4}
-        freeMode={true}
-        navigation
-        watchSlidesProgress={true}
-        modules={[FreeMode, Navigation, Thumbs, EffectFade]}
-        className="mySwiper w-full max-w-3xl bg-black mt-2 md:mt-8"
-      >
-        {mediaLinks.map((media, index) => (
-          <SwiperSlide key={index}>
-            <Image
-              alt={'image for ' + media.title}
-              onClick={() => setActiveVid(index)}
-              className={`${activeVid == index ? "border-accent" : "border-black"} my-2 border-2 sm:px-2`}
-              src={`http://img.youtube.com/vi/${media.URL}/hqdefault.jpg`}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>}
+      {mediaLinks.length > 1 && (
+        <Swiper
+          onSwiper={(swiper) => setThumbsSwiper(swiper)}
+          spaceBetween={0}
+          slidesPerView={4}
+          freeMode={true}
+          navigation
+          watchSlidesProgress={true}
+          modules={[FreeMode, Navigation, Thumbs, EffectFade]}
+          className="mySwiper w-full max-w-3xl bg-black mt-2 md:mt-8"
+        >
+          {mediaLinks.map((media, index) => (
+            <SwiperSlide key={index}>
+              <img
+                // width="100"
+                // height="100"
+                alt={"image for " + media.title}
+                onClick={() => setActiveVid(index)}
+                className={`${activeVid == index ? "border-accent" : "border-black"} my-2 border-2 sm:px-2`}
+                src={`http://img.youtube.com/vi/${media.URL}/hqdefault.jpg`}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      )}
     </div>
   );
 };

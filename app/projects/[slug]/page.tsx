@@ -5,6 +5,8 @@ import PageWrapper from "@/components/PageWrapper";
 import MediaCarousel from "@/components/MediaCarousel";
 import Albums from "@/components/Albums";
 import MediaModal from "@/components/MediaModal";
+import PageTitle from "@/components/PageTitle";
+
 // import ProjectExpo from "@/components/ProjectExpo";
 import PDFContainer from "@/components/PDFContainer";
 import Link from "next/link";
@@ -55,18 +57,8 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   return (
     <PageWrapper>
       <div className=" flex w-full flex-col items-center justify-between">
-        {/* <ProjectExpo
-          mainImage={section.mainImage}
-          title={section.title}
-          description={section.description}
-        /> */}
-        <div className="relative flex w-full h-full justify-center items-center">
-          <div className="mx-8 flex w-full max-w-xl flex-col items-center justify-center border-t border-b border-neutral-400 py-4 text-center md:my-10 lg:mx-20 lg:py-8">
-            <h3 className="text-center text-3xl text-neutral-700 md:text-5xl lg:text-6xl">
-              {section.title}
-            </h3>
-          </div>
-        </div>
+        <PageTitle title={section.title} />
+
         <ProjectBody
           title={section.title}
           description={section.description}

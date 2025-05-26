@@ -14,7 +14,7 @@ const ProjectBody = ({
   // description
 }: BodyProps) => {
   return (
-    <div className="flex w-full flex-col items-center justify-center bg-white md:py-8">
+    <div className="flex w-full flex-col items-center justify-center text-white md:my-8">
       {/* <div className=" flex my-10  h-fit w-full justify-center">
         <div className="mx-8 flex h-fit w-full max-w-2xl flex-col justify-between gap-6 border-t border-b border-neutral-400 py-8 text-center">
           <h3 className="text-center text-4xl font-light text-neutral-700 lg:text-5xl">
@@ -26,7 +26,7 @@ const ProjectBody = ({
         </div>
       </div> */}
       <div
-        className={`prose prose-md  sm:prose-xl w-full border-neutral-400 px-4 sm:px-12`}
+        className={`prose prose-md  sm:prose-xl w-full border-neutral-400 px-4 sm:px-12 text-white`}
       >
         {typeof body === "string" ? (
           <p>{body}</p>

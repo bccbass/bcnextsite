@@ -17,10 +17,10 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <div
-      className={`flex flex-col animate-shadow w-7/8 md:w-2/5 max-w-sm justify-between items-center bg-white outline outline-neutral-300  backdrop-blur-2xl pb-4`}
+      className={`flex flex-col w-7/8 md:w-2/5 max-w-sm justify-between items-cente pb-4`}
     >
       <div className="flex flex-col items-center gap-2">
-        <div className=" w-full">
+        <div className=" w-full rounded-4xl overflow-hidden">
           <SanityImage image={image} alt={title} />
         </div>
         <div className="flex px-4 flex-col text-pretty items-center md:items-start py-4 gap-2 justify-center mb-4">
@@ -30,7 +30,7 @@ const ProjectCard = ({
             {title}
           </h3>
 
-          <p className="prose  prose-md md:prose-lg  text-pretty">
+          <p className="prose  prose-md md:prose-lg  text-pretty text-white">
             {description}
           </p>
         </div>

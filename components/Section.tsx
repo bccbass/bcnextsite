@@ -16,10 +16,10 @@ const Section = ({ title, image, slug, i }: SectionProps) => {
   return (
     <Link
       href={"/" + slug}
-      className={`flex flex-col w-screen  md:w-1/2 lg:w-2/5 max-w-128  h-fit bg-primary justify-center items-center md:items-start `}
+      className={`flex flex-col w-screen  md:w-1/2 lg:w-2/5 max-w-128  h-fit bg-background justify-center items-center md:items-start outline-8 rounded-4xl `}
     >
       <div
-        className="w-screen sm:w-full h-128 overflow-hidden "
+        className="w-screen sm:w-full h-128 overflow-hidden rounded-4xl "
         style={{
           backgroundImage: `url(${urlFor(image).width(1200).height(1200).url()})`,
           backgroundSize: "cover",

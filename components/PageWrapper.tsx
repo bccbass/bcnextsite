@@ -1,11 +1,14 @@
 import React from "react";
-import Header from "@/components/sections/Header";
+// import Header from "@/components/sections/Header";
+import HomeButton from "./HomeButton";
+
 import Footer from "@/components/sections/Footer";
 const PageWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <div className="section  w-full py-24">{children}</div>
+      <HomeButton/>
       <Footer />
     </div>
   );

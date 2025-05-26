@@ -16,13 +16,13 @@ const PostCard = ({
 }: PostCardProps) => {
   return (
     <div
-      className={`flex flex-col animate-shadow max-w-72 bg-white shadow-md  w-7/8 md:w-full gap-2 border  border-neutral-300 justify-between items-center  px-4 py-4 `}
+      className={`flex flex-col rounded-2xl max-w-72 bg-white shadow-md  w-7/8 md:w-full gap-2 border  border-neutral-300 justify-between items-center  px-4 py-6 `}
     >
       <div className="flex flex-col items-center gap-2">
-        <div className=" w-full  sm:w-60 ">
+        <div className=" w-full  ">
           <SanityImage image={image} alt={title} />
         </div>
-        <div className="flex flex-col text-pretty items-center md:items-start  gap-2 justify-center mb-4">
+        <div className="flex flex-col text-pretty items-center md:items-start  gap-3 justify-center mb-10">
           <h3 className={` font-semibold text-xl  md:text-2xl text-primary`}>
             {title}
           </h3>

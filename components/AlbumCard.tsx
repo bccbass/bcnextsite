@@ -23,15 +23,15 @@ const AlbumCard = ({ album, index, width }: AlbumCardProps) => {
   // const isVisible = entry?.isIntersecting;
   return (
     <div
-      className={`${width} m-4 flex w-[90vw] max-w-lg flex-col items-center justify-center bg-white pb-2 md:min-w-md md:p-2`}
+      className={`${width} m-4 flex w-[90vw] max-w-lg flex-col items-center justify-center pb-2 md:min-w-md md:p-2`}
     >
       <div
         key={index}
-        className={`m-4 flex h-1/4 w-[90vw] max-w-lg flex-col items-center justify-center border border-neutral-300 bg-white p-2 pb-8 shadow-lg md:min-w-md md:p-6`}
+        className={`m-4 flex h-1/4 w-[90vw] max-w-lg flex-col items-center justify-center border border-neutral-300 rounded-2xl p-2 pb-8 bg-background md:min-w-md md:p-6`}
       >
         <div
           // className="p-1 outline-neutral-500 rounded-sm outline-1"
-          className="mb-2 overflow-hidden border-neutral-400"
+          className="mb-6 overflow-hidden  border-neutral-400"
         >
           <SanityImage image={album.image} alt={`Image for ${album.title}`} />
         </div>

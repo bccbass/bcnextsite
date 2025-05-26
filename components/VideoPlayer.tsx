@@ -82,6 +82,8 @@ const VideoPlayer = ({ video, isPlaying, setIsPlaying }: VideoPlayerProps) => {
           <Image
             onClick={() => setIsPlaying(video.title)}
             src={urlFor(video.videoThumbnail).width(640).height(360).url()}
+            width={640}
+            height={360}
             alt={video.title}
           />
         </div>

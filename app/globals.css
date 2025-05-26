@@ -37,9 +37,15 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
-background-size: 100% 100%;
-background-position: 0px 0px,0px 0px,0px 0px;
-background-image: radial-gradient(42% 53% at 34% 72%, #646464FF 7%, #60647300 100%),radial-gradient(74% 86% at 67% 38%, #4C504EF5 24%, #073AFF00 100%),linear-gradient(177deg, #010D18FF 6%, #B5B3B9FF 40%);
+  /* background-size: 100% 100%;
+  background-position:
+    0px 0px,
+    0px 0px,
+    0px 0px;
+  background-image:
+    radial-gradient(42% 53% at 34% 72%, #646464ff 7%, #60647300 100%),
+    radial-gradient(74% 86% at 67% 38%, #4c504ef5 24%, #073aff00 100%),
+    linear-gradient(177deg, #010d18ff 6%, #b5b3b9ff 40%); */
 }
 
 .text-outline {
@@ -51,7 +57,7 @@ background-image: radial-gradient(42% 53% at 34% 72%, #646464FF 7%, #60647300 10
 }
 
 .text-outline-theme {
-  @apply drop-shadow-[2px_3px_.3px_rgba(249,63,176,.3)]
+  @apply drop-shadow-[2px_3px_.3px_rgba(249,63,176,.3)];
 }
 
 .section {
@@ -59,20 +65,28 @@ background-image: radial-gradient(42% 53% at 34% 72%, #646464FF 7%, #60647300 10
 }
 
 .section-title {
-  @apply drop-shadow-[3px_3px_2px_rgba(249,63,176)] text-white font-bold text-4xl  uppercase md:text-6xl lg:text-7xl;
+  @apply drop-shadow-[3px_3px_1px_rgba(249,63,176)] text-neutral-300 font-bold text-4xl  uppercase md:text-6xl lg:text-7xl;
 }
 .badge-title {
-  @apply drop-shadow-[2px_2px_1px_rgba(249,63,176)] text-white font-bold text-3xl  uppercase md:text-4xl lg:text-5xl;
+  @apply drop-shadow-[2px_2px_1px_rgba(249,63,176)] text-neutral-300 font-bold text-3xl  uppercase md:text-4xl lg:text-5xl;
 }
 .section-title-sm {
-  @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,0.7)] text-white font-bold text-5xl  uppercase;
+  @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,0.7)] text-neutral-300 font-bold text-5xl  uppercase;
 }
 /* .section-title {
   @apply text-3xl font-feature font-semibold tracking-[6] uppercase md:text-4xl lg:text-5xl;
 } */
 
 .theme-button {
-  @apply w-fit my-2 mb-1 px-6 rounded-none   text-neutral-700 bg-white py-1 text-center  outline transition-all duration-300 hover:bg-accent outline-neutral-400 hover:text-white lg:text-lg;
+   @apply bg-primary/90 hover:bg-primary  transition-colors duration-300 ease-in-out rounded-full px-6 py-2 text-neutral-100
+}
+
+.square-button {
+  @apply w-fit my-2 mb-1 px-6 rounded-none   text-neutral-600 bg-neutral-300 py-1 text-center  outline transition-all duration-300 hover:bg-accent outline-neutral-400 hover:text-white lg:text-lg;
+}
+
+.rounded-btn {
+  @apply bg-primary hover:bg-primary/80 transition-colors duration-300 ease-in-out rounded-full px-6 py-3 text-neutral-100
 }
 
 .pdf-button {
@@ -80,7 +94,7 @@ background-image: radial-gradient(42% 53% at 34% 72%, #646464FF 7%, #60647300 10
 }
 
 .active-tag {
-  @apply text-lg text-accent  hover:text-primary underline underline-offset-6 decoration-accent decoration-2
+  @apply text-lg text-accent  hover:text-primary underline underline-offset-6 decoration-accent decoration-2;
 }
 
 .inactive-tag {
@@ -96,9 +110,8 @@ background-image: radial-gradient(42% 53% at 34% 72%, #646464FF 7%, #60647300 10
 }
 
 a {
-  @apply transition-all duration-300 hover:text-secondary text-inherit;
+  @apply transition-all duration-300 hover:text-white/70 text-inherit;
 }
-
 
 .prose {
   @apply max-w-7xl p-0 m-0;
@@ -118,25 +131,21 @@ a {
   @apply -mb-6 mt-6 
 } */
 
-
-
 .prose ul {
-  @apply mx-auto w-fit self-center px-0 ;
+  @apply mx-auto w-fit self-center px-0;
 }
 .prose ul > li {
-  @apply my-1 list-none  ;
+  @apply my-1 list-none;
 }
 
 .prose ul * {
-  @apply mx-0 my-1 text-neutral-600 font-normal text-base sm:text-lg md:text-xl lg:text-2xl sm:px-4;
+  @apply mx-0 my-1 text-neutral-50 font-normal text-base sm:text-lg md:text-xl lg:text-2xl sm:px-4;
 }
 
-
 .prose img {
-  @apply  my-6
+  @apply my-6;
 }
 
 .animate-shadow {
-  @apply drop-shadow-sm hover:drop-shadow-xl hover:-translate-y-0.5 transition-all duration-300
+  @apply drop-shadow-sm hover:drop-shadow-xl hover:-translate-y-0.5 transition-all duration-300;
 }
-

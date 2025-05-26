@@ -9,7 +9,7 @@ const ProjectBodySecondary = ({ body }: BodyProps) => {
   return (
     <div className="flex w-full flex-col items-center justify-center md:my-12">
       <div
-        className={`prose prose-md sm:prose-xl w-full border-neutral-400 px-2 sm:px-12`}
+        className={`prose prose-md sm:prose-xl w-full border-neutral-400 px-2 sm:px-12 text-white `}
       >
         {typeof body === "string" ? (
           <p>{body}</p>

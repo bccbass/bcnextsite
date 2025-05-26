@@ -19,7 +19,7 @@ const Hero = () => {
       className="w-screen flex  h-screen top-0  -z-10"
     >
       <motion.div
-        className=" bg-neutral-500/70   w-screen p-8 md:py-12 top-0 left-0 absolute backdrop-blur-lg"
+        className=" bg-primary/40   w-screen p-8 md:py-12 top-0 left-0 absolute backdrop-blur-lg"
         style={{
           y,
         }}
