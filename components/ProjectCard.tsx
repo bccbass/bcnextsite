@@ -7,7 +7,6 @@ type ProjectCardProps = {
   image: string;
   description: string;
   slug: string;
-  i: number;
 };
 
 const ProjectCard = ({
@@ -15,7 +14,6 @@ const ProjectCard = ({
   image,
   description,
   slug,
-  i,
 }: ProjectCardProps) => {
   return (
     <div

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 // import { isMobile } from "react-device-detect";
 // import { useMediaQuery } from "@uidotdev/usehooks";
 import { urlFor } from "../lib/sanityImage";

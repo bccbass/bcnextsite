@@ -3,8 +3,8 @@ import React from "react";
 import { urlForMedImg } from "../lib/sanityImage";
 import Image from "next/image";
 import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
-import { motion, useScroll, useTransform } from "framer-motion";
-import useMedia from "@/hooks/useMedia";
+import { motion, useScroll } from "framer-motion";
+// import useMedia from "@/hooks/useMedia";
 
 type ProjectProps = {
   mainImage: {
@@ -15,13 +15,13 @@ type ProjectProps = {
   description: string;
 };
 const ProjectExpo = ({ mainImage, title, description }: ProjectProps) => {
-  const isMedium = useMedia("(max-width: 768px)");
+  // const isMedium = useMedia("(max-width: 768px)");
 
   const { scrollYProgress } = useScroll({
     offset: ["start start", "end center"],
   });
 
-  const scrollOpacity = useTransform(scrollYProgress, [0.01, 0.08], [1, 0]);
+  // const scrollOpacity = useTransform(scrollYProgress, [0.01, 0.08], [1, 0]);
 
   return (
     <div

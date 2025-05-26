@@ -1,17 +1,16 @@
 import React from "react";
-import SanityImage from "./SanityImage";
+// import SanityImage from "./SanityImage";
 import { urlFor } from "../lib/sanityImage";
 
 import Link from "next/link";
 type SectionProps = {
   title: string;
   image: string;
-  description: string;
   slug: string;
   i: number;
 };
 
-const Section = ({ title, image, description, slug, i }: SectionProps) => {
+const Section = ({ title, image, slug, i }: SectionProps) => {
   return (
     // <div className={`flex flex-col  w-7/8 sm:w-3/5 md:w-full max-w-5xl ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6   border-neutral-300 justify-center items-center md:items-start px-6 py-10 `}>
     //   <div className="w-70 md:w-xl lg:w-xl outline p-0.5 outline-neutral-300">

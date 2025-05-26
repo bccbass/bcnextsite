@@ -34,7 +34,7 @@ const iconsMap: Record<string, React.JSX.Element> = {
 };
 type SocialType = { platform: string; url: string };
 
-type PropsType = { socials: SocialType[] };
+// type PropsType = { socials: SocialType[] };
 const Socials =async  () => {
     const socials = await getSocials();
   return (

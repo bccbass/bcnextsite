@@ -1,5 +1,5 @@
 /** @format */
-import type { PortableTextBlock } from "@sanity/types";
+// import type { PortableTextBlock } from "@sanity/types";
 
 
 export interface PostPreview {

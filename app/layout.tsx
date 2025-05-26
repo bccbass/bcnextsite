@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-import { Roboto, Raleway, Julius_Sans_One, Rubik_Pixels } from "next/font/google";
+import { Roboto, Julius_Sans_One, Rubik_Pixels } from "next/font/google";
 import "./globals.css";
 import "lenis/dist/lenis.css";
 import { ReactLenis } from "@/lib/lenis";
 
-const ralewaySans = Raleway({
-  variable: "--font-sans",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
-});
+
 const roboto = Roboto({
   variable: "--font-sans",
   subsets: ["latin"],

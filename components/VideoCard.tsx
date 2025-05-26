@@ -1,16 +1,15 @@
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import VideoPlayer from "./VideoPlayer";
+import { motion } from "framer-motion";
+// import VideoPlayer from "./VideoPlayer";
 // import WorkCardInfo from "./WorkCardInfo";
 
 type WorkCardProps = {
   project: {
     videoID: string;}
-  isPlaying: string | null;
-  setIsPlaying: (videoID: string | null) => void;
+  // isPlaying: string | null;
+  // setIsPlaying: (videoID: string | null) => void;
 }
-const WorkCard = ({ project, isPlaying, setIsPlaying } : WorkCardProps) => {
-  console.log("WorkCard project", project._id);
+const WorkCard = ({ project } : WorkCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}

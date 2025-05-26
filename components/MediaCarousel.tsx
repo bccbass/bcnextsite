@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperType } from "swiper/types"; // Explicitly import Swiper type
+import Image from "next/image"; 
 
 import {
   Navigation,
@@ -81,7 +82,7 @@ const MediaCarousel = ({ mediaLinks }: MediaProps) => {
       >
         {mediaLinks.map((media, index) => (
           <SwiperSlide key={index}>
-            <img
+            <Image
               alt={'image for ' + media.title}
               onClick={() => setActiveVid(index)}
               className={`${activeVid == index ? "border-accent" : "border-black"} my-2 border-2 sm:px-2`}

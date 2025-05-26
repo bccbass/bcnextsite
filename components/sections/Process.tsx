@@ -2,7 +2,7 @@ import React from "react";
 import { getPostsPreview } from "@/lib/fetch";
 import Link from "next/link";
 import PostCard from "../PostCard";
-import TitleCard from "../TitleCard";
+// import TitleCard from "../TitleCard";
 
 const Process = async () => {
   const posts = await getPostsPreview();

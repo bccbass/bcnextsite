@@ -5,7 +5,7 @@ import PageWrapper from "@/components/PageWrapper";
 import MediaCarousel from "@/components/MediaCarousel";
 import Albums from "@/components/Albums";
 import MediaModal from "@/components/MediaModal";
-import ProjectExpo from "@/components/ProjectExpo";
+// import ProjectExpo from "@/components/ProjectExpo";
 import PDFContainer from "@/components/PDFContainer";
 import Link from "next/link";
 import ProjectBody from "@/components/ProjectBody";

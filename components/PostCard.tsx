@@ -6,7 +6,6 @@ type PostCardProps = {
   image: string;
   description: string;
   slug: string;
-  i: number;
 };
 
 const PostCard = ({
@@ -14,7 +13,6 @@ const PostCard = ({
   image,
   description,
   slug,
-  i,
 }: PostCardProps) => {
   return (
     <div
