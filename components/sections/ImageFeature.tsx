@@ -13,13 +13,14 @@ const ImageFeature = ({imgUrl}:{imgUrl: string}) => {
   return (
     <motion.div ref={ref} className="w-screen h-[60vh] flex justify-center overflow-hidden mb-20 md:mb-32 ">
       <motion.div
-        className="w-screen h-[80vh] flex justify-center items-center saturate-100 filter contrast-150"
+        className="w-screen h-[80vh] flex justify-center items-center saturate-100 filter contrast-150 bg-contain sm:bg-cover"
         style={{
           opacity,
           y,
           backgroundImage: `url('${imgUrl}')`,
           backgroundPosition: "center",
-          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          // backgroundSize: "cover",
         }}
       />
     </motion.div>

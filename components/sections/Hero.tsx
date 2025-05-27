@@ -23,7 +23,7 @@ const Hero = () => {
         className="w-screen flex  h-screen top-0  -z-10"
       >
         <motion.div
-          className="w-screen p-8 md:py-12 top-0 left-0 absolute"
+          className="w-screen  top-5 left-8 absolute"
           style={{
             y,
           }}

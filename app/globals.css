@@ -71,6 +71,15 @@ body {
 .badge-title {
   @apply drop-shadow-[2px_2px_1px_rgba(249,63,176)] text-neutral-300 font-bold text-3xl  uppercase md:text-4xl lg:text-5xl;
 }
+.feature-title-subtle {
+  @apply drop-shadow-[1px_1px_1px_rgba(249,63,176)] text-neutral-300 font-bold uppercase;
+}
+.feature-title {
+  @apply drop-shadow-[2px_2px_1px_rgba(249,63,176)] text-neutral-300 font-bold uppercase;
+}
+.outline-title {
+  @apply drop-shadow-[1px_1px_1px_rgba(0,0,0,.5)] text-neutral-300 font-bold uppercase;
+}
 .section-title-sm {
   @apply drop-shadow-[2px_2px_1px_rgba(249,63,176)]  text-neutral-300 font-bold text-5xl uppercase;
 }
@@ -79,7 +88,7 @@ body {
 } */
 
 .theme-button {
-   @apply bg-primary/90 hover:bg-primary  transition-colors duration-300 ease-in-out rounded-full px-6 py-2 text-neutral-100
+  @apply bg-primary/90 hover:bg-primary  transition-colors duration-300 ease-in-out rounded-full px-6 py-2 text-neutral-100;
 }
 
 .square-button {
@@ -87,7 +96,7 @@ body {
 }
 
 .rounded-btn {
-  @apply bg-primary hover:bg-primary/80 transition-colors duration-300 ease-in-out rounded-full px-6 py-3 text-neutral-100
+  @apply bg-primary hover:bg-primary/80 transition-colors duration-300 ease-in-out rounded-full px-6 py-3 text-neutral-100;
 }
 
 .pdf-button {
@@ -102,7 +111,7 @@ body {
   @apply text-lg  flex items-center hover:underline underline-offset-6 decoration-accent decoration-2 hover:text-foreground  transition-all duration-200;
 }
 .menu-item {
-  @apply text-2xl md:text-4xl border-b-4 border-primary hover:border-accent hover:text-accent w-fit transition-all duration-300 ease-in-out;
+  @apply text-2xl md:text-4xl lg:text-5xl border-b-4 text-accent border-primary hover:border-accent hover:text-secondary w-fit transition-all duration-300 ease-in-out;
 }
 
 .row-centered {
@@ -131,8 +140,10 @@ a {
   @apply underline 
 } */
 
-.prose h3, .prose h4, .prose h5 {
-  @apply mt-6  text-neutral-300
+.prose h3,
+.prose h4,
+.prose h5 {
+  @apply mt-6  text-neutral-300;
 }
 
 .prose ul {

@@ -7,5 +7,12 @@ const menuItems = [
   { title: "Studio", href: "/discography" },
   { title: "Contact", href: "/#contact" },
 ];
+const footerMenuItems = [
+  { title: "Home", href: "/" },
+  { title: "About", href: "/about" },
+  { title: "Process", href: "/process" },
+  { title: "Studio", href: "/discography" },
+  { title: "Contact", href: "/#contact" },
+];
 
-export {menuItems}
+export {menuItems, footerMenuItems};
