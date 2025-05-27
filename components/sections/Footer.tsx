@@ -13,7 +13,7 @@ const Footer = async () => {
           <h4 className="text-2xl feature-title-subtle">Section</h4>
           <div className="flex flex-col gap-2">
             {footerMenuItems.map((item) => (
-              <Link key={item.href} href={"/"}>
+              <Link key={item.href} href={item.href}>
                 {item.title}
               </Link>
             ))}
