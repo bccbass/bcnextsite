@@ -62,18 +62,18 @@ const NavMenu = ({
         <div className="flex justify-around mx-auto px-10 md:px-20 py-16 md:py-20 gap-16 flex-wrap max-w-7xl ">
           <div className="flex flex-col gap-4 uppercase font-semibold ">
             <Suspense fallback={<div>Loading...</div>}>
-              {menuItems.map((item, i) =>
-                pathname !== item.href ? (
+              {menuItems
+                .filter((item) => pathname !== item.href)
+                .map((item, i) => (
                   <Link
                     key={i}
-                    onClick={() => setOpen(false)}
+                    // onClick={() => setOpen(false)}
                     className="menu-item"
                     href={item.href}
                   >
                     {item.title}
                   </Link>
-                ) : null
-              )}
+                ))}
             </Suspense>
           </div>
         </div>

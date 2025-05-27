@@ -4,7 +4,7 @@ const menuItems = [
   { title: "Bass", href: "/bass" },
   { title: "Production", href: "/production" },
   { title: "Process", href: "/process" },
-  { title: "Studio", href: "/studio" },
+  { title: "Studio", href: "/discography" },
   { title: "Contact", href: "/#contact" },
 ];
 
