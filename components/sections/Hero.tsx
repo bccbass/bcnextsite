@@ -13,6 +13,7 @@ const Hero = () => {
     target: ref,
   });
   const scrollOpacity = useTransform(scrollYProgress, [0, 0.85], [1, 0]);
+  const badgeOpacity = useTransform(scrollYProgress, [0, 0.25], [1, 0]);
   const y = useTransform(scrollYProgress, [0, 1], [0, 550]);
   return (
     <>
@@ -23,8 +24,9 @@ const Hero = () => {
         className="w-screen flex  h-screen top-0  -z-10"
       >
         <motion.div
-          className="w-screen  top-5 left-8 absolute"
+          className="w-screen top-1/4 flex justify-center absolute"
           style={{
+            opacity: badgeOpacity,
             y,
           }}
         >
