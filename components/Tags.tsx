@@ -14,14 +14,13 @@ const Tags = ({ categories }: CategoryType) => {
 
   return (
     <div className="flex w-full items-center justify-end">
-      {/* <h3 className="text-2xl  text-primary mr-6">category:</h3> */}
       <div className="justify-center items-center flex flex-wrap gap-4">
         <Link
           href={"/process"}
           className={
             tag == null || tag != "all"
-              ? "rounded-full py-1 px-2 bg-accent hover:text-white"
-              : "opacity-0 rounded-full py-1 px-2"
+              ? "rounded-full py-1 px-3 bg-accent hover:text-white flex items-center"
+              : "opacity-0 rounded-full py-1 px-3"
           }
         >
           Clear Filter

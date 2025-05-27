@@ -7,7 +7,7 @@ const PageWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
     <div>
       <Header />
-      <div className="section  w-full py-24">{children}</div>
+      <div className="section z-0 w-full py-24">{children}</div>
       <HomeButton/>
       <Footer />
     </div>

@@ -12,7 +12,6 @@ const Footer = async () => {
                 <div className="flex flex-col gap-2">
                 <Link href={'/'}>Home</Link>
                 <Link href={'/about'}>About</Link>
-                <Link href={'/#explore'}>Explore</Link>
                 <Link href={'/process'}>Process</Link>
                 <Link href={'/studio'}>Studio</Link>
                 <Link href={'/#contact'}>Contact</Link>
@@ -41,7 +40,7 @@ const Footer = async () => {
             </div>
         </div>
         <Socials />
-        <p className='w-full text-center text-xs md:text-sm uppercase' >Benjamin Campbell © 2025</p>
+        <p className='w-full text-center text-xs md:text-sm pb-1' >Benjamin Campbell © 2025</p>
     </footer>
   )
 }

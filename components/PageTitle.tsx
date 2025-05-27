@@ -1,11 +1,16 @@
 import React from 'react'
 
-const PageTitle = ({title}:{title: string}) => {
+const PageTitle = ({title, description}:{title: string, description?: string}) => {
   return (
-        <div className="mx-8 flex w-full  flex-col items-center justify-center py-4 text-center   md:mt-6 lg:mx-20 ">
+        <div className="flex w-full  flex-col items-center justify-center py-4 md:pb-24 text-center   md:mt-6 ">
           <h3 className="text-center section-title">
             {title}
           </h3>
+          {description && (
+            <p className="text-neutral-300 text-lg md:text-xl lg:text-2xl pretty pt-4">
+              {description}
+            </p>
+          )}
         </div>  )
 }
 

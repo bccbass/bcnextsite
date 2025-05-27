@@ -37,7 +37,7 @@ const MediaCarousel = ({ mediaLinks }: MediaProps) => {
   // media.URL is actually a YouTube ID now -> Will prefix the url with correct path for videos and images and add in ID programatically
   return (
     <div className="h-full mt-24  sm:mt-8 w-3xl p-2 px-4 max-w-screen ">
-      <h1 className="absolute top-12 left-0 pt-2 w-full text-center z-40  pb-2  text-4xl  font-feature text-accent uppercase opacity-0 md:opacity-100">
+      <h1 className="absolute top-12 left-0 pt-2 w-full text-center  pb-2  text-4xl  font-feature text-accent uppercase opacity-0 md:opacity-100">
         {activeVid ? mediaLinks[activeVid].title : mediaLinks[0].title}
       </h1>
       <Swiper

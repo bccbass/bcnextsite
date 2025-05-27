@@ -62,7 +62,7 @@ const ProjectExpo = ({ mainImage, title, description }: ProjectProps) => {
           ease: "easeInOut",
         }}
       >
-        <div className="relative z-50 flex w-full items-start h-full justify-center py-8  md:items-center">
+        <div className="relative flex w-full items-start h-full justify-center py-8  md:items-center">
           <div className="mx-8 flex w-full max-w-xl flex-col items-center justify-center border-t border-b border-neutral-400 py-4 text-center md:my-10 lg:mx-20 lg:py-8">
             <h3 className="text-center text-3xl text-neutral-300 md:text-4xl lg:text-5xl">
               {title}

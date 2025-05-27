@@ -19,7 +19,7 @@ const WorkCard = () => {
       className="w-full md:w-1/2 px-2"
     >
       <div className=" flex flex-col shadow-md mb-4 bg-white w-full">
-        <div className="z-10">
+        <div className="z-0">
           {/* <VideoPlayer
             project={project}
             isPlaying={isPlaying}

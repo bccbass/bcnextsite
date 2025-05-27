@@ -13,6 +13,7 @@
   --color-foreground: var(--foreground);
   --color-primary: #2596be;
   --color-secondary: #f97316;
+  /* --color-accent: var(--color-red-400); */
   --color-accent: #f93fb0;
   --font-sans: var(--font-sans);
   --font-feature: var(--font-feature);
@@ -71,7 +72,7 @@ body {
   @apply drop-shadow-[2px_2px_1px_rgba(249,63,176)] text-neutral-300 font-bold text-3xl  uppercase md:text-4xl lg:text-5xl;
 }
 .section-title-sm {
-  @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,0.7)] text-neutral-300 font-bold text-5xl  uppercase;
+  @apply drop-shadow-[2px_2px_1px_rgba(249,63,176)]  text-neutral-300 font-bold text-5xl uppercase;
 }
 /* .section-title {
   @apply text-3xl font-feature font-semibold tracking-[6] uppercase md:text-4xl lg:text-5xl;
@@ -100,6 +101,9 @@ body {
 .inactive-tag {
   @apply text-lg  flex items-center hover:underline underline-offset-6 decoration-accent decoration-2 hover:text-foreground  transition-all duration-200;
 }
+.menu-item {
+  @apply text-2xl md:text-4xl border-b-4 border-primary hover:border-accent hover:text-accent w-fit transition-all duration-300 ease-in-out;
+}
 
 .row-centered {
   @apply flex items-center justify-center;
@@ -110,7 +114,7 @@ body {
 }
 
 a {
-  @apply transition-all duration-300 hover:text-secondary/70 text-inherit;
+  @apply transition-all duration-300 hover:text-inherit/40 text-inherit;
 }
 
 .prose {
