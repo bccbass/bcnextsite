@@ -15,19 +15,14 @@ const NavMenu = ({
 }) => {
   const pathname = usePathname();
 
-  const handleEscKey = (event: KeyboardEvent) => {
-    if (event.key == "Escape") setOpen(false);
-  };
-
   // Combined approach for both overflow and Lenis
   useEffect(() => {
-    // if (!lenis) return;
-
+    const handleEscKey = (event: KeyboardEvent) => {
+      if (event.key == "Escape") setOpen(false);
+    };
     if (isOpen) {
       // Stop scrolling using both methods
       document.body.style.overflow = "hidden";
-      // console.log('stopping lenis')
-      // lenis.stop();
 
       // Force touch-action none on body for mobile
       document.body.style.touchAction = "none";
@@ -37,17 +32,12 @@ const NavMenu = ({
       // Re-enable scrolling using both methods
       document.body.style.overflow = "";
       document.body.style.touchAction = "";
-      // console.log("starting lenis");
-
-      // lenis.start();
     }
 
     return () => {
       document.body.style.overflow = "";
       document.body.style.touchAction = "";
       document.removeEventListener("keyup", handleEscKey);
-      // if (lenis) lenis.start();
-      // console.log("returning lenis -> start");
     };
   }, [isOpen]);
 

@@ -3,8 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import SanityImage from "@/components/SanityImage";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { motion, AnimatePresence } from "framer-motion";
-// import { useLenis } from "@/lib/lenis";
-
+import FadeIn from "./FadeIn";
 export default function DiscogModal({
   image,
   alt,
@@ -31,7 +30,6 @@ export default function DiscogModal({
 
   // Combined approach for both overflow and Lenis
   useEffect(() => {
-
     if (isOpen) {
       // Stop scrolling using both methods
       document.body.style.overflow = "hidden";
@@ -58,11 +56,11 @@ export default function DiscogModal({
   return (
     <>
       <button className={` max-w-2xl`} onClick={() => setIsOpen(true)}>
-        <div
-          className="w-full md:w-60 lg:w-72 overflow-hidden  border-neutral-400"
-        >
+        <FadeIn random={true} y={false}>
+        <div className="w-full md:w-60 lg:w-72 overflow-hidden  border-neutral-400">
           <SanityImage image={image} alt={alt} />
         </div>
+        </FadeIn>
       </button>
       <AnimatePresence>
         {isOpen && (

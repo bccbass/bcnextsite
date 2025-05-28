@@ -1,10 +1,7 @@
 import React from "react";
 import SanityImage from "./SanityImage";
-import Link from "next/link";
 import AlbumLinks from "./AlbumLinks";
 import DiscogModal from "./DiscogModal";
-// import { useIntersectionObserver } from "@uidotdev/usehooks";
-// import style from "./album.module.css";
 
 type DiscogCardProps = {
   album: {
@@ -17,11 +14,9 @@ type DiscogCardProps = {
     vinyl: boolean;
     links: { platform: string; url: string }[];
   };
-  index: number;
 };
-const DiscogCard = ({ album, index }: DiscogCardProps) => {
-  // const [ref, entry] = useIntersectionObserver({ threshold: .4 });
-  // const isVisible = entry?.isIntersecting;
+const DiscogCard = ({ album }: DiscogCardProps) => {
+
   return (
     <DiscogModal image={album.image} alt={`Image for ${album.title}`}>
       {/* Modal Contents -> */}

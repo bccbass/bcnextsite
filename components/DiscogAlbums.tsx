@@ -35,7 +35,7 @@ const DiscogAlbums = ({ albums }: AlbumsProps) => {
             },
             index: number
           ) => (
-            <DiscogCard key={index} album={album} index={index} />
+            <DiscogCard key={index} album={album} />
           )
         )}
       </div>
