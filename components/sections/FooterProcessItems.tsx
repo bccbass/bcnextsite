@@ -9,7 +9,6 @@ export async function getMenuItems(
   type: string,
   limit?: number
 ): Promise<{ title: string; slug: { current: string; title: string } }[]> {
-  console.log("type", type, "limit", limit, limit ? true : false);
   return await sanityClient.fetch(groq`
     *[_type == '${type}']${limit ? `[0...${limit}]` : ""} | order(sortOrder asc) {
       title,

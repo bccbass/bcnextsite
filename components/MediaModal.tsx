@@ -21,17 +21,14 @@ export default function Modal({
     if (isOpen) {
       document.body.style.overflow = "hidden";
       document.body.style.touchAction = "none";
-
     } else {
       document.body.style.overflow = ""; // Reset on close
       document.body.style.touchAction = "";
-
     }
 
     return () => {
       document.body.style.overflow = ""; // Cleanup when unmounting
       document.body.style.touchAction = "";
-
     };
   }, [isOpen]);
 
@@ -49,13 +46,11 @@ export default function Modal({
       if (event.key == "Escape") setIsOpen(false);
     };
     if (isOpen) {
-
       document.addEventListener("keyup", handleEscKey);
       document.addEventListener("mousedown", handleClickOutside);
     }
 
     return () => {
-
       document.removeEventListener("keyup", handleEscKey);
       document.removeEventListener("mousedown", handleClickOutside);
     };
@@ -133,7 +128,7 @@ export default function Modal({
               {children}
             </div>
             <button
-              className="btn close-button absolute right-auto bottom-8 z-50 sm:hidden"
+              className=" close-button absolute right-auto bottom-8 z-50 sm:hidden"
               onClick={() => setIsOpen(false)}
             >
               Close

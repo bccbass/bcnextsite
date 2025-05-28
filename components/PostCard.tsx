@@ -33,7 +33,7 @@ const PostCard = ({
         </div>
    
       </div>
-           <Link className=" theme-button self-center " href={"/process/" + slug}>
+           <Link className=" rounded-button self-center " href={"/process/" + slug}>
           {" "}
           More
         </Link>

@@ -3,7 +3,7 @@
 
 :root {
   --background: #464646;
-  /* --background: #f3f3f3; */
+  /* --background: var(--color-red-400); */
   --foreground: #eeeeee;
   /* --foreground: #575757; */
 }
@@ -12,7 +12,9 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: #2596be;
-  --color-secondary: #f97316;
+  /* --color-secondary: #f97316; */
+  --color-secondary: var(--color-red-400);
+
   /* --color-accent: var(--color-red-400); */
   --color-accent: #f93fb0;
   --font-sans: var(--font-sans);
@@ -66,10 +68,10 @@ body {
 }
 
 .section-title {
-  @apply drop-shadow-[3px_3px_1px_rgba(249,63,176)] text-neutral-300 font-bold text-4xl  uppercase md:text-6xl lg:text-7xl;
+  @apply drop-shadow-[3px_3px_1px_rgba(37,150,190)] text-neutral-300 font-bold text-4xl  uppercase md:text-6xl lg:text-7xl;
 }
 .badge-title {
-  @apply drop-shadow-[2px_2px_1px_rgba(249,63,176)] text-neutral-300 font-bold text-3xl  uppercase md:text-4xl lg:text-5xl;
+  @apply drop-shadow-[3px_3px_1px_rgba(37,150,190)] text-accent/80 font-bold  uppercase;
 }
 .feature-title-subtle {
   @apply drop-shadow-[1px_1px_1px_rgba(249,63,176)] text-neutral-300 font-bold uppercase;
@@ -88,15 +90,15 @@ body {
 } */
 
 .theme-button {
-  @apply bg-primary/90 hover:bg-primary  transition-colors duration-300 ease-in-out rounded-full px-6 py-2 text-neutral-100;
+  @apply bg-accent/90 hover:bg-primary  transition-colors duration-300 ease-in-out rounded-full px-6 py-2 text-neutral-100;
 }
 
 .square-button {
   @apply w-fit my-2 mb-1 px-6 rounded-none   text-neutral-600 bg-neutral-300 py-1 text-center  outline transition-all duration-300 hover:bg-accent outline-neutral-400 hover:text-white lg:text-lg;
 }
 
-.rounded-btn {
-  @apply bg-primary hover:bg-primary/80 transition-colors duration-300 ease-in-out rounded-full px-6 py-3 text-neutral-100;
+.rounded-button {
+  @apply bg-primary hover:bg-primary/80 transition-colors duration-300 ease-in-out rounded-xl px-3 py-1 text-neutral-100;
 }
 
 .pdf-button {
@@ -144,6 +146,10 @@ a {
 .prose h4,
 .prose h5 {
   @apply mt-6  text-neutral-300;
+}
+
+.prose strong {
+  @apply text-white font-bold;
 }
 
 .prose ul {

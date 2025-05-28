@@ -9,6 +9,9 @@ export const structure: StructureResolver = (S) =>
 			S.listItem().title("Website Settings").child(
 				S.document().schemaType("website").documentId("website") // Forces a single document
 			),
+			S.listItem().title("Discography").child(
+				S.document().schemaType("discography").documentId("discography") // Forces a single document
+			),
 			S.divider(),
       S.documentTypeListItem('section').title('Main Sections'),
       S.documentTypeListItem('project').title('Individual Projects'),
@@ -16,6 +19,6 @@ export const structure: StructureResolver = (S) =>
       S.documentTypeListItem('category').title('Categories'),
       S.divider(),
       ...S.documentTypeListItems().filter(
-        (item) => item.getId() && !['post', 'category','section','project', 'website'].includes(item.getId()!),
+        (item) => item.getId() && !['post', 'category','section','project', 'website', 'discography'].includes(item.getId()!),
       ),
     ])

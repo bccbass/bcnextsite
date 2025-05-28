@@ -1,5 +1,14 @@
 /** @format */
-import { PostPreview, Section, WebsiteData, SocialsData, CategoriesData, Post, Project } from "./types";
+import {
+  PostPreview,
+  Section,
+  WebsiteData,
+  SocialsData,
+  CategoriesData,
+  Post,
+  Project,
+  DiscographyData,
+} from "./types";
 
 import { createClient, groq } from "next-sanity";
 
@@ -10,11 +19,10 @@ export const sanityClient = createClient({
   apiVersion: "2023-01-01",
 });
 
-
-export async function getSlugs(type:string): Promise<{slug: {current: string}}[]> {
-  const data = await sanityClient.fetch(
-    `*[_type == "${type}"]{ slug }`
-  );
+export async function getSlugs(
+  type: string
+): Promise<{ slug: { current: string } }[]> {
+  const data = await sanityClient.fetch(`*[_type == "${type}"]{ slug }`);
   return data;
 }
 // Example function to fetch projects
@@ -44,8 +52,8 @@ export async function getAllPostsPreview(): Promise<PostPreview[]> {
     }
   `);
 }
-export async function getPost(slug:string): Promise<Post[]> {
-  return await sanityClient.fetch(   
+export async function getPost(slug: string): Promise<Post[]> {
+  return await sanityClient.fetch(
     `*[_type == "post" && slug.current == $slug][0]{
     _id,
 		title,
@@ -63,7 +71,8 @@ export async function getPost(slug:string): Promise<Post[]> {
       "url": document.asset->url 
     }
   }`,
-    { slug: slug });
+    { slug: slug }
+  );
 }
 export async function getSections(): Promise<Section[]> {
   return await sanityClient.fetch(groq`
@@ -100,6 +109,14 @@ export async function getWebsiteData(): Promise<WebsiteData> {
   briefBiography,
 	city,
 	socialLinks
+    }
+  `);
+}
+export async function getDiscographyData(): Promise<DiscographyData> {
+  return await sanityClient.fetch(groq`
+    *[_type == "discography"][0] {
+    title,
+    albums
     }
   `);
 }

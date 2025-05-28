@@ -82,7 +82,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             <Link
               href={section.projectWebsite}
               target="_blank"
-              className="square-button max-w-xl"
+              className="theme-button max-w-xl"
             >
               {`${section.title} Website`}
             </Link>

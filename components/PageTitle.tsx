@@ -2,7 +2,7 @@ import React from 'react'
 
 const PageTitle = ({title, description}:{title: string, description?: string}) => {
   return (
-        <div className="flex w-full  flex-col items-center justify-center py-4 md:pb-24 text-center   md:mt-6 ">
+        <div className="flex w-full  flex-col items-center justify-center py-4 text-center   md:mt-6 ">
           <h3 className="text-center section-title">
             {title}
           </h3>
