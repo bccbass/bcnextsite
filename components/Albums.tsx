@@ -2,18 +2,23 @@
 import React from "react";
 import AlbumCard from "./AlbumCard";
 
-type AlbumsProps = {
-  albums: {
+
+type AlbumType = {
     title: string;
     artist: string;
+        role: string;
+    label: string;
     image: string;
     purchaseLink?: string;
     vinyl: boolean;
     links: { platform: string; url: string }[];
-  }[];
+  }
+
+type AlbumsProps = {
+  albums: AlbumType[];
 };
 const Albums = ({ albums }: AlbumsProps) => {
-  const width = `md:w-1/${albums.length + 1}`;
+  // const width = `md:w-1/${albums.length + 1}`;
   return (
     <div className="flex w-full justify-center">
       <div
@@ -22,17 +27,10 @@ const Albums = ({ albums }: AlbumsProps) => {
       >
         {albums.map(
           (
-            album: {
-              title: string;
-              artist: string;
-              image: string;
-              purchaseLink?: string;
-              vinyl: boolean;
-              links: { platform: string; url: string }[];
-            },
+            album: AlbumType,
             index: number,
           ) => (
-            <AlbumCard key={index} width={width} album={album} index={index} />
+            <AlbumCard key={index}  album={album} />
           ),
         )}
       </div>
