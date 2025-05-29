@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { useEffect } from "react";
-import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import NavMenuItems from "./NavMenuItems";
 const NavMenu = ({
@@ -11,7 +10,6 @@ const NavMenu = ({
   isOpen: boolean;
   setOpen: (arg0: boolean) => void;
 }) => {
-  const pathname = usePathname();
 
   // Combined approach for both overflow and Lenis
   useEffect(() => {
