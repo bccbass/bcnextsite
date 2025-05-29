@@ -1,30 +1,32 @@
-'use client';
+"use client";
 // npm install react-hook-form @web3forms/react
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { motion } from "framer-motion";
+import FadeInOut from "./FadeInOut";
 import useWeb3Forms from "@web3forms/react";
 
 const Contact = () => {
-  const inputClassStyle = "border border-gray-400 rounded p-1 bg-black";
+  const inputClassStyle =
+    "bg-white/10 font-semibold border-gray-400  outline-none p-1 border-b backdrop-blur-lg";
   const { register, reset, handleSubmit } = useForm();
 
-  const [isSuccess, setIsSuccess] = useState< boolean >(false);
-  const [result, setResult] = useState< string | null >(null);
+  const [isSuccess, setIsSuccess] = useState<boolean>(false);
+  const [result, setResult] = useState<string | null>(null);
+  const [showForm, setShowForm] = useState<boolean>(false);
 
   const accessKey = "31670424-2432-4e48-8002-d7c5e175702e";
 
   const { submit: onSubmit } = useWeb3Forms({
     access_key: accessKey,
     settings: {
-      from_name: "PossumConnect",
-      subject: "Website, Hello!",
+      from_name: "Benjamin Campbell",
+      subject: "Website Hello!",
       // ... other settings
     },
     onSuccess: () => {
       setIsSuccess(true);
-      setResult("Message sent!");
+      setResult("Message sent - thank you");
       reset();
     },
     onError: (msg) => {
@@ -34,38 +36,63 @@ const Contact = () => {
   });
 
   return (
-    <div className="flex flex-col items-center justify-center h-54 bg-neutral-50 border w-full max-w-xl mb-12">
-      {!isSuccess && (
-        <form
-          className="flex flex-col space-y-4 my-2 p-4 font-thin text-lg w-full max-w-lg "
-          onSubmit={handleSubmit(onSubmit)}
-        >
-          <input
-            className={inputClassStyle}
-            placeholder="name"
-            type="text"
-            {...register("name", { required: true })}
-          />
-          <input
-            className={inputClassStyle}
-            placeholder="email"
-            type="email"
-            {...register("email", { required: true })}
-          />
-          <textarea
-            className={inputClassStyle}
-            placeholder="type your message"
-            rows={3}
-            {...register("message", { required: true })}
-          ></textarea>
+    <div
+      className="flex flex-col h-110 items-center justify-center w-full max-w-xl mb-12 p-12 rounded-2xl"
+      style={{
+        backgroundImage:
+          "url('https://res.cloudinary.com/dyb9ascpy/image/upload/v1724818853/possumpark/bhchbbx8x1xdawpse9ih.webp')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {!showForm && (
+        <button className="theme-button " onClick={() => setShowForm(true)}>
+          <span className="text-outline text-3xl "> Send a message</span>
+        </button>
+      )}
 
-          <button
-            className="ring-1 ring-red-300  ring-offset-2 hover:ring-red-100 self-end bg-white border-red-500 rounded px-2 border hover:bg-red-400 hover:text-white transition-colors"
-            type="submit"
-          >
-            Send Message
-          </button>
-        </form>
+      {!isSuccess && showForm && (
+        <FadeInOut>
+          <div className="centered-col w-full relative">
+            <form
+              className="flex flex-col space-y-4 my-2 p-4 text-lg w-full max-w-lg "
+              onSubmit={handleSubmit(onSubmit)}
+            >
+              <input
+                className={inputClassStyle}
+                placeholder="Full Name"
+                type="text"
+                {...register("name", { required: true })}
+              />
+              <input
+                className={inputClassStyle}
+                placeholder="Email"
+                type="email"
+                {...register("email", { required: true })}
+              />
+              <textarea
+                className={inputClassStyle}
+                placeholder="Type your message"
+                rows={2}
+                {...register("message", { required: true })}
+              ></textarea>
+
+              <button className="theme-button" type="submit">
+                Send Message
+              </button>
+            </form>
+            <div className="pt-6 flex flex-col items-center gap-8 w-full">
+              <button
+                className="text-xl font-semibold underline"
+                onClick={() => setShowForm(false)}
+              >
+                cancel
+              </button>
+              <p className="text-center">we respect your privacy</p>
+            </div>
+          </div>
+        </FadeInOut>
       )}
 
       {/* SENDING PROGRESS CARD */}
@@ -78,25 +105,15 @@ const Contact = () => {
       )} */}
 
       {isSuccess && (
-        <motion.div
-          animate={{
-            scale: [0, 1, 1, 0.95, 1],
-            borderRadius: ["100%", "0%", "0%", "0%", "0%"],
-          }}
-          transition={{
-            duration: 2,
-            ease: "easeInOut",
-            times: [0, 0.2, 0.5, 0.8, 1],
-            repeatDelay: 1,
-          }}
-          className="flex flex-col items-center bg-red-500 "
-        >
-          <div className="flex flex-col items-center border border-neutral-50 m-4 py-10 ">
-            <h2 className="text-2xl w-full text-center p-2 m-16 text-neutral-100 julius-sans-one-regular">
-              {result}
-            </h2>
+        <FadeInOut>
+          <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center border border-secondary   rounded-2xl overflow-hidden m-4  ">
+              <h2 className="text-3xl md:text-4xl backdrop-blur-sm bg-white/30 w-full text-center p-2 text-neutral-100 text-outline py-4 px-6">
+                {result}
+              </h2>
+            </div>
           </div>
-        </motion.div>
+        </FadeInOut>
       )}
     </div>
   );

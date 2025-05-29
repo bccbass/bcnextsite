@@ -52,7 +52,7 @@ body {
 }
 
 .text-outline {
-  @apply drop-shadow-[0_.8px_.8px_rgba(0,0,0,0.5)];
+  @apply drop-shadow-[1px_1px_1px_rgba(0,0,0,0.5)];
 }
 
 .text-outline-accent {

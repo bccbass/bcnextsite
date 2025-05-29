@@ -47,7 +47,7 @@ const NavMenu = ({
       <div className="flex flex-col items-center  z-50 justify-between h-1/2 my-20 text-3xl text-slate-100 font-light cursor-default">
         <div className="flex justify-around mx-auto px-10 md:px-20 py-16 md:py-20 gap-16 flex-wrap max-w-7xl ">
           <div className="flex flex-col gap-4 lg:gap-8 uppercase font-semibold ">
-    <NavMenuItems />
+    <NavMenuItems setOpen={setOpen} />
           </div>
         </div>
       </div>

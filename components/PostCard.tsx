@@ -16,7 +16,6 @@ const PostCard = ({
   slug,
   categories,
 }: PostCardProps) => {
-  console.log("categories", categories);
 
   return (
     <div

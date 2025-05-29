@@ -5,14 +5,14 @@ const menuItems = [
   { title: "Production", href: "/production" },
   { title: "Process", href: "/process" },
   { title: "Studio", href: "/discography" },
-  { title: "Contact", href: "/#contact" },
+  { title: "Hello", href: "/#hello" },
 ];
 const footerMenuItems = [
   { title: "Home", href: "/" },
   { title: "About", href: "/about" },
   { title: "Process", href: "/process" },
   { title: "Studio", href: "/discography" },
-  { title: "Contact", href: "/#contact" },
+  { title: "Hello", href: "/#hello" },
 ];
 
 export {menuItems, footerMenuItems};
