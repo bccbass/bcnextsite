@@ -5,6 +5,7 @@ import Explore from "@/components/sections/Explore";
 import Projects from "@/components/sections/Projects";
 import Process from "@/components/sections/Process";
 import ImageFeature from "@/components/sections/ImageFeature";
+import Hello from "@/components/sections/Hello";
 import Footer from "@/components/sections/Footer";
 import { getWebsiteData } from "@/lib/fetch";
 
@@ -25,6 +26,7 @@ const page = async () => {
       <Projects />
       <ImageFeature imgUrl="https://res.cloudinary.com/dyb9ascpy/image/upload/v1747185772/WebAssets/BenAndAngelica_lygs3g.webp" />
       <Process />
+      <Hello />
       <Footer />
     </div>
   );

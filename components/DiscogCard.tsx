@@ -39,15 +39,15 @@ const DiscogCard = ({ album }: DiscogCardProps) => {
           <SanityImage image={album.image} alt={`Image for ${album.title}`} />
         </div>
 
-        <h2 className="text-center text-lg py-4 text-primary font-semibold">
+        <h2 className="text-center text-lg py-4 text-neutral-700 capitalize font-semibold">
           {album.role}
         </h2>
 
-        {album.links && (
+        {/* {album.links && (
           <p className="mb-2 w-4/5 text-lg font-semibold text-neutral-600">
             Listen on
           </p>
-        )}
+        )} */}
         {album.links && <AlbumLinks albumLinks={album.links} />}
       </div>
     </DiscogModal>
