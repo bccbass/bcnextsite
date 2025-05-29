@@ -4,8 +4,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import FadeInOut from "./FadeInOut";
-import { easeInOut, motion, AnimatePresence } from "framer-motion";
-
 import useWeb3Forms from "@web3forms/react";
 
 const Contact = () => {
