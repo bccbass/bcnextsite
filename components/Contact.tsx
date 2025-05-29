@@ -4,11 +4,13 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import FadeInOut from "./FadeInOut";
+import { easeInOut, motion, AnimatePresence } from "framer-motion";
+
 import useWeb3Forms from "@web3forms/react";
 
 const Contact = () => {
   const inputClassStyle =
-    "bg-white/10 font-semibold border-gray-400  outline-none p-1 border-b backdrop-blur-lg";
+    "bg-secondary  font-semibold text-white border-gray-400  outline-none p-1 border-b-4 border-white backdrop-blur-lg";
   const { register, reset, handleSubmit } = useForm();
 
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
@@ -37,7 +39,7 @@ const Contact = () => {
 
   return (
     <div
-      className="flex flex-col h-110 items-center justify-center w-full max-w-xl mb-12 p-12 rounded-2xl"
+      className="flex flex-col h-fit min-h-146 items-center w-full max-w-xl mb-12 py-12 sm:px-12 px-4 rounded-2xl"
       style={{
         backgroundImage:
           "url('https://res.cloudinary.com/dyb9ascpy/image/upload/v1724818853/possumpark/bhchbbx8x1xdawpse9ih.webp')",
@@ -46,15 +48,21 @@ const Contact = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
+      
+      <h2 className="section-title">Hello</h2>
       {!showForm && (
-        <button className="theme-button " onClick={() => setShowForm(true)}>
+        <button
+          key={"showFormButton" + showForm}
+          className="theme-button  my-auto"
+          onClick={() => setShowForm(true)}
+        >
           <span className="text-outline text-3xl "> Send a message</span>
         </button>
       )}
 
-      {!isSuccess && showForm && (
-        <FadeInOut>
-          <div className="centered-col w-full relative">
+      <FadeInOut>
+        {!isSuccess && showForm ? (
+          <div key={"form"} className="centered-col w-full relative">
             <form
               className="flex flex-col space-y-4 my-2 p-4 text-lg w-full max-w-lg "
               onSubmit={handleSubmit(onSubmit)}
@@ -78,7 +86,7 @@ const Contact = () => {
                 {...register("message", { required: true })}
               ></textarea>
 
-              <button className="theme-button" type="submit">
+              <button className="theme-button mt-4" type="submit">
                 Send Message
               </button>
             </form>
@@ -92,8 +100,8 @@ const Contact = () => {
               <p className="text-center">we respect your privacy</p>
             </div>
           </div>
-        </FadeInOut>
-      )}
+        ) : null}
+      </FadeInOut>
 
       {/* SENDING PROGRESS CARD */}
       {/* {isClicked && (
@@ -106,7 +114,7 @@ const Contact = () => {
 
       {isSuccess && (
         <FadeInOut>
-          <div className="flex flex-col items-center">
+          <div key={"statusCard"} className="flex flex-col items-center">
             <div className="flex flex-col items-center border border-secondary   rounded-2xl overflow-hidden m-4  ">
               <h2 className="text-3xl md:text-4xl backdrop-blur-sm bg-white/30 w-full text-center p-2 text-neutral-100 text-outline py-4 px-6">
                 {result}

@@ -2,11 +2,16 @@
 import React from "react";
 import { Suspense } from "react";
 import Link from "next/link";
-import { usePathname, useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { menuItems } from "@/lib/menuItems";
-const NavMenuItems = ({classStyle = 'menu-item', setOpen}:{classStyle?: string, setOpen: (arg0: boolean) => void;}) => {
+const NavMenuItems = ({
+  classStyle = "menu-item",
+  setOpen,
+}: {
+  classStyle?: string;
+  setOpen: (arg0: boolean) => void;
+}) => {
   const pathname = usePathname();
-
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -16,11 +21,13 @@ const NavMenuItems = ({classStyle = 'menu-item', setOpen}:{classStyle?: string, 
           <Link
             key={i}
             // Logic to close menu if on homepage and link is an anchor
-            onClick={() => pathname == '/' && item.href.includes('#') ? setOpen(false) : null}
+            onClick={() =>
+              pathname == "/" && item.href.includes("#") ? setOpen(false) : null
+            }
             className={classStyle}
             href={item.href}
           >
-            { item.title }
+            {item.title}
           </Link>
         ))}
     </Suspense>

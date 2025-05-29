@@ -8,7 +8,7 @@ const Process = async () => {
   const posts = await getPostsPreview();
 
   return (
-    <div className="flex flex-col gap-4 section">
+    <div className="flex flex-col gap-4 bg-secondary ">
       <div className="flex flex-col justify-center md:flex-row gap-6 md:gap-16 pt-10">
         <h2 className="section-title    ">Process</h2>{" "}
         {/* <div className="prose prose-lg pretty ">
@@ -41,7 +41,7 @@ const Process = async () => {
           </div>
         </div>
       </div> */}
-      <div className="pt-12 flex flex-wrap justify-center md:justify-start w-full gap-16 sm:gap-x-10 lg:gap-y-20 ">
+      <div className="pt-12 flex flex-wrap justify-center  w-full gap-16 sm:gap-x-10 lg:gap-y-20 ">
         {/* <TitleCard title='Process' description='A space to share the nuts and bolts of the creative process: works
             in progress, transcriptions, musings and any other elements that
             might be orphaned from a larger collection of work, worthy of its

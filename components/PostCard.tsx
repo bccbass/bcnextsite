@@ -19,7 +19,7 @@ const PostCard = ({
 
   return (
     <div
-      className={`flex flex-col rounded-2xl w-full md:max-w-72  md:w-full gap-2 border  border-neutral-500 justify-between items-center  px-2 py-3 `}
+      className={`flex flex-col rounded-2xl w-full md:max-w-72  md:w-full gap-2 border bg-background border-neutral-500 justify-between items-center  px-2 py-3 `}
     >
       <div className="flex flex-col items-center gap-2">
         <div className=" w-full rounded-2xl overflow-hidden">
