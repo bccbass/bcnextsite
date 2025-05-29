@@ -1,12 +1,12 @@
 import React from "react";
-// import Badge from "@/components/Badge";
+import HeaderBadge from "@/components/HeaderBadge";
 // import welcomeRiver from "../../public/waterfall.webp";
 import NavHamburger from "../NavHamburger";
 
 const Header = () => {
   return (
-    <div className=" w-screen z-50">
-      {/* <Badge color="text-neutral-100" /> */}
+    <div className="w-full z-50">
+      <HeaderBadge color="text-neutral-100" />
       <NavHamburger />
     </div>
   );

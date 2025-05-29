@@ -64,18 +64,18 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           description={section.description}
           body={section.body}
         />
-        {section.mediaLinks && (
-          <MediaModal imgUrl={section.mediaLinks[0].URL}>
-            <MediaCarousel mediaLinks={section.mediaLinks} />
-          </MediaModal>
-        )}
+
+        {section.albums && <Albums albums={section.albums} />}
 
         {section.displayBodySecondary && (
           <ProjectBodySecondary body={section.bodySecondary} />
         )}
 
-        {section.albums && <Albums albums={section.albums} />}
-
+        {section.mediaLinks && (
+          <MediaModal imgUrl={section.mediaLinks[0].URL}>
+            <MediaCarousel mediaLinks={section.mediaLinks} />
+          </MediaModal>
+        )}
         <div className="mt-0 flex w-full flex-wrap items-center justify-center ">
           {section.pdfMedia && <PDFContainer pdfs={section.pdfMedia} />}
           {section.projectWebsite && (

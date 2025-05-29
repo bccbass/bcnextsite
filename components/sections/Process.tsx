@@ -52,6 +52,7 @@ const Process = async () => {
             title={post.title}
             slug={post.slug.current}
             image={post.imageUrl}
+            categories={post.categories}
             description={post.description}
           />
         ))}

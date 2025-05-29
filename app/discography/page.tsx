@@ -11,7 +11,7 @@ const page = async () => {
     console.log('discog', discographyData.albums);
   return (
     <PageWrapper>
-        <PageTitle title="Discography" />
+        <PageTitle title="Studio" />
         <DiscogAlbums albums={discographyData.albums} />
         
     </PageWrapper>

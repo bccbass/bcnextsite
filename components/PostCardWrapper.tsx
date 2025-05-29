@@ -34,6 +34,7 @@ const PostCardWrapper = ({posts}:PostCardWrapperProps) => {
               title={post.title}
               slug={post.slug.current}
               image={post.imageUrl}
+              categories={post.categories}
               description={post.description}
             />
           ))

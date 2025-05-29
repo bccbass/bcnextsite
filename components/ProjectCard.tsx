@@ -17,7 +17,7 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <div
-      className={`flex flex-col w-7/8 md:w-2/5 max-w-sm justify-between items-cente pb-4`}
+      className={`flex flex-col w-full md:w-2/5 max-w-sm justify-between items-cente pb-4`}
     >
       <div className="flex flex-col items-center gap-2">
         <div className=" w-full rounded-4xl overflow-hidden">

@@ -90,19 +90,23 @@ body {
 } */
 
 .theme-button {
-  @apply bg-accent/90 hover:bg-primary  transition-colors duration-300 ease-in-out rounded-full px-6 py-2 text-neutral-100;
+  @apply bg-accent/90 hover:bg-primary  border-2 transition-colors duration-300 ease-in-out rounded-full px-6 py-2 text-neutral-100;
 }
 
 .square-button {
-  @apply w-fit my-2 mb-1 px-6 rounded-none   text-neutral-600 bg-neutral-300 py-1 text-center  outline transition-all duration-300 hover:bg-accent outline-neutral-400 hover:text-white lg:text-lg;
+  @apply w-fit my-2 mb-1 px-6 rounded-none text-neutral-600 bg-neutral-300 py-1 text-center  outline transition-all duration-300 hover:bg-accent outline-neutral-400 hover:text-white lg:text-lg;
 }
 
 .rounded-button {
-  @apply bg-primary hover:bg-primary/80 transition-colors duration-300 ease-in-out rounded-xl px-3 py-1 text-neutral-100;
+  @apply bg-primary hover:bg-primary/80 border-2 transition-colors duration-300 ease-in-out rounded-2xl my-2 px-3 py-1 text-neutral-100;
 }
 
 .pdf-button {
   @apply w-full my-4 mb-1 px-6 rounded-xs text-neutral-100 bg-accent py-1 text-center  outline-3  transition-all duration-300 hover:bg-primary  border-2 border-pink-200 outline-pink-500 hover:border-cyan-500 hover:outline-cyan-700 lg:text-xl;
+}
+
+.tag {
+  @apply text-neutral-100 px-2 text-[.6rem] font-semibold tracking-[-.5] rounded-2xl bg-neutral-500 py-0.5 hover:bg-accent transition-all duration-300 border uppercase border-neutral-400;
 }
 
 .active-tag {
@@ -113,7 +117,10 @@ body {
   @apply text-lg  flex items-center hover:underline underline-offset-6 decoration-accent decoration-2 hover:text-foreground  transition-all duration-200;
 }
 .menu-item {
-  @apply text-2xl md:text-4xl lg:text-5xl border-b-4 text-accent border-primary hover:border-accent hover:text-secondary w-fit transition-all duration-300 ease-in-out;
+  @apply text-4xl md:text-5xl lg:text-5xl border-b-4 text-accent border-primary hover:border-accent hover:text-secondary w-fit transition-all duration-300 ease-in-out;
+}
+.inset-menu-item {
+  @apply text-3xl  border-b-4 text-accent border-background hover:border-accent hover:text-secondary w-fit transition-all duration-300 ease-in-out;
 }
 
 .row-centered {
@@ -153,7 +160,7 @@ a {
 }
 
 .prose ul {
-  @apply mx-auto w-fit self-center px-0;
+  @apply  w-fit  px-0;
 }
 .prose ul > li {
   @apply my-1 list-none;

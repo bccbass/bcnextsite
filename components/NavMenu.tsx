@@ -1,11 +1,9 @@
 "use client";
 import React from "react";
-import { Suspense, useEffect } from "react";
+import { useEffect } from "react";
 import { usePathname } from "next/navigation";
-import Link from "next/link";
 import { motion } from "framer-motion";
-import { menuItems } from "@/lib/menuItems";
-
+import NavMenuItems from "./NavMenuItems";
 const NavMenu = ({
   setOpen,
   isOpen,
@@ -51,26 +49,13 @@ const NavMenu = ({
       <div className="flex flex-col items-center  z-50 justify-between h-1/2 my-20 text-3xl text-slate-100 font-light cursor-default">
         <div className="flex justify-around mx-auto px-10 md:px-20 py-16 md:py-20 gap-16 flex-wrap max-w-7xl ">
           <div className="flex flex-col gap-4 lg:gap-8 uppercase font-semibold ">
-            <Suspense fallback={<div>Loading...</div>}>
-              {menuItems
-                .filter((item) => pathname !== item.href)
-                .map((item, i) => (
-                  <Link
-                    key={i}
-                    // onClick={() => setOpen(false)}
-                    className="menu-item"
-                    href={item.href}
-                  >
-                    {item.title}
-                  </Link>
-                ))}
-            </Suspense>
+    <NavMenuItems />
           </div>
         </div>
       </div>
-      <p className="text-neutral-300 text-xs md:text-sm absolute bottom-1">
+      {/* <p className="text-neutral-300 text-xs md:text-sm absolute bottom-1">
         Benjamin Campbell © 2025
-      </p>
+      </p> */}
     </motion.div>
   );
 };

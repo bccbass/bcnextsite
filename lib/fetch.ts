@@ -32,6 +32,7 @@ export async function getPostsPreview(): Promise<Post[]> {
       _id,
       title,
       sortOrder,
+     "categories": categories[]->title,
       slug,
       description,
       "imageUrl": mainImage,
