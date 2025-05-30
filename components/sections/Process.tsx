@@ -8,9 +8,9 @@ const Process = async () => {
   const posts = await getPostsPreview();
 
   return (
-    <div className="flex flex-col gap-4 bg-secondary ">
+    <div className="flex flex-col gap-4 ">
       <div className="flex flex-col justify-center md:flex-row gap-6 md:gap-16 pt-10">
-        <h2 className="section-title    ">Process</h2>{" "}
+        <h2 className="section-title  pt-20 pb-8  ">Process</h2>{" "}
         {/* <div className="prose prose-lg pretty ">
           <div className="text-neutral-400">
  A space to share the nuts and bolts of the creative process: works

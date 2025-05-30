@@ -19,20 +19,20 @@ const PostCard = ({
 
   return (
     <div
-      className={`flex flex-col rounded-2xl w-full md:max-w-72  md:w-full gap-2 border bg-background border-neutral-500 justify-between items-center  px-2 py-3 `}
+      className={`flex flex-col rounded-2xl w-full md:max-w-72  md:w-full gap-2 border bg-secondary border-neutral-300 justify-between items-center  px-1 py-1 `}
     >
       <div className="flex flex-col items-center gap-2">
         <div className=" w-full rounded-2xl overflow-hidden">
           <SanityImage image={image} alt={title} />
         </div>
         <div className="flex flex-col text-pretty items-center md:items-start  gap-3 justify-center mb-8 px-2">
-          <h3 className={` font-semibold text-xl  md:text-2xl text-primary`}>
+          <h3 className={` font-semibold text-xl  md:text-2xl text-outline text-center w-full`}>
             {title}
           </h3>
 
-          <p className="prose  prose-md md:prose-lg text-neutral-100">
+          {/* <p className="prose  prose-md md:prose-lg text-neutral-300">
             {description}
-          </p>
+          </p> */}
         </div>
       </div>
       <div className="flex flex-col items-center justify-center w-full gap-6">

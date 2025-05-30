@@ -6,7 +6,7 @@ import type { PortableTextBlock } from "@sanity/types";
 
 const About = ({ briefBiography }: { briefBiography: PortableTextBlock[] | string }) => {
   return (
-    <div className="flex flex-col gap-16 section pt-24">
+    <div className="flex flex-col gap-16 section ">
       <div className="  flex flex-col md:flex-row gap-6 md:gap-16 lg:gap-20">
         <h2 className="section-title">about</h2>
         <div className="prose prose-lg pretty text-white">

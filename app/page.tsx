@@ -6,9 +6,10 @@ import Projects from "@/components/sections/Projects";
 import Process from "@/components/sections/Process";
 import ImageFeature from "@/components/sections/ImageFeature";
 import Hello from "@/components/sections/Hello";
-import DividerGrunge from "@/components/sections/DividerGrunge";
+// import DividerGrunge from "@/components/sections/DividerGrunge";
 import DividerStripes from "@/components/sections/DividerStripes";
-import DividerSpikes from "@/components/sections/DividerSpikes";
+import DividerLayered from "@/components/sections/DividerLayered";
+// import DividerSpikes from "@/components/sections/DividerSpikes";
 import Footer from "@/components/sections/Footer";
 import { getWebsiteData } from "@/lib/fetch";
 
@@ -22,19 +23,18 @@ const page = async () => {
     >
       <Hero />
       <About briefBiography={websiteData.briefBiography} />
-     <DividerStripes/>
+      <DividerStripes />
       <Explore />
 
       {/* <ImageFeature imgUrl="https://res.cloudinary.com/dyb9ascpy/image/upload/v1747204590/WebAssets/t96v0r1hwc6ofzlbdnlj.jpg" /> */}
       <ImageFeature imgUrl="https://res.cloudinary.com/dyb9ascpy/image/upload/v1747714103/WebAssets/assembly_fettzn.webp" />
       <Projects />
       <ImageFeature imgUrl="https://res.cloudinary.com/dyb9ascpy/image/upload/v1747185772/WebAssets/BenAndAngelica_lygs3g.webp" />
-      <div className="rotate-180 z-10 -mt-20">
-      < DividerGrunge/>
-
-      </div>
+      {/* <div className="rotate-180 z-10 -mt-20">
+        <DividerGrunge />
+      </div> */}
       <Process />
-      < DividerSpikes/>
+      <DividerLayered />
       <Hello />
       <Footer />
     </div>
