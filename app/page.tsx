@@ -8,7 +8,7 @@ import ImageFeature from "@/components/sections/ImageFeature";
 import Hello from "@/components/sections/Hello";
 // import DividerGrunge from "@/components/sections/DividerGrunge";
 import DividerStripes from "@/components/sections/DividerStripes";
-import DividerLayered from "@/components/sections/DividerLayered";
+// import DividerLayered from "@/components/sections/DividerLayered";
 // import DividerSpikes from "@/components/sections/DividerSpikes";
 import Footer from "@/components/sections/Footer";
 import { getWebsiteData } from "@/lib/fetch";
@@ -23,7 +23,7 @@ const page = async () => {
     >
       <Hero />
       <About briefBiography={websiteData.briefBiography} />
-      <DividerStripes />
+      {/* <DividerStripes /> */}
       <Explore />
 
       {/* <ImageFeature imgUrl="https://res.cloudinary.com/dyb9ascpy/image/upload/v1747204590/WebAssets/t96v0r1hwc6ofzlbdnlj.jpg" /> */}
@@ -34,7 +34,7 @@ const page = async () => {
         <DividerGrunge />
       </div> */}
       <Process />
-      <DividerLayered />
+      <DividerStripes />
       <Hello />
       <Footer />
     </div>

@@ -4,8 +4,8 @@ const DividerStripes = ({ color = "secondary" }: { color?: string }) => {
   const fillColor = `var(--color-${color})`;
 
   return (
-    <div className="w-screen z-30 h-18 overflow-hidden">
-      <div className="h-14 bg-primary w-full z-50 -mb-20 mt-2"></div>
+    <div className="w-screen z-30 h-12 overflow-hidden -mb-2">
+      <div className="h-8 bg-primary w-full z-50 -mb-20 mt-2"></div>
       <div className="z-10">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100">
           <path

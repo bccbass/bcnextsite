@@ -16,7 +16,7 @@ const Section = ({ title, image, slug, i }: SectionProps) => {
   return (
     <Link
       href={"/" + slug}
-      className={`mt-20 flex flex-col w-7/8 sm:w-full md:w-1/2 lg:w-2/5 max-w-128  h-fit bg-background justify-center items-center md:items-start outline-8 rounded-4xl `}
+      className={` flex flex-col w-7/8 sm:w-full md:w-1/2 lg:w-2/5 max-w-128  h-fit bg-background justify-center items-center md:items-start outline-8 rounded-4xl `}
     >
       <div
         className="w-full h-128 overflow-hidden rounded-4xl "
