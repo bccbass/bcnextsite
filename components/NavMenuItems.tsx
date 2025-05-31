@@ -7,9 +7,10 @@ import { menuItems } from "@/lib/menuItems";
 const NavMenuItems = ({
   classStyle = "menu-item",
   setOpen,
+  
 }: {
   classStyle?: string;
-  setOpen: (arg0: boolean) => void;
+  setOpen?: (arg0: boolean) => void;
 }) => {
   const pathname = usePathname();
 
@@ -22,7 +23,7 @@ const NavMenuItems = ({
             key={i}
             // Logic to close menu if on homepage and link is an anchor
             onClick={() =>
-              pathname == "/" && item.href.includes("#") ? setOpen(false) : null
+             setOpen && pathname == "/" && item.href.includes("#")  ? setOpen(false) : null
             }
             className={classStyle}
             href={item.href}

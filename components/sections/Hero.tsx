@@ -17,7 +17,7 @@ const Hero = () => {
   const y = useTransform(scrollYProgress, [0, 1], [0, 550]);
   return (
     <>
-      <NavHamburger />
+      <NavHamburger homePage={true}/>
       <motion.div
         style={{ opacity: scrollOpacity }}
         ref={ref}

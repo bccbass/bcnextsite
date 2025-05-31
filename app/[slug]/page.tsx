@@ -6,7 +6,7 @@ import MediaCarousel from "@/components/MediaCarousel";
 import Albums from "@/components/Albums";
 import MediaModal from "@/components/MediaModal";
 // import ProjectExpo from "@/components/ProjectExpo";
-import PageTitle from "@/components/PageTitle";
+// import PageTitle from "@/components/PageTitle";
 import VideosWrapper from "@/components/VideosWrapper";
 import PDFContainer from "@/components/PDFContainer";
 import Link from "next/link";
@@ -57,15 +57,17 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   // const totalMediaElements =  totalAlbums + videoEmbed
 
   return (
-    <PageWrapper>
+    <PageWrapper title={section.title}>
       <div className=" flex w-full flex-col items-center justify-between">
-        <PageTitle title={section.title} />
+        {section.videos && <VideosWrapper videos={section.videos} />}
+
+        {/* <PageTitle title={section.title} /> */}
         <ProjectBody
           title={section.title}
           description={section.description}
           body={section.body}
         />
-        {section.videos && <VideosWrapper videos={section.videos} />}
+        {/* {section.videos && <VideosWrapper videos={section.videos} />} */}
         {section.mediaLinks && (
           <MediaModal imgUrl={section.mediaLinks[0].URL}>
             <MediaCarousel mediaLinks={section.mediaLinks} />

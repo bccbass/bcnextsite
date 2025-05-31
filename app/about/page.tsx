@@ -7,7 +7,7 @@ const page = async () => {
   const websiteData = await getWebsiteData();
 
   return (
-    <PageWrapper>
+    <PageWrapper title="About">
       <Biography biography={websiteData.biography} />
     </PageWrapper>
   );

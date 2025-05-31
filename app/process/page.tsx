@@ -13,8 +13,8 @@ const page = async () => {
   const categories = await getCategories();
 
   return (
-    <PageWrapper>
-      <PageTitle title="Process" description="Works in progress, transcriptions and musings." />
+    <PageWrapper title="Process">
+      {/* <PageTitle title="Process" description="Works in progress, transcriptions and musings." /> */}
       <Suspense fallback={<div>Loading...</div>}>
       <div className="">
         < Tags categories={categories} />

@@ -66,7 +66,13 @@ body {
 .section {
   @apply w-full px-8 xl:px-0 pb-28 lg:py-48 pt-28  max-w-7xl mx-auto;
 }
+.page-section {
+  @apply w-full px-8  pb-28 lg:py-42 pt-28  md:pr-24 lg:pr-36 xl:pr-48 md:pl-8 mx-auto;
+}
 
+.page-title {
+  @apply drop-shadow-[3px_3px_1px_rgba(37,150,190)] text-neutral-300 font-bold  uppercase ;
+}
 .section-title {
   @apply drop-shadow-[3px_3px_1px_rgba(37,150,190)] text-neutral-300 font-bold text-4xl  uppercase md:text-6xl lg:text-7xl;
 }

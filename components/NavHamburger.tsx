@@ -5,7 +5,7 @@ import NavMenu from "./NavMenu";
 import { Cross as Hamburger } from "hamburger-react";
 
 
-function NavHamburger() {
+function NavHamburger({homePage = false}:{homePage?: boolean}) {
     const [isOpen, setOpen] = useState(false);
     
 
@@ -13,7 +13,7 @@ function NavHamburger() {
     <>
       
 
-      <div className={`top-4 right-8 z-50 fixed`}>
+      <div className={`top-4 right-8 z-50 fixed ${homePage ? '' : 'lg:hidden'}`}>
         <Hamburger
         //   className=""
           // onClick={handleNavToggle}
