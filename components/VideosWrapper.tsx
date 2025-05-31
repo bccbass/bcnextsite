@@ -2,7 +2,7 @@
 import React from "react";
 import { useState } from "react";
 import VideoPlayer from "@/components/VideoPlayer";
-
+import VideoPlayerYouTube from "./VideoPlayerYouTube";
 type VideosPropType = {
   videos: {
     category: string;
@@ -17,6 +17,7 @@ type VideosPropType = {
         };
       };
       url: string;
+      youtubeId: string
     }[];
   }[];
 };
@@ -36,12 +37,20 @@ const VideosWrapper = ({ videos }: VideosPropType) => {
       </h2> */}
       <div className="flex flex-wrap justify-between items-stretch w-full gap-y-6">
         {videoCategory?.videos?.map((video, index) => (
+          video.youtubeId ? <VideoPlayerYouTube
+            key={index}
+            video={video}
+            isPlaying={isPlaying}
+            setIsPlaying={setIsPlaying}
+          />
+          : 
           <VideoPlayer
             key={index}
             video={video}
             isPlaying={isPlaying}
             setIsPlaying={setIsPlaying}
           />
+          
         ))}
       </div>
     </div>

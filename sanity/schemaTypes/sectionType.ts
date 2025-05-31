@@ -54,10 +54,10 @@ export const sectionType = defineType({
       ],
     }),
 
-{
+    {
       name: "videos",
       title: "Videos",
-      description: "Media hosted on Cloudinary",
+      description: "Media hosted on Cloudinary/YouTube",
       type: "array",
       of: [
         defineField({
@@ -102,7 +102,8 @@ export const sectionType = defineType({
                       title: "Video Thumbnail",
                       type: "image",
                     },
-                    { name: "url", title: "URL", type: "url" },
+                    { name: "url", title: "URL", type: "url", description: "URL for Cloudinary resource" },
+                    { name: "youtubeId", title: "YouTube ID", type: "string", description: "ID for YouTube video - if present this will over ride cloudinary resource " },
                   ],
                 }),
               ],
@@ -205,7 +206,7 @@ export const sectionType = defineType({
         }),
       ],
     },
-        {
+    {
       name: "albums",
       title: "Albums",
       description: "Album pop-out with streaming links",
