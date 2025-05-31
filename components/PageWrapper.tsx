@@ -9,7 +9,7 @@ const getFontSize = (text:string) => {
   if (text?.length >= 8) return ' text-6xl ';
   return 'text-base';
 };
-const PageWrapper = ({ children, title }: {title: string; children: React.ReactNode }) => {
+const PageWrapper = ({ children, title='' }: {title?: string; children: React.ReactNode }) => {
   const fontSize = getFontSize(title)
   return (
     <div>
