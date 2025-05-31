@@ -1,7 +1,6 @@
 import React from 'react'
 import { PortableTextBlock } from 'next-sanity'
 import { PortableText } from '@portabletext/react'
-import NavMenuItems from "./NavMenuItems";
 
 const Biography = ({biography}:{biography: PortableTextBlock[] | string }) => {
   return (

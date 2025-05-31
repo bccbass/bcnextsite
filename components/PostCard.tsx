@@ -30,9 +30,9 @@ const PostCard = ({
             {title}
           </h3>
 
-          {/* <p className="prose  prose-md md:prose-lg text-neutral-300">
+          <p className="prose  prose-md md:prose-lg text-neutral-300">
             {description}
-          </p> */}
+          </p>
         </div>
       </div>
       <div className="flex flex-col items-center justify-center w-full gap-6">

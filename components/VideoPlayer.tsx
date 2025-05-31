@@ -60,7 +60,7 @@ const VideoPlayer = ({ video, isPlaying, setIsPlaying }: VideoPlayerProps) => {
           </div>
           <video
             ref={vidRef}
-            className="w-full relative top-0 left-0"
+            className="w-full  relative top-0 left-0"
             // style={{transform: 'translate(0px, -1px)'}}
             height={"100%"}
             width={"100%"}

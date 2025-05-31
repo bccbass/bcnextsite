@@ -1,7 +1,7 @@
 import React from "react";
 import { Suspense } from "react";
 import PageWrapper from "@/components/PageWrapper";
-import PageTitle from "@/components/PageTitle";
+// import PageTitle from "@/components/PageTitle";
 import PostCardWrapper from "@/components/PostCardWrapper";
 import Tags from "@/components/Tags";
 

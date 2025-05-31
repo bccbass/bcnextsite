@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useRef } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import ReactPlayer from "react-player";
 
 // import { isMobile } from "react-device-detect";
@@ -74,6 +74,7 @@ const VideoPlayerYouTube = ({
 
           <div className="aspect-video h-full w-full">
             <ReactPlayer
+              ref={vidRef}
               key={video.title}
               modestbranding={1}
               controls

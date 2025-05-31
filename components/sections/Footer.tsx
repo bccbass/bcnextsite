@@ -4,7 +4,7 @@ import Socials from "../Socials";
 import { footerMenuItems } from "@/lib/menuItems";
 import FooterProcessItems from "./FooterProcessItems";
 import FooterExploreItems from "./FooterExploreItems";
-import DividerGrunge from "./DividerGrunge";
+// import DividerGrunge from "./DividerGrunge";
 
 const Footer = async () => {
   return (
