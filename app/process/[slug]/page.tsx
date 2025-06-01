@@ -92,7 +92,6 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
       </div>
                   <Link
               href={'/process'}
-              target="_blank"
               className="theme-button max-w-xl mt-32"
             >
               Back to Posts
