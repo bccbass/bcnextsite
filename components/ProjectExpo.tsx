@@ -53,7 +53,7 @@ const ProjectExpo = ({ mainImage, title, description }: ProjectProps) => {
 
       {/* Title and Description */}
       <motion.div
-        className="w-full md:w-1/2 h-full"
+        className="w-full md:w-1/2 h-full mx-6"
         initial={{ opacity: 0, y: 1 }}
         whileInView={{ opacity: 1, y: 0}}
         transition={{
@@ -63,10 +63,10 @@ const ProjectExpo = ({ mainImage, title, description }: ProjectProps) => {
         }}
       >
         <div className="relative flex w-full items-start h-full justify-center py-8  md:items-center">
-          <div className="mx-8 flex w-full max-w-xl flex-col items-center justify-center border-t border-b border-neutral-400 py-4 text-center md:my-10 lg:mx-20 lg:py-8">
-            {/* <h3 className="text-center text-3xl text-neutral-300 md:text-4xl lg:text-5xl">
+          <div className="mx-8 flex w-full max-w-xl flex-col items-center justify-center  border-neutral-400 py-4 text-center md:my-10 lg:mx-20 lg:py-8">
+            <h3 className="text-center text-3xl page-title text-neutral-300 md:text-4xl lg:text-5xl">
               {title}
-            </h3> */}
+            </h3>
             <p className="block w-full px-2 pt-5 text-xl leading-9 font-light text-neutral-400 italic md:text-2xl">
               {description}
             </p>
