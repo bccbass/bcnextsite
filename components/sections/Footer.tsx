@@ -9,7 +9,7 @@ import FooterExploreItems from "./FooterExploreItems";
 const Footer = async () => {
   return (
     <>
-      <div className="rotate-180 z-10 lg:-mt-30 -mt-20  drop-shadow-xl   drop-shadow-primary -mb-10">
+      <div className="rotate-180 z-10 lg:-mt-30 -mt-30 md:-mt-20  drop-shadow-xl   drop-shadow-primary -mb-10">
         <div className="w-full min-w-[105rem] z-20">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100">
             <path

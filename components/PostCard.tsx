@@ -22,7 +22,7 @@ const PostCard = ({
     <FadeIn y={false} random>
     
     <div
-      className={`flex flex-col shadow-2xl rounded-2xl w-full md:max-w-72  md:w-full gap-2  bg-gray-800 border border-neutral-600 300 justify-between items-center  `}
+      className={`flex flex-col shadow-2xl rounded-2xl w-full max-w-md md:max-w-84 gap-2  bg-gray-800 border border-neutral-600 justify-between items-center  `}
     >
       <div className="flex flex-col items-center gap-2">
         <div className=" w-full rounded-t-2xl overflow-hidden">

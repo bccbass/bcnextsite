@@ -28,7 +28,7 @@ export async function getSlugs(
 // Example function to fetch projects
 export async function getPostsPreview(): Promise<Post[]> {
   return await sanityClient.fetch(groq`
-    *[_type == "post"][0...4] | order(sortOrder asc) {
+    *[_type == "post"][0...6] | order(sortOrder asc) {
       _id,
       title,
       sortOrder,
