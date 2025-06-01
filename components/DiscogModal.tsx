@@ -57,7 +57,7 @@ export default function DiscogModal({
     <>
       <button className={` max-w-2xl`} onClick={() => setIsOpen(true)}>
         <FadeIn random={true} y={false}>
-        <div className="w-full md:w-60 lg:w-72 overflow-hidden  border-neutral-400">
+        <div className="w-full md:w-60 lg:w-72 overflow-hidden  border-neutral-400 shadow-xl ">
           <SanityImage image={image} alt={alt} />
         </div>
         </FadeIn>

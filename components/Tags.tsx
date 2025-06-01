@@ -13,19 +13,9 @@ const Tags = ({ categories }: CategoryType) => {
     searchParams.get("tag") !== null ? searchParams.get("tag") : "all";
 
   return (
-    <div className="flex w-full items-center justify-end">
+    <div className="flex flex-col gap-6 w-full items-center justify-center">
       <div className="justify-center items-center flex flex-wrap gap-4">
-        <Link
-          href={"/process"}
-          className={
-            tag == null || tag != "all"
-              ? "rounded-full py-1 px-3 bg-accent hover:text-white flex items-center"
-              : "opacity-0 rounded-full py-1 px-3"
-          }
-        >
-          Clear Filter
-          <IoIosCloseCircleOutline className="inline-block ml-1 text-xl" />
-        </Link>
+
         {categories.map((category) => (
           <Link
             key={category._id}
@@ -40,7 +30,19 @@ const Tags = ({ categories }: CategoryType) => {
             {category.title}
           </Link>
         ))}
+        
       </div>
+              <Link
+          href={"/process"}
+          className={
+            tag == null || tag != "all"
+              ? "rounded-full py-1 px-3 bg-accent hover:text-white flex items-center text-sm md:text-lg"
+              : "opacity-0 rounded-full py-1 px-3 text-sm md:text-lg"
+          }
+        >
+          Clear Filter
+          <IoIosCloseCircleOutline className="inline-block ml-1 text-xl" />
+        </Link>
     </div>
   );
 };

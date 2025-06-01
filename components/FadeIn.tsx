@@ -28,6 +28,7 @@ const FadeIn = ({
         duration: 0.5,
         ease: easeIn,
       }}
+      className="flex"
     >
       {children}
     </motion.div>

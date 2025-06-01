@@ -5,7 +5,6 @@ import PageWrapper from "@/components/PageWrapper";
 import MediaCarousel from "@/components/MediaCarousel";
 import Albums from "@/components/Albums";
 import MediaModal from "@/components/MediaModal";
-import PageTitle from "@/components/PageTitle";
 
 // import ProjectExpo from "@/components/ProjectExpo";
 import PDFContainer from "@/components/PDFContainer";
@@ -55,9 +54,8 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   // const totalMediaElements =  totalAlbums + videoEmbed
 
   return (
-    <PageWrapper>
+    <PageWrapper title={section.title}>
       <div className=" flex w-full flex-col items-center justify-between">
-        <PageTitle title={section.title} />
 
         <ProjectBody
           title={section.title}

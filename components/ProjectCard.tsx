@@ -25,7 +25,7 @@ const ProjectCard = ({
         </div>
         <div className="flex px-4 flex-col text-pretty items-center md:items-start py-4 gap-2 justify-center mb-4">
           <h3
-            className={` font-semibold text-xl  md:text-4xl text-primary text-center w-full`}
+            className={` font-semibold text-xl  md:text-4xl text-outline text-center w-full`}
           >
             {title}
           </h3>

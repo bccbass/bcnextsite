@@ -2,8 +2,8 @@
 import React from "react";
 import { useRef } from "react";
 import Image from "next/image";
-// import { isMobile } from "react-device-detect";
-// import { useMediaQuery } from "@uidotdev/usehooks";
+import FadeIn from "./FadeIn";
+
 import { urlFor } from "../lib/sanityImage";
 
 type VideoPlayerProps = {
@@ -73,13 +73,15 @@ const VideoPlayer = ({ video, isPlaying, setIsPlaying }: VideoPlayerProps) => {
           ></video>
         </div>
       ) : (
-        <div className="w-full relative">
+    <FadeIn y={false} random>
+        <div className="w-full relative shadow-xl lg:shadow-2xl">
           <div className="w-full h-full z-10  opacity-0 transition-all duration-300 hover:opacity-80 absolute  p-4 text-white bg-accent ">
             <h2 className="text-lg md:text-xl capitalize">{video.title}</h2>
             <p className="text-sm md:text-md capitalize">{video.artist}</p>
             <p className="text-sm md:text-md capitalize">{video.role}</p>
           </div>
           <Image
+          
             onClick={() => setIsPlaying(video.title)}
             src={urlFor(video.videoThumbnail).width(640).height(360).url()}
             width={640}
@@ -87,6 +89,7 @@ const VideoPlayer = ({ video, isPlaying, setIsPlaying }: VideoPlayerProps) => {
             alt={video.title}
           />
         </div>
+        </FadeIn>
       )}
     </div>
   );

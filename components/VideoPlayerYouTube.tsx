@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useRef } from "react";
-// import Image from "next/image";
+import FadeIn from "./FadeIn";
 import ReactPlayer from "react-player";
 
 // import { isMobile } from "react-device-detect";
@@ -86,7 +86,9 @@ const VideoPlayerYouTube = ({
           </div>
         </div>
       ) : (
-        <div className="w-full relative h-1/2] ">
+    <FadeIn y={false} random>
+
+        <div className="w-full relative h-1/2] shadow-xl lg:shadow-2xl">
           <div className="w-full h-full aspect-video z-10  opacity-0 transition-all duration-300 hover:opacity-80 absolute  p-4 text-white bg-accent ">
             <h2 className="text-lg md:text-xl capitalize">{video.title}</h2>
             <p className="text-sm md:text-md capitalize">{video.artist}</p>
@@ -110,6 +112,7 @@ const VideoPlayerYouTube = ({
             className=" w-full"
           ></div>
         </div>
+        </ FadeIn>
       )}
     </div>
   );

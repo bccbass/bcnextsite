@@ -64,8 +64,10 @@ body {
 }
 
 .section {
-  @apply w-full px-8 xl:px-0 pb-28 lg:pb-48 pt-28  max-w-7xl mx-auto;
+  @apply w-full px-8 xl:px-0 pb-28 lg:pb-28 pt-28  max-w-7xl mx-auto;
 }
+
+
 .page-section {
   @apply w-full px-8  pb-28 md:pb-48  pt-28 mx-auto sm:px-16;
 }
@@ -96,7 +98,7 @@ body {
 } */
 
 .theme-button {
-  @apply bg-accent/90 font-semibold hover:bg-accent  border-0 transition-colors duration-300 ease-in-out rounded-full px-6 py-2 text-neutral-100;
+  @apply bg-accent/90 font-semibold hover:bg-primary  border-0 transition-colors duration-300 ease-in-out rounded-full px-6 py-2 text-neutral-100;
 }
 
 .square-button {
@@ -104,7 +106,7 @@ body {
 }
 
 .rounded-button {
-  @apply bg-primary hover:bg-primary/80 border-1 border-neutral-100/40 transition-colors font-semibold drop-shadow-lg duration-300 ease-in-out rounded-2xl my-2 px-3 py-1 text-neutral-100;
+  @apply bg-primary hover:bg-secondary  transition-colors font-semibold duration-300 ease-in-out rounded-2xl my-2 px-3 py-1 text-neutral-100;
 }
 
 .pdf-button {
@@ -112,18 +114,18 @@ body {
 }
 
 .tag {
-  @apply text-neutral-100 px-2 text-[.6rem] font-semibold tracking-[-.5] rounded-2xl bg-neutral-500 py-0.5 hover:bg-accent transition-all duration-300 border uppercase border-neutral-400;
+  @apply text-neutral-100 px-2 text-[.6rem] font-semibold tracking-[-.5] rounded-2xl bg-secondary py-0.5 hover:bg-primary transition-all duration-300 border uppercase border-neutral-400;
 }
 
 .active-tag {
-  @apply text-lg text-accent  hover:text-primary underline underline-offset-6 decoration-accent decoration-2;
+  @apply text-sm md:text-lg text-accent  hover:text-primary underline underline-offset-6 decoration-accent decoration-2;
 }
 
 .inactive-tag {
-  @apply text-lg  flex items-center hover:underline underline-offset-6 decoration-accent decoration-2 hover:text-foreground  transition-all duration-200;
+  @apply text-sm md:text-lg  flex items-center hover:underline underline-offset-6 decoration-accent decoration-2 hover:text-foreground  transition-all duration-200;
 }
 .menu-item {
-  @apply text-4xl md:text-5xl lg:text-5xl border-b-4 text-accent border-primary hover:border-accent hover:text-secondary w-fit transition-all duration-300 ease-in-out;
+  @apply text-4xl md:text-5xl lg:text-5xl border-b-4 text-accent border-primary hover:border-accent hover:text-secondary w-fit transition-all duration-300  ease-in-out;
 }
 .inset-menu-item {
   @apply text-3xl  border-b-4 text-accent border-background hover:border-accent hover:text-secondary w-fit transition-all duration-300 ease-in-out;

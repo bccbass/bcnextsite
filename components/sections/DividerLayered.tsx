@@ -2,7 +2,7 @@ import React from "react";
 
 const DividerLayered = () => {
   return (
-    <div className="-my-48   z-10">
+    <div className="flex ">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100">
       <g fill="var(--color-background)">
         <path d="M0 0v84l500 16 500-16V0H0z" opacity="0"></path>
@@ -12,6 +12,8 @@ const DividerLayered = () => {
         <path d="M0 0v4l500 96 500-96V0H0z"></path>
       </g>
     </svg>
+    {/* spacer block to create bg to match element beneath */}
+    <div className="h-90 -z-10 absolute w-full bg-secondary"></div>
     </div>
   );
 };

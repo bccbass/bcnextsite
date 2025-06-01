@@ -53,7 +53,8 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   // const totalMediaElements =  totalAlbums + videoEmbed
 
   return (
-    <PageWrapper>
+    <PageWrapper           title={post.title}
+>
       <div className=" flex w-full flex-col items-center justify-between">
         <ProjectExpo
           mainImage={post.mainImage}
@@ -89,6 +90,13 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           )}
         </div>
       </div>
+                  <Link
+              href={'/process'}
+              target="_blank"
+              className="theme-button max-w-xl mt-32"
+            >
+              Back to Posts
+            </Link>
     </PageWrapper>
   );
 };

@@ -37,6 +37,7 @@ const Contact = () => {
 
   return (
     <div
+      id="hello"
       className="flex drop-shadow-2xl border border-neutral-400 flex-col h-fit min-h-146 items-center w-full max-w-xl mb-12 py-12 sm:px-12 px-4 rounded-2xl"
       style={{
         backgroundImage:
@@ -46,7 +47,6 @@ const Contact = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      
       <h2 className="section-title">Hello</h2>
       {!showForm && (
         <button
