@@ -35,7 +35,7 @@ const VideosWrapper = ({ videos }: VideosPropType) => {
       {/* <h2 className="text-2xl p-4 text-white md:text-3xl lg:text-5xl w-full mb-6 text-start bg-primary font-feature">
         {videoCategory.category}
       </h2> */}
-      <div className="flex flex-wrap justify-between items-stretch w-full gap-y-6">
+      <div className="flex flex-wrap justify-between items-stretch w-full gap-y-8 lg:gap-y-10 xl:gap-y-12">
         {videoCategory?.videos?.map((video, index) => (
           video.youtubeId ? <VideoPlayerYouTube
             key={index}

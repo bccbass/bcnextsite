@@ -37,7 +37,7 @@ const Contact = () => {
 
   return (
     <div
-      className="flex flex-col h-fit min-h-146 items-center w-full max-w-xl mb-12 py-12 sm:px-12 px-4 rounded-2xl"
+      className="flex drop-shadow-2xl border border-neutral-400 flex-col h-fit min-h-146 items-center w-full max-w-xl mb-12 py-12 sm:px-12 px-4 rounded-2xl"
       style={{
         backgroundImage:
           "url('https://res.cloudinary.com/dyb9ascpy/image/upload/v1724818853/possumpark/bhchbbx8x1xdawpse9ih.webp')",

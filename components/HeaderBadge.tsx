@@ -5,10 +5,10 @@ const HeaderBadge = ({ color }: { color?: string }) => {
   return (
     <Link
       href={"/"}
-      className={`uppercase  fixed lg:right-0 lg:w-fit w-3/4  gap-2 overflow-hidden  px-6 py-4`}
+      className={`uppercase hidden lg:block fixed  w-3/4  gap-2 overflow-hidden  px-8 py-4`}
     >
       <h1
-        className={`${color} badge-title text-3xl   uppercase md:text-4xl  -tracking-[.15rem]`}
+        className={`${color} badge-title text-4xl   uppercase sm:text-5xl  -tracking-[.15rem]`}
       >
         BC
       </h1>

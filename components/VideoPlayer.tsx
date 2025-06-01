@@ -54,9 +54,9 @@ const VideoPlayer = ({ video, isPlaying, setIsPlaying }: VideoPlayerProps) => {
       {isPlaying == video.title ? (
         <div className=" relative">
           <div className="w-full z-10  transition-all duration-300 absolute  p-4 text-white  ">
-            <h2 className="text-lg md:text-xl ">{video.title}</h2>
-            <p className="text-sm md:text-md ">{video.artist}</p>
-            <p className="text-sm md:text-md ">{video.role}</p>
+            <h2 className="text-lg md:text-xl capitalize">{video.title}</h2>
+            <p className="text-sm md:text-md capitalize ">{video.artist}</p>
+            <p className="text-sm md:text-md capitalize ">{video.role}</p>
           </div>
           <video
             ref={vidRef}
@@ -75,9 +75,9 @@ const VideoPlayer = ({ video, isPlaying, setIsPlaying }: VideoPlayerProps) => {
       ) : (
         <div className="w-full relative">
           <div className="w-full h-full z-10  opacity-0 transition-all duration-300 hover:opacity-80 absolute  p-4 text-white bg-accent ">
-            <h2 className="text-lg md:text-xl ">{video.title}</h2>
-            <p className="text-sm md:text-md ">{video.artist}</p>
-            <p className="text-sm md:text-md ">{video.role}</p>
+            <h2 className="text-lg md:text-xl capitalize">{video.title}</h2>
+            <p className="text-sm md:text-md capitalize">{video.artist}</p>
+            <p className="text-sm md:text-md capitalize">{video.role}</p>
           </div>
           <Image
             onClick={() => setIsPlaying(video.title)}

@@ -64,10 +64,10 @@ body {
 }
 
 .section {
-  @apply w-full px-8 xl:px-0 pb-28 lg:py-48 pt-28  max-w-7xl mx-auto;
+  @apply w-full px-8 xl:px-0 pb-28 lg:pb-48 pt-28  max-w-7xl mx-auto;
 }
 .page-section {
-  @apply w-full px-8  pb-28 lg:py-42 pt-28  md:pr-24 lg:pr-36 xl:pr-48 md:pl-8 mx-auto;
+  @apply w-full px-8  pb-28 md:pb-48  pt-28 mx-auto sm:px-16;
 }
 
 .page-title {
@@ -96,7 +96,7 @@ body {
 } */
 
 .theme-button {
-  @apply bg-accent/90 font-semibold hover:bg-accent  border-2 transition-colors duration-300 ease-in-out rounded-full px-6 py-2 text-neutral-100;
+  @apply bg-accent/90 font-semibold hover:bg-accent  border-0 transition-colors duration-300 ease-in-out rounded-full px-6 py-2 text-neutral-100;
 }
 
 .square-button {
@@ -104,7 +104,7 @@ body {
 }
 
 .rounded-button {
-  @apply bg-primary hover:bg-primary/80 border-2 transition-colors duration-300 ease-in-out rounded-2xl my-2 px-3 py-1 text-neutral-100;
+  @apply bg-primary hover:bg-primary/80 border-1 border-neutral-100/40 transition-colors font-semibold drop-shadow-lg duration-300 ease-in-out rounded-2xl my-2 px-3 py-1 text-neutral-100;
 }
 
 .pdf-button {
