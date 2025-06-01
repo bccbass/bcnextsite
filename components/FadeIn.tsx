@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { easeIn, motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 
 const FadeIn = ({
   children,
@@ -22,11 +22,11 @@ const FadeIn = ({
       viewport={{ once: once }}
       key={i}
       initial={{ opacity: 0, y: startY }}
-      whileInView={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }} 
       transition={{
         delay: delayTime,
         duration: 0.5,
-        ease: easeIn,
+        ease: easeInOut,
       }}
       className="flex"
     >

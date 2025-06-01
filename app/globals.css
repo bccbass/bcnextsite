@@ -114,7 +114,7 @@ body {
 }
 
 .tag {
-  @apply text-neutral-100 px-2 text-[.6rem] font-semibold tracking-[-.5] rounded-2xl bg-secondary py-0.5 hover:bg-primary transition-all duration-300 border uppercase border-neutral-400;
+  @apply text-neutral-100 px-2 text-[.7rem] font-semibold tracking-[-.5] rounded-2xl bg-secondary py-0.5 hover:bg-primary transition-all duration-300 border-0 uppercase border-neutral-400;
 }
 
 .active-tag {

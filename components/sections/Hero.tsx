@@ -2,6 +2,7 @@
 import React, { useRef } from "react";
 import Badge from "@/components/Badge";
 import NavHamburger from "../NavHamburger";
+import FadeIn from "../FadeIn";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 // import welcomeRiver from '/welcome_river.mp4'
@@ -18,6 +19,7 @@ const Hero = () => {
   return (
     <>
       <NavHamburger homePage={true}/>
+      <FadeIn y={false} random={false}>
       <motion.div
         style={{ opacity: scrollOpacity }}
         ref={ref}
@@ -45,6 +47,7 @@ const Hero = () => {
           Your browser does not support the video tag.
         </video>
       </motion.div>
+    </FadeIn>
     </>
   );
 };
