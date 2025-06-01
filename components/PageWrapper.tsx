@@ -3,12 +3,12 @@ import Header from "@/components/sections/Header";
 import NavMenuItems from "./NavMenuItems";
 
 import Footer from "@/components/sections/Footer";
-const getFontSize = (text: string) => {
-  if (text?.length < 5) return " text-7xl ";
-  if (text?.length < 8) return " text-6xl ";
-  if (text?.length >= 8) return " text-6xl ";
-  return "text-base";
-};
+// const getFontSize = (text: string) => {
+//   if (text?.length < 5) return " text-7xl ";
+//   if (text?.length < 8) return " text-6xl ";
+//   if (text?.length >= 8) return " text-6xl ";
+//   return "text-base";
+// };
 const PageWrapper = ({
   children,
   title = "",
@@ -16,7 +16,7 @@ const PageWrapper = ({
   title?: string;
   children: React.ReactNode;
 }) => {
-  const fontSize = getFontSize(title);
+  // const fontSize = getFontSize(title);
   return (
     <div>
       <Header />
