@@ -65,6 +65,8 @@ const VideoPlayerYouTube = ({
     >
       {isPlaying == video.title ? (
         <div className=" relative">
+
+          
           {/* Video title card while playing: */}
           {/* <div className="w-full z-10  transition-all duration-300 absolute  p-4 text-white  ">
             <h2 className="text-lg md:text-xl ">{video.title}</h2>
