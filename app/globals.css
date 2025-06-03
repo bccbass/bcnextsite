@@ -64,7 +64,7 @@ body {
 }
 
 .section {
-  @apply w-full px-8 xl:px-0 pb-28 lg:pb-28 pt-28  max-w-7xl mx-auto;
+  @apply w-full px-6 xl:px-0 pb-28 lg:pb-28 pt-28  max-w-7xl mx-auto;
 }
 
 

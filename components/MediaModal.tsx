@@ -72,9 +72,9 @@ export default function Modal({
   // }, [isOpen, lenis]);
 
   return (
-    <div className="flex h-fit w-full justify-center px-4 py-4">
+    <div className="flex h-fit w-screen justify-center px-4 py-8">
       <button
-        className="relative mx-auto flex min-h-72 w-full max-w-2xl justify-center outline outline-neutral-500 sm:min-h-96 md:min-h-110"
+        className="relative mx-auto flex aspect-video w-full max-w-2xl justify-center outline outline-neutral-500 shadow-2xl"
         onClick={() => setIsOpen(true)}
       >
         <div

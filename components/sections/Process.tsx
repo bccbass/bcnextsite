@@ -11,11 +11,11 @@ const Process = async () => {
     <>  
     <div className="flex flex-col gap-4 section">
       <div className="text-center">
-        <h2 className="section-title  pt-20 pb-8  ">Process</h2>{" "}
+        <h2 className="section-title  pt-20  pb-8 md:pb-16 ">Process</h2>{" "}
       
       </div>
       
-      <div className="pt-12 flex flex-wrap justify-center  w-full gap-16 sm:gap-x-10 lg:gap-y-20 ">
+      <div className=" flex flex-wrap justify-center  w-full gap-16 sm:gap-x-10 lg:gap-y-20 ">
         {/* <TitleCard title='Process' description='A space to share the nuts and bolts of the creative process: works
             in progress, transcriptions, musings and any other elements that
             might be orphaned from a larger collection of work, worthy of its

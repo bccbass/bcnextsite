@@ -7,10 +7,10 @@ const Projects = async () => {
   const projects = await getProjects();
 
   return (
-    <div className="flex flex-col gap-10  bg-secondary w-full px-8 xl:px-0 pb-28 lg:pb-48 pt-16">
+    <div className="flex flex-col gap-10  bg-secondary w-full px-6 xl:px-0 pb-28 lg:pb-48 pt-16">
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
-          <h2 className="section-title pt-20 pb-8 md:pb-24 ">Projects</h2>{" "}
+          <h2 className="section-title pt-20 pb-8 md:pb-20 ">Projects</h2>{" "}
         </div>
         {/* <div className="  bg-primary border border-white outline-2 outline-primary py-10 px-6  flex flex-col md:flex-row gap-6 md:gap-16 lg:gap-20">
         <h2 className="section-title text-accent ">Projects</h2>{" "}

@@ -9,7 +9,7 @@ const DividerGrunge = ({ topColor = "secondary", bottomColor='background' }: { t
     //     fill={fillColor}
     //   ></path>
     // </svg>
-    <div className={` h-26 relative`}>
+    <div className={`h-26 relative`}>
       <div className={` relative drop-shadow-xl w-full min-w-[105rem] z-20   drop-shadow-${topColor}`}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100">
           <path
