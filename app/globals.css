@@ -99,9 +99,7 @@ body {
 .section-title-sm {
   @apply drop-shadow-[2px_2px_1px_rgba(249,63,176)]  text-neutral-300 font-bold text-5xl uppercase;
 }
-/* .section-title {
-  @apply text-3xl font-feature font-semibold tracking-[6] uppercase md:text-4xl lg:text-5xl;
-} */
+
 
 .theme-button {
   @apply bg-accent/90 font-semibold hover:bg-primary  border-0 transition-colors duration-300 ease-in-out rounded-full px-6 py-2 text-neutral-100;
@@ -130,9 +128,11 @@ body {
 .inactive-tag {
   @apply text-sm md:text-lg  flex items-center hover:underline underline-offset-6 decoration-accent decoration-2 hover:text-foreground  transition-all duration-200;
 }
+
 .menu-item {
   @apply text-4xl md:text-5xl lg:text-5xl border-b-4 text-accent border-primary hover:border-accent hover:text-secondary w-fit transition-all duration-300  ease-in-out;
 }
+
 .inset-menu-item {
   @apply text-3xl  border-b-4 text-accent border-background hover:border-accent hover:text-secondary w-fit transition-all duration-300 ease-in-out;
 }

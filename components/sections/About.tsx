@@ -15,7 +15,7 @@ const About = ({
         <h2 className="section-title text-center md:text-start">about</h2>
 
         <div className="flex flex-col items-center">
-          <div className="prose prose-lg md:prose-2xl pretty text-white">
+          <div className="prose prose-lg md:prose-xl pretty text-white">
             {typeof briefBiography !== "string" ? (
               <PortableText value={briefBiography} />
             ) : (

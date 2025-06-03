@@ -17,9 +17,9 @@ const Hero = () => {
   const badgeOpacity = useTransform(scrollYProgress, [0, 0.25], [1, 0]);
   const y = useTransform(scrollYProgress, [0, 1], [0, 550]);
   return (
-    <>
-      <NavHamburger homePage={true}/>
-      <FadeIn y={false} random={false}>
+    <FadeIn y={false} random={false}>
+      <NavHamburger homePage={true} />
+
       <motion.div
         style={{ opacity: scrollOpacity }}
         ref={ref}
@@ -48,7 +48,6 @@ const Hero = () => {
         </video>
       </motion.div>
     </FadeIn>
-    </>
   );
 };
 
