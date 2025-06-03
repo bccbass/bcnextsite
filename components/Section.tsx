@@ -16,10 +16,15 @@ const Section = ({ title, image, slug, i }: SectionProps) => {
   return (
     <Link
       href={"/" + slug}
-      className={` flex flex-col w-7/8 sm:w-full md:w-1/2 lg:w-2/5 max-w-128  h-fit bg-background justify-center items-center md:items-start outline-8 rounded-4xl `}
+      className={` flex flex-col w-7/8 sm:w-full md:w-1/2 lg:w-2/5 max-w-128  h-fit bg-background justify-center items-center md:items-start shadow-2xl border border-neutral-400 rounded-4xl `}
     >
+             <h3
+            className={`absolute w-fit pl-10 z-10 text-center feature-title tracking-[6] text-4xl md:text-5xl lg:text-6xl uppercase`}
+          >
+            {title}
+          </h3>
       <div
-        className="w-full h-128 overflow-hidden rounded-4xl "
+        className="w-full aspect-square overflow-hidden rounded-4xl "
         style={{
           backgroundImage: `url(${urlFor(image).width(1200).height(1200).url()})`,
           backgroundSize: "cover",
@@ -27,15 +32,9 @@ const Section = ({ title, image, slug, i }: SectionProps) => {
         }}
       >
         <div
-          className={`flex flex-col ${i % 2 === 0 ? "bg-primary/50" : "bg-accent/50"} backdrop-grayscale-100 backdrop-contrast-100  ease-in-out transition-all hover:backdrop-contrast-150 duration-300 h-full w-full items-center justify-center`}
+          className={`flex flex-col ${i % 2 === 0 ? "bg-primary" : "bg-accent"} opacity-80 hover:opacity-95   ease-in-out transition-all backdrop-contrast-150 duration-300 h-full w-full items-center justify-center`}
         >
-          <h3
-            className={`${i % 2 !== 0 ? "bg-secondary/60" : "bg-emerald-200/60"} relative top-20 backdrop-blur-3xl backdrop-brightness-50 w-full py-12  text-center  tracking-[6] uppercase font-bold  text-white  `}
-          >
-            <p className=" outline-title text-4xl md:text-5xl lg:text-6xl ">
-            {title}
-            </p>
-          </h3>
+   
         </div>
       </div>
     </Link>

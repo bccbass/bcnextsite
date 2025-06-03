@@ -75,6 +75,12 @@ body {
 .page-title {
   @apply drop-shadow-[3px_3px_1px_rgba(37,150,190)] text-neutral-300 font-bold  uppercase ;
 }
+.title-primary {
+  @apply drop-shadow-[3px_3px_1px_rgba(37,150,190)] text-neutral-300 font-bold  uppercase ;
+}
+.title-accent {
+  @apply drop-shadow-[3px_3px_1px_rgba(249,63,176)] text-neutral-300 font-bold  uppercase ;
+}
 .section-title {
   @apply drop-shadow-[3px_3px_1px_rgba(37,150,190)] text-neutral-300 font-bold text-5xl  uppercase md:text-6xl lg:text-7xl;
 }

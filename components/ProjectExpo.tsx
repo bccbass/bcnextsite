@@ -42,7 +42,7 @@ const ProjectExpo = ({ mainImage, title, description }: ProjectProps) => {
 
 
         <Image
-          className="w-full p-0.5 outline-neutral-400 outline-4 rounded-2xl"
+          className="w-full shadow-2xl border border-neutral-400 rounded-2xl"
           alt={mainImage.alt ? mainImage.alt : title}
           width={800}
           height={800}

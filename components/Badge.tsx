@@ -11,7 +11,7 @@ const Badge = ({color}:{color?: string}) => {
           <h1 className={`${color} ${badgeStyle}`}>
              Campbell
           </h1>
-          <h2 className={`${ color } text-center text-md sm:text-xl font-feature md:text-lg md:tracking-[.12rem]`}>
+          <h2 className={`${ color } text-center text-md sm:text-xl font-feature font-bold md:text-lg md:tracking-[.12rem]`}>
             Bassist | Composer | Educator
           </h2>
         </Link>

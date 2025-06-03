@@ -116,7 +116,13 @@ export const sectionType = defineType({
     defineField({
       name: "description",
       description: "A brief description of the project (1-2 sentences)",
-      type: "string",
+            type: "array",
+      of: [
+        { type: "block" },
+        {
+          type: "image",
+        },
+      ],
     }),
     defineField({
       name: "projectWebsite",

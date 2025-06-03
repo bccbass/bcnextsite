@@ -74,7 +74,7 @@ export default function Modal({
   return (
     <div className="flex h-fit w-full justify-center px-4 py-4">
       <button
-        className="relative mx-auto flex min-h-72 w-full max-w-2xl justify-center rounded-lg border-2 border-background outline-2 outline-neutral-500 sm:min-h-96 md:min-h-110"
+        className="relative mx-auto flex min-h-72 w-full max-w-2xl justify-center outline outline-neutral-500 sm:min-h-96 md:min-h-110"
         onClick={() => setIsOpen(true)}
       >
         <div
@@ -84,10 +84,10 @@ export default function Modal({
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
           }}
-          className="h-full w-full overflow-hidden rounded-lg"
+          className="h-full w-full overflow-hidden"
         ></div>
         <div
-          className="absolute inset-1/2 h-fit w-fit rounded-lg px-4 py-1 text-6xl text-white"
+          className="absolute inset-1/2 h-fit w-fit px-4 py-1 text-6xl text-white"
           style={{
             translate: "-2.5rem -2rem",
             backgroundColor: "rgba(0, 0, 0, .7)",
