@@ -6,7 +6,7 @@ import Projects from "@/components/sections/Projects";
 import Process from "@/components/sections/Process";
 import ImageFeature from "@/components/sections/ImageFeature";
 import Hello from "@/components/sections/Hello";
-import DividerGrunge from "@/components/sections/DividerGrunge";
+// import DividerGrunge from "@/components/sections/DividerGrunge";
 // import DividerStripes from "@/components/sections/DividerStripes";
 // import DividerLayered from "@/components/sections/DividerLayered";
 // import DividerSpikes from "@/components/sections/DividerSpikes";
