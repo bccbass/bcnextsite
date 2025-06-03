@@ -1,6 +1,6 @@
 import React from "react";
 // import Link from "next/link";
-import { PortableText } from "@portabletext/react";
+import CustomPortableText from '@/components/CustomPortableText'
 
 import type { PortableTextBlock } from "@sanity/types";
 
@@ -17,7 +17,7 @@ const About = ({
         <div className="flex flex-col items-center">
           <div className="prose prose-lg md:prose-xl pretty text-white">
             {typeof briefBiography !== "string" ? (
-              <PortableText value={briefBiography} />
+              <CustomPortableText value={briefBiography} />
             ) : (
               <div>{briefBiography}</div>
             )}

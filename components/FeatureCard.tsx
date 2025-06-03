@@ -18,7 +18,7 @@ const FeatureCard = ({ title, image, description, slug }: FeatureCardProps) => {
       <div className="flex flex-col items-center gap-2">
         <Link
           href={"/" + slug}
-          className=" w-full rounded-4xl overflow-hidden shadow-2xl hover:outline-4 outline-accent transition-all duration-150 ease-in-out border border-neutral-400"
+          className=" w-full rounded-4xl overflow-hidden shadow-2xl hover:outline-4 outline-primary transition-all duration-150 ease-in-out border border-neutral-400"
         >
           <SanityImage image={image} alt={title} />
         </Link>
