@@ -33,7 +33,7 @@ const PageWrapper = ({
             <div className="max-w-7xl w-full flex flex-col items-center">
               <h2
                 className={
-                  "w-full max-w-6xl text-center page-title text-5xl sm:text-6xl md:text-7xl mb-12 sm:mb-20 lg:mb-24"
+                  "w-full max-w-6xl text-center page-title text-5xl sm:text-6xl md:text-7xl mb-6 sm:mb-8 lg:mb-10"
                 }
               >
                 {title}
