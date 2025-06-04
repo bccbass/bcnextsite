@@ -7,7 +7,7 @@ const Projects = async () => {
   const projects = await getProjects();
 
   return (
-    <div className="flex flex-col gap-10  bg-secondary w-full px-6 xl:px-0 pb-28 lg:pb-48 pt-16">
+    <div className="flex flex-col gap-10  bg-secondary w-full px-6 xl:px-0 pb-28 pt-16">
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
           <h2 className="section-title pt-20 pb-8 md:pb-20 ">Projects</h2>{" "}
