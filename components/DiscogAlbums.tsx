@@ -19,7 +19,7 @@ const DiscogAlbums = ({ albums }: AlbumsProps) => {
     <div className="flex w-full justify-center">
       <div
         key={"albums"}
-        className="flex h-fit w-full max-w-7xl flex-wrap items-start justify-center md:py-16 py-8 gap-8"
+        className="flex h-fit w-full max-w-7xl flex-wrap items-start justify-center py-6 gap-8"
       >
         {albums.map(
           (
