@@ -1,7 +1,7 @@
 import React from "react";
 // import Link from "next/link";
-import CustomPortableText from '@/components/CustomPortableText'
-
+// import CustomPortableText from "@/components/CustomPortableText";
+import { PortableText } from "next-sanity";
 import type { PortableTextBlock } from "@sanity/types";
 
 const About = ({
@@ -17,17 +17,16 @@ const About = ({
         <div className="flex flex-col items-center">
           <div className="prose prose-lg md:prose-xl pretty text-white">
             {typeof briefBiography !== "string" ? (
-              <CustomPortableText value={briefBiography} />
+              <PortableText value={briefBiography} />
             ) : (
               <div>{briefBiography}</div>
             )}
-            {/* <div className="w-full flex justify-center">
-                 <Link className="" href={"/about"}>
-            Read More
-          </Link>
-          </div> */}
+            {/* <div className="w-full text-xl flex justify-center">
+              <Link className="" href={"/about"}>
+                read more...
+              </Link>
+            </div> */}
           </div>
-     
         </div>
       </div>
     </div>

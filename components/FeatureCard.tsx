@@ -38,13 +38,13 @@ const FeatureCard = ({ title, image, description, slug }: FeatureCardProps) => {
           </div>
         </div>
       </div>
-     {/* <Link style={{color: 'var(--color-secondary)'}}
-            className=" font-bold  hover:text-primary text-accent self-center text-xl transition-all duration-300 ease-in-out mb-4"
-            href={"/" + slug}
-          >
-            {" "}
-          More
-          </Link> */}
+      <div className="w-full flex justify-center">
+        <Link className="font-semibold underline decoration-1 underline-offset-4  text-xl" href={"/about"}
+        style={{color: "var(--color-secondary)"}}
+        >
+          more
+        </Link>
+      </div>
     </div>
   );
 };

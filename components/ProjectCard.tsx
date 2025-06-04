@@ -32,11 +32,11 @@ const ProjectCard = ({ title, image, description, slug }: ProjectCardProps) => {
             {description}
           </p>
           <Link
-            className="mt-2 font-bold underline underline-offset-4 decoration-1  hover:text-primary text-accent self-center text-xl transition-all duration-300 ease-in-out mb-4"
+            className="mt-2 font-semibold underline underline-offset-4 decoration-1  hover:text-primary text-accent self-center text-xl transition-all duration-300 ease-in-out mb-4"
             href={"/projects/" + slug}
           >
             {" "}
-          More
+          more
           </Link>
         </div>
       </div>
