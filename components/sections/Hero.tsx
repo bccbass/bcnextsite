@@ -45,8 +45,8 @@ const Hero = () => {
           loop
           preload="auto"
           playsInline
-          onCanPlay={() => {
-            console.log("Loaded ->", isLoaded);
+          onLoadedData={() => {
+            // console.log("Loaded ->", isLoaded);
             setIsLoaded(true);
           }}
         >
