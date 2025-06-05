@@ -1,11 +1,12 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Badge from "@/components/Badge";
 import FadeIn from "../FadeIn";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const Hero = () => {
   const ref = useRef<HTMLDivElement>(null);
+  const [isLoaded, setIsLoaded] = useState(false);
   const { scrollYProgress } = useScroll({
     offset: ["start start", "end start"],
     target: ref,
@@ -28,17 +29,21 @@ const Hero = () => {
             y,
           }}
         >
-          <Badge color="text-neutral-100" />
+          {!isLoaded ? <h1>Loading</h1> : <Badge color="text-neutral-100" />}
         </motion.div>
 
         <video
-
           className="object-cover h-screen w-screen"
           // poster="/waterfall.webp"
           autoPlay
           muted
           loop
+          preload="auto"
           playsInline
+          onLoadedData={() => {
+            console.log("Loaded ->", isLoaded);
+            setIsLoaded(true);
+          }}
         >
           <source src="/welcome_river.mp4" type="video/mp4" />
           Your browser does not support the video tag.

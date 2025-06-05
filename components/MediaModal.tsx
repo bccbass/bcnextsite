@@ -87,7 +87,7 @@ export default function Modal({
           className="h-full w-full overflow-hidden"
         ></div>
         <div
-          className="absolute rounded-lg inset-1/2 h-fit w-fit px-4 py-1 text-6xl text-white"
+          className="absolute rounded-lg inset-1/2 h-fit w-fit px-4 py-1 text-5xl text-white"
           style={{
             translate: "-2.5rem -2rem",
             backgroundColor: "rgba(0, 0, 0, .7)",

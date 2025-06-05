@@ -14,6 +14,7 @@ const SanityImage = ({ image, alt }: { image: string; alt: string }) => {
 
 	return (
 		<Image
+		loading="lazy"
 			src={urlFor(image).width(1200).height(1200).url()} // Adjust width & height
 			alt={alt}
 			width={1200
