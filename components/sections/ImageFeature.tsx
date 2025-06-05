@@ -15,9 +15,9 @@ const yOuterLimit = isSmScreen ? -40 : -130
   const y = useTransform(scrollYProgress, [0, 1], [0, yOuterLimit]);
   // const opacity = useTransform(scrollYProgress, [.5, .9], [1,0]);
   return (
-    <motion.div ref={ref} className="w-screen aspect-video md:h-[60vh] flex justify-center overflow-hidden ">
+    <motion.div ref={ref} className="w-screen aspect-video md:h-[60vh] flex justify-center overflow-hidden relative">
       <motion.div
-        className="w-screen h-[90vh] md:h-[80vh] flex justify-center items-center saturate-100 filter contrast-150 bg-contain md:bg-cover scale-120 md:scale-100 -translate-y-46 md:translate-y-0"
+        className=" w-screen h-[90vh] md:h-[80vh] flex justify-center items-center saturate-100 filter contrast-150 bg-contain md:bg-cover scale-120 md:scale-100 -translate-y-46 md:translate-y-0"
         style={{
           // opacity,
           y,
