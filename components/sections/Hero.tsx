@@ -2,6 +2,7 @@
 import React, { useRef, useState } from "react";
 import Badge from "@/components/Badge";
 import FadeIn from "../FadeIn";
+import Spinner from "../Spinner";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const Hero = () => {
@@ -16,22 +17,26 @@ const Hero = () => {
   const y = useTransform(scrollYProgress, [0, 1], [0, 450]);
   return (
     <FadeIn y={false} random={false}>
-
       <motion.div
         style={{ opacity: scrollOpacity }}
         ref={ref}
         className="w-screen flex  h-screen top-0  -z-10 relative"
       >
-        <motion.div
-          className="w-screen top-1/4 flex justify-center absolute"
-          style={{
-            opacity: badgeOpacity,
-            y,
-          }}
-        >
-          {!isLoaded ? <h1>Loading</h1> : <Badge color="text-neutral-100" />}
-        </motion.div>
-
+        {!isLoaded ? (
+          <div className="h-screen absolute col-centered w-screen">
+            <Spinner />
+          </div>
+        ) : (
+          <motion.div
+            className="w-screen top-1/4 flex justify-center absolute"
+            style={{
+              opacity: badgeOpacity,
+              y,
+            }}
+          >
+            <Badge color="text-neutral-100" />
+          </motion.div>
+        )}
         <video
           className="object-cover h-screen w-screen"
           // poster="/waterfall.webp"
