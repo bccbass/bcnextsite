@@ -8,7 +8,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 const ImageFeature = ({imgUrl}:{imgUrl: string}) => {
   const ref = useRef<HTMLDivElement>(null);
   const isSmScreen = useMedia("(max-width: 700px)");
-const yOuterLimit = isSmScreen ? -40 : -130
+const yOuterLimit = isSmScreen ? -47 : -130
   const { scrollYProgress } = useScroll({target: ref,
     offset: ["start center", "end start"],
   });
@@ -22,7 +22,7 @@ const yOuterLimit = isSmScreen ? -40 : -130
           // opacity,
           y,
           backgroundImage: `url('${imgUrl}')`,
-          backgroundPosition: "end",
+          backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           // backgroundSize: "cover",
         }}
