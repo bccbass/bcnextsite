@@ -50,7 +50,7 @@ const Hero = () => {
             setIsLoaded(true);
           }}
         >
-          <source src="/welcome_river.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/dyb9ascpy/video/upload/v1749101662/welcome_river_lekdjv.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </motion.div>
