@@ -1,16 +1,16 @@
 import React from "react";
 import SanityImage from "./SanityImage";
 import Link from "next/link";
-import { PortableText } from "next-sanity";
+// import { PortableText } from "next-sanity";
 
 type FeatureCardProps = {
   title: string;
   image: string;
-  description: string;
+  // description: string;
   slug: string;
 };
 
-const FeatureCard = ({ title, image, description, slug }: FeatureCardProps) => {
+const FeatureCard = ({ title, image, slug }: FeatureCardProps) => {
   return (
     <div
       className={`flex flex-col w-full md:w-2/5 max-w-sm justify-between items-cente pb-4`}

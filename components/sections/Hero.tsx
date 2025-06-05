@@ -2,9 +2,7 @@
 import React, { useRef } from "react";
 import Badge from "@/components/Badge";
 import FadeIn from "../FadeIn";
-
 import { motion, useScroll, useTransform } from "framer-motion";
-// import welcomeRiver from '/welcome_river.mp4'
 
 const Hero = () => {
   const ref = useRef<HTMLDivElement>(null);

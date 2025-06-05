@@ -7,11 +7,7 @@ import Process from "@/components/sections/Process";
 import ImageFeature from "@/components/sections/ImageFeature";
 import Hello from "@/components/sections/Hello";
 import NavHamburger from "@/components/NavHamburger";
-
 // import DividerGrunge from "@/components/sections/DividerGrunge";
-// import DividerStripes from "@/components/sections/DividerStripes";
-// import DividerLayered from "@/components/sections/DividerLayered";
-// import DividerSpikes from "@/components/sections/DividerSpikes";
 import Footer from "@/components/sections/Footer";
 import { getWebsiteData } from "@/lib/fetch";
 
