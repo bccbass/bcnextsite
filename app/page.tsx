@@ -6,6 +6,8 @@ import Projects from "@/components/sections/Projects";
 import Process from "@/components/sections/Process";
 import ImageFeature from "@/components/sections/ImageFeature";
 import Hello from "@/components/sections/Hello";
+import NavHamburger from "@/components/NavHamburger";
+
 // import DividerGrunge from "@/components/sections/DividerGrunge";
 // import DividerStripes from "@/components/sections/DividerStripes";
 // import DividerLayered from "@/components/sections/DividerLayered";
@@ -18,6 +20,7 @@ const page = async () => {
 
   return (
     <div className="flex  flex-col">
+      < NavHamburger homePage={true}/>
       <Hero />
       <About briefBiography={websiteData.briefBiography} />
       <Explore />

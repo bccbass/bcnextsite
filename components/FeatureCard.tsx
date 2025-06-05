@@ -23,28 +23,30 @@ const FeatureCard = ({ title, image, description, slug }: FeatureCardProps) => {
           <SanityImage image={image} alt={title} />
         </Link>
         <div className="flex px-4 flex-col text-pretty items-center md:items-start py-4 gap-4 justify-center mb-4">
-          <h3
-            className={` font-semibold text-4xl lg:text-5xl text-outline text-center w-full`}
-          >
-            {title}
-          </h3>
+          <Link href={"/" + slug}>
+            <h3
+              className={` font-semibold text-4xl lg:text-5xl text-outline text-center w-full`}
+            >
+              {title}
+            </h3>
+          </Link>
 
-          <div className="prose  prose-lg md:prose-xl  text-pretty text-white">
+          {/* <div className="prose  prose-lg md:prose-xl  text-pretty text-white">
             {typeof description !== "string" ? (
               <PortableText value={description} />
             ) : (
               <div>{description}</div>
             )}
-          </div>
+          </div> */}
         </div>
       </div>
-      <div className="w-full flex justify-center">
+      {/* <div className="w-full flex justify-center">
         <Link className="font-semibold underline decoration-1 underline-offset-4  text-xl" href={"/about"}
         style={{color: "var(--color-secondary)"}}
         >
           more
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };

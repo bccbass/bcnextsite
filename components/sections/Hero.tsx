@@ -1,7 +1,6 @@
 "use client";
 import React, { useRef } from "react";
 import Badge from "@/components/Badge";
-import NavHamburger from "../NavHamburger";
 import FadeIn from "../FadeIn";
 
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -15,15 +14,14 @@ const Hero = () => {
   });
   const scrollOpacity = useTransform(scrollYProgress, [0, 0.85], [1, 0]);
   const badgeOpacity = useTransform(scrollYProgress, [0, 0.25], [1, 0]);
-  const y = useTransform(scrollYProgress, [0, 1], [0, 550]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, 450]);
   return (
     <FadeIn y={false} random={false}>
-      <NavHamburger homePage={true} />
 
       <motion.div
         style={{ opacity: scrollOpacity }}
         ref={ref}
-        className="w-screen flex  h-screen top-0  -z-10"
+        className="w-screen flex  h-screen top-0  -z-10 relative"
       >
         <motion.div
           className="w-screen top-1/4 flex justify-center absolute"
@@ -36,8 +34,9 @@ const Hero = () => {
         </motion.div>
 
         <video
+
           className="object-cover h-screen w-screen"
-          poster="/waterfall.webp"
+          // poster="/waterfall.webp"
           autoPlay
           muted
           loop
