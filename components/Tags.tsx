@@ -13,8 +13,8 @@ const Tags = ({ categories }: CategoryType) => {
     searchParams.get("tag") !== null ? searchParams.get("tag") : "all";
 
   return (
-    <div className="flex flex-col gap-4 w-full items-center justify-center">
-      <div className="justify-center items-center flex flex-wrap gap-4">
+    <div className="flex flex-col gap-4 w-full items-center justify-center ">
+      <div className="justify-center items-center flex flex-wrap gap-4 max-w-xl">
         {categories.map((category) => (
           <Link
             key={category._id}
