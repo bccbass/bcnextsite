@@ -42,7 +42,7 @@ export async function getPostsPreview(): Promise<Post[]> {
 
 export async function getAllPostsPreview(): Promise<PostPreview[]> {
   return await sanityClient.fetch(groq`
-    *[_type == "post"][0..6] | order(sortOrder asc) {
+    *[_type == "post"] | order(sortOrder asc) {
       _id,
       title,
       sortOrder,

@@ -17,7 +17,7 @@ const page = async () => {
       <Suspense fallback={<div>Loading...</div>}>
         <div className="">
           <Tags categories={categories} />
-          <div className="pt-12 flex   flex-wrap justify-center w-full gap-16 sm:gap-8 max-w-7xl mx-auto">
+          <div className="pt-12 flex   flex-wrap justify-center w-full gap-16 sm:gap-x-4 sm:gap-y-10  2xl:gap-8 max-w-7xl mx-auto">
             <PostCardWrapper posts={posts} />
           </div>
         </div>

@@ -15,8 +15,8 @@ const page = async () => {
   const websiteData = await getWebsiteData();
 
   return (
-    <div className="flex  flex-col">
-      < NavHamburger homePage={true}/>
+    <div className="flex flex-col">
+      <NavHamburger homePage={true} />
       <Hero />
       <About briefBiography={websiteData.briefBiography} />
       <Explore />
