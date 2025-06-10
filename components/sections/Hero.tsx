@@ -60,7 +60,7 @@ const Hero = () => {
         />
 
         {/* Content layer */}
-        <div className="fixed z-10 h-screen flex items-center justify-center">
+        <div className="-z-20 fixed h-screen flex items-center justify-center">
           <motion.div
             className="w-screen flex justify-center pb-42"
             initial={{ opacity: 0 }}
