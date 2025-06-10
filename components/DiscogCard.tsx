@@ -39,7 +39,7 @@ const DiscogCard = ({ album }: DiscogCardProps) => {
           <SanityImage image={album.image} alt={`Image for ${album.title}`} />
         </div>
 
-        <h2 className="text-center text-lg py-4 text-neutral-700 capitalize font-semibold">
+        <h2 className="text-center max-w-lg text-lg py-4 text-neutral-700 capitalize font-semibold">
           {album.role}
         </h2>
 
