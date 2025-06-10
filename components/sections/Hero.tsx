@@ -14,7 +14,7 @@ const Hero = () => {
     target: ref,
   });
 
-  const scrollOpacity = useTransform(scrollYProgress, [0, 0.85], [1, 0]);
+  const scrollOpacity = useTransform(scrollYProgress, [0, 0.65], [1, 0]);
   const badgeOpacity = useTransform(scrollYProgress, [0, 0.25], [1, 0]);
   // const y = useTransform(scrollYProgress, [0, 1], [0, 1100]);
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.7]);
