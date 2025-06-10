@@ -20,8 +20,9 @@ const Hero = () => {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.7]);
 
   return (
+    <div className="w-full -z-10">
     <FadeIn y={false} random={false}>
-      <div ref={ref} className="w-screen h-screen relative">
+      <div ref={ref} className="w-screen h-screen relative ">
         {/* Fixed video background - not affected by scroll transforms */}
         <div className="fixed inset-0 w-screen h-screen -z-20">
           <video
@@ -80,6 +81,7 @@ const Hero = () => {
         </div>
       </div>
     </FadeIn>
+    </div>
   );
 };
 
