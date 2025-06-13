@@ -5,8 +5,6 @@ import PageWrapper from "@/components/PageWrapper";
 import MediaCarousel from "@/components/MediaCarousel";
 import Albums from "@/components/Albums";
 import MediaModal from "@/components/MediaModal";
-// import ProjectExpo from "@/components/ProjectExpo";
-// import PageTitle from "@/components/PageTitle";
 import VideosWrapper from "@/components/VideosWrapper";
 import PDFContainer from "@/components/PDFContainer";
 import Link from "next/link";
@@ -51,17 +49,12 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   if (!section) {
     return notFound();
   }
-  // console.log(section);
-  // const totalAlbums = section.albums ? 1: 0
-  // const videoEmbed = section.mediaLinks && !section.displayBodySecondary ? 1 : 0;
-  // const totalMediaElements =  totalAlbums + videoEmbed
 
   return (
     <PageWrapper title={section.title}>
       <div className=" flex w-full flex-col items-center justify-between">
         {section.videos && <VideosWrapper videos={section.videos} />}
 
-        {/* <PageTitle title={section.title} /> */}
         <ProjectBody
           title={section.title}
           description={section.description}

@@ -18,11 +18,11 @@ const Section = ({ title, image, slug, i }: SectionProps) => {
       href={"/" + slug}
       className={` flex flex-col w-7/8 sm:w-full md:w-1/2 lg:w-2/5 max-w-128  h-fit bg-background justify-center items-center md:items-start shadow-2xl border border-neutral-400 rounded-4xl `}
     >
-             <h3
+             <h1
             className={`absolute w-fit pl-10 z-10 text-center feature-title tracking-[6] text-4xl md:text-5xl lg:text-6xl uppercase`}
           >
             {title}
-          </h3>
+          </h1>
       <div
         className="w-full aspect-square overflow-hidden rounded-4xl "
         style={{

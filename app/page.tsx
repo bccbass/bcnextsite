@@ -7,7 +7,6 @@ import Process from "@/components/sections/Process";
 import ImageFeature from "@/components/sections/ImageFeature";
 import Hello from "@/components/sections/Hello";
 import NavHamburger from "@/components/NavHamburger";
-// import DividerGrunge from "@/components/sections/DividerGrunge";
 import Footer from "@/components/sections/Footer";
 import { getWebsiteData } from "@/lib/fetch";
 

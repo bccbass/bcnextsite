@@ -1,7 +1,6 @@
 import React from "react";
 import { Suspense } from "react";
 import PageWrapper from "@/components/PageWrapper";
-// import PageTitle from "@/components/PageTitle";
 import PostCardWrapper from "@/components/PostCardWrapper";
 import Tags from "@/components/Tags";
 
@@ -13,7 +12,6 @@ const page = async () => {
 
   return (
     <PageWrapper title="Process">
-      {/* <PageTitle title="Process" description="Works in progress, transcriptions and musings." /> */}
       <Suspense fallback={<div>Loading...</div>}>
         <div className="">
           <Tags categories={categories} />
