@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import Badge from "@/components/Badge";
 import FadeIn from "../FadeIn";
 // import Spinner from "../Spinner";
-import {  motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const Hero = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -21,66 +21,71 @@ const Hero = () => {
 
   return (
     <div className="w-full -z-10">
-    <FadeIn y={false} random={false}>
-      <div ref={ref} className="w-screen h-screen relative ">
-        {/* Fixed video background - not affected by scroll transforms */}
-        <div className="fixed inset-0 w-screen h-screen -z-20">
-          <video
-            className="object-cover h-full w-full"
-            autoPlay
-            muted
-            loop
-            preload="auto"
-            playsInline
-            webkit-playsinline="true"
-            x5-playsinline="true"
-            style={{
-              transform: "translate3d(0, 0, 0)",
-              backfaceVisibility: "hidden",
-            }}
-            // onLoadedData={() => {
-            //   setIsLoaded(true);
-            // }}
-          >
-            <source
-              src="https://res.cloudinary.com/dyb9ascpy/video/upload/v1749101662/welcome_river_lekdjv.mp4"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+      <FadeIn y={false} random={false}>
+        <div ref={ref} className="w-screen h-screen relative ">
+          {/* Fixed video background - not affected by scroll transforms */}
+          <div className="fixed inset-0 w-screen h-screen -z-20">
+            <video
+              className="object-cover h-full w-full"
+              autoPlay
+              muted
+              loop
+              preload="auto"
+              playsInline
+              webkit-playsinline="true"
+              x5-playsinline="true"
+              style={{
+                transform: "translate3d(0, 0, 0)",
+                backfaceVisibility: "hidden",
+              }}
+              // onLoadedData={() => {
+              //   setIsLoaded(true);
+              // }}
+            >
+              <track
+                src="captions_en.vtt"
+                kind="captions"
+                label="english_captions"
+              ></track>
+              <source
+                src="https://res.cloudinary.com/dyb9ascpy/video/upload/v1749101662/welcome_river_lekdjv.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
 
-        {/* Scroll-based overlay for opacity effect */}
-        <motion.div
-          className="fixed inset-0 w-screen h-screen bg-background pointer-events-none -z-10"
-          style={{
-            opacity: useTransform(scrollOpacity, (value) => 1 - value),
-            willChange: "opacity",
-          }}
-        />
-
-        {/* Content layer */}
-        <div className="-z-20 fixed h-screen flex items-center justify-center">
+          {/* Scroll-based overlay for opacity effect */}
           <motion.div
-            className="w-screen flex justify-center pb-42"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.3, delay: 0.5 }}
+            className="fixed inset-0 w-screen h-screen bg-background pointer-events-none -z-10"
             style={{
-              opacity: badgeOpacity,
-              // y,
-              scale,
-              transform: "translate3d(0, 0, 0)",
-              willChange: "transform, opacity",
-              backfaceVisibility: "hidden",
-              WebkitFontSmoothing: "antialiased",
+              opacity: useTransform(scrollOpacity, (value) => 1 - value),
+              willChange: "opacity",
             }}
-          >
-            <Badge color="text-neutral-100" />
-          </motion.div>
+          />
+
+          {/* Content layer */}
+          <div className="-z-20 fixed h-screen flex items-center justify-center">
+            <motion.div
+              className="w-screen flex justify-center pb-42"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1.3, delay: 0.5 }}
+              style={{
+                opacity: badgeOpacity,
+                // y,
+                scale,
+                transform: "translate3d(0, 0, 0)",
+                willChange: "transform, opacity",
+                backfaceVisibility: "hidden",
+                WebkitFontSmoothing: "antialiased",
+              }}
+            >
+              <Badge color="text-neutral-100" />
+            </motion.div>
+          </div>
         </div>
-      </div>
-    </FadeIn>
+      </FadeIn>
     </div>
   );
 };
