@@ -15,6 +15,7 @@ function NavHamburger({ homePage = false }: { homePage?: boolean }) {
         className={`top-4 right-8 z-50 fixed ${homePage ? "" : "lg:hidden"}`}
       >
         <Hamburger
+          aria-label="hamburger-menu-button"
           toggled={isOpen}
           toggle={setOpen}
           direction="left"
