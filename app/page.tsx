@@ -12,7 +12,7 @@ import { getWebsiteData } from "@/lib/fetch";
 
 
 export const metadata = {
-  title: "Bass Lessons in Sydney | Upright & Electric | Benjamin Campbell",
+  title: "Benjamin Campbell | Bassist | Composer | Educator",
   description: "Learn upright or electric bass in-person or online with an experienced session bassist and educator. Book your first lesson today.",
   keywords: ["bass lessons", "bass teacher Sydney", "upright bass lessons", "online bass lessons", "electric bass tutor", "shire bass lessons"],
   openGraph: {
