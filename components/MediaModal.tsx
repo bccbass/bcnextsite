@@ -74,12 +74,14 @@ export default function Modal({
   return (
     <div className="flex h-fit w-screen justify-center px-4 py-8">
       <button
+        role="button"
+        aria-label="media modal for videos"
         className="relative mx-auto flex aspect-video w-full max-w-2xl justify-center outline outline-neutral-500 shadow-2xl"
         onClick={() => setIsOpen(true)}
       >
         <div
           style={{
-            backgroundImage: `url('http://img.youtube.com/vi/${imgUrl}/hqdefault.jpg')`,
+            backgroundImage: `url('https://img.youtube.com/vi/${imgUrl}/hqdefault.jpg')`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
