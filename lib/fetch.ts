@@ -21,8 +21,9 @@ export const sanityClient = createClient({
 
 export async function getSlugs(
   type: string
-): Promise<{ slug: { current: string } }[]> {
-  const data = await sanityClient.fetch(`*[_type == "${type}"]{ slug }`);
+): Promise<{_updatedAt: string, slug: {current: string } }[]> {
+  const data = await sanityClient.fetch(`*[_type == "${type}"]{_updatedAt, slug }`);
+  console.log(data)
   return data;
 }
 // Example function to fetch projects
