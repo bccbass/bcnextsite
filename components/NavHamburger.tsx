@@ -1,22 +1,20 @@
-'use client';
+"use client";
 import React from "react";
 import { useState } from "react";
 import NavMenu from "./NavMenu";
 import { Cross as Hamburger } from "hamburger-react";
 
-
-function NavHamburger({homePage = false}:{homePage?: boolean}) {
-    const [isOpen, setOpen] = useState(false);
-    
+function NavHamburger({ homePage = false }: { homePage?: boolean }) {
+  const [isOpen, setOpen] = useState(false);
 
   return (
     <>
-      
-
-      <div className={`top-4 right-8 z-50 fixed ${homePage ? '' : 'lg:hidden'}`}>
+      <div
+        role="button"
+        aria-label="hamburger-menu-button"
+        className={`top-4 right-8 z-50 fixed ${homePage ? "" : "lg:hidden"}`}
+      >
         <Hamburger
-        //   className=""
-          // onClick={handleNavToggle}
           toggled={isOpen}
           toggle={setOpen}
           direction="left"
@@ -26,9 +24,7 @@ function NavHamburger({homePage = false}:{homePage?: boolean}) {
           color={isOpen ? "white" : "var(--color-neutral-200)"}
         />
       </div>
-      {isOpen && (
-        <NavMenu setOpen={setOpen} isOpen={isOpen}  />
-      )}
+      {isOpen && <NavMenu setOpen={setOpen} isOpen={isOpen} />}
     </>
   );
 }

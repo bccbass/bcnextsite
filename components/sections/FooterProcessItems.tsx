@@ -31,7 +31,7 @@ const FooterProcessItems = async ({
   //   console.log("menuItems", menuItems);
   return (
     <div className="flex flex-col sm:flex-row gap-2 sm:gap-8 flex-1  ">
-      <h4 className="text-2xl feature-title-subtle">{title}</h4>
+      <h3 className="text-2xl feature-title-subtle">{title}</h3>
       <div className="flex flex-col gap-2">
         {menuItems.map((item) => (
           <Link key={item.slug.current} href={"/process/" + item.slug.current}>

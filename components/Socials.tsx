@@ -42,7 +42,7 @@ const Socials =async  () => {
       <ul className="flex flex-wrap justify-center gap-4">
         {socials.map((social) => (
           <li key={social.platform} className="">
-            <Link href={social.url} target="blank" className="">
+            <Link role="link" aria-label={`Link to ${social.platform}`}  href={social.url} target="blank" className="">
               {iconsMap[social.platform]}
             </Link>
           </li>
