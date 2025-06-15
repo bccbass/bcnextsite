@@ -40,7 +40,7 @@ console.log('blogslugs', blogSlugs[0]._updatedAt.split('T')[0])
       ...sectionSlugs.map(
     (path) => `
       <url>
-        <loc>${baseUrl}/projects/${path.slug.current}</loc>
+        <loc>${baseUrl}/${path.slug.current}</loc>
         <lastmod>${path._updatedAt.split('T')[0]}</lastmod>
       </url>`
   ),
