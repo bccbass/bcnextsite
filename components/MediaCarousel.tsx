@@ -32,7 +32,7 @@ const MediaCarousel = ({ mediaLinks }: MediaProps) => {
   const [activeVid, setActiveVid] = useState<number | null>(0);
   // console.log('thumb', thumbsSwiper?.activeIndex);
 
-  // To extract an image from a YouTube video link, you can use the YouTube image URL format: http://img.youtube.com/vi/VIDEO_ID/IMAGE_TYPE.jpg, replacing VIDEO_ID with the video ID and IMAGE_TYPE with the desired resolution (e.g., 0.jpg, default.jpg, mqdefault.jpg, hqdefault.jpg, sddefault.jpg, maxresdefault.jpg).
+  // To extract an image from a YouTube video link, you can use the YouTube image URL format: https://img.youtube.com/vi/VIDEO_ID/IMAGE_TYPE.jpg, replacing VIDEO_ID with the video ID and IMAGE_TYPE with the desired resolution (e.g., 0.jpg, default.jpg, mqdefault.jpg, hqdefault.jpg, sddefault.jpg, maxresdefault.jpg).
 
   // media.URL is actually a YouTube ID now -> Will prefix the url with correct path for videos and images and add in ID programatically
   return (
@@ -88,7 +88,7 @@ const MediaCarousel = ({ mediaLinks }: MediaProps) => {
                 alt={"image for " + media.title}
                 onClick={() => setActiveVid(index)}
                 className={`${activeVid == index ? "border-accent" : "border-black"} my-2 border-2 sm:px-2`}
-                src={`http://img.youtube.com/vi/${media.URL}/hqdefault.jpg`}
+                src={`https://img.youtube.com/vi/${media.URL}/hqdefault.jpg`}
               />
             </SwiperSlide>
           ))}

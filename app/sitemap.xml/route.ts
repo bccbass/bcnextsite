@@ -7,7 +7,6 @@ export async function GET() {
   const blogSlugs = await getSlugs('post')
   const projectSlugs = await getSlugs('project')
   const sectionSlugs = await getSlugs('section')
-console.log('blogslugs', blogSlugs[0]._updatedAt.split('T')[0])
   const staticPages = [
     '',
     'about',

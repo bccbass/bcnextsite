@@ -34,7 +34,7 @@ const VideoPlayerYouTube = ({
 
   const thumbNail = video.videoThumbnail
     ? urlFor(video.videoThumbnail).width(640).height(360).url()
-    : `http://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`;
+    : `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`;
 
   // const smallScreen = useMediaQuery("only screen and (max-width : 768px)");
 
