@@ -10,8 +10,8 @@ import { getAllPostsPreview, getCategories } from "@/lib/fetch";
 
 // NextJS looks for generateMetadata on build. This function adds directives to <head> alerting search indexing services to iginore if there are search params (ie. ?tags=<your tag>)
 interface Props {
-  params: { [key: string]: string | string[] | undefined }
-  searchParams: { [key: string]: string | string[] | undefined }
+  params: Promise<{ [key: string]: string | string[] | undefined }>
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
 export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
