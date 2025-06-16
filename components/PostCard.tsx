@@ -24,7 +24,7 @@ const PostCard = ({
       >
         <div className="flex flex-col items-center gap-2">
           <div className=" w-full md:h-68 h-80  rounded-t-2xl overflow-hidden">
-            <SanityImage image={image} alt={title} />
+            <SanityImage image={image} alt={title} width={400} height={400} />
           </div>
           <div className="flex flex-col text-pretty items-center gap-3 justify-center  p-6 md:p-4">
             <h3
