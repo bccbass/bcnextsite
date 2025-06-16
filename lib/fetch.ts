@@ -1,4 +1,5 @@
 /** @format */
+import { cache } from "react";
 import {
   PostPreview,
   Section,
@@ -21,9 +22,11 @@ export const sanityClient = createClient({
 
 export async function getSlugs(
   type: string
-): Promise<{_updatedAt: string, slug: {current: string } }[]> {
-  const data = await sanityClient.fetch(`*[_type == "${type}"]{_updatedAt, slug }`);
-  console.log(data)
+): Promise<{ _updatedAt: string; slug: { current: string } }[]> {
+  const data = await sanityClient.fetch(
+    `*[_type == "${type}"]{_updatedAt, slug }`
+  );
+  console.log(data);
   return data;
 }
 // Example function to fetch projects
@@ -41,8 +44,9 @@ export async function getPostsPreview(): Promise<Post[]> {
   `);
 }
 
-export async function getAllPostsPreview(): Promise<PostPreview[]> {
-  return await sanityClient.fetch(groq`
+export const getAllPostsPreview = cache(async (): Promise<PostPreview[]> => {
+  return await sanityClient.fetch(
+    groq`
     *[_type == "post"] | order(sortOrder asc) {
       _id,
       title,
@@ -52,8 +56,13 @@ export async function getAllPostsPreview(): Promise<PostPreview[]> {
       description,
       "imageUrl": mainImage,
     }
-  `);
-}
+  `,
+    {},
+    {
+      next: { revalidate: 600 }, // Revalidate every 60 seconds
+    }
+  );
+});
 export async function getPost(slug: string): Promise<Post[]> {
   return await sanityClient.fetch(
     `*[_type == "post" && slug.current == $slug][0]{
@@ -128,14 +137,20 @@ export async function getSocials(): Promise<SocialsData[]> {
   `);
   return data;
 }
-export async function getCategories(): Promise<CategoriesData[]> {
-  const data = await sanityClient.fetch(`
+export const getCategories = cache(async (): Promise<CategoriesData[]> => {
+  const data = await sanityClient.fetch(
+    `
     *[_type == "category"] {
       _id,
       title,
       slug,
       description,
     }
-  `);
+  `,
+    {},
+    {
+      next: { revalidate: 600 }, // Revalidate every 60 seconds
+    }
+  );
   return data;
-}
+});
