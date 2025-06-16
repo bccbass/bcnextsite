@@ -5,12 +5,10 @@ import { IoIosCloseCircleOutline } from "react-icons/io";
 
 import { useSearchParams } from "next/navigation";
 
-type CategoryType = { categories: { _id: string; title: string }[] };
+type CategoryType = { categories: { _id: string; title: string }[]; activeTag: string };
 
-const Tags = ({ categories }: CategoryType) => {
-  const searchParams = useSearchParams();
-  const tag =
-    searchParams.get("tag") !== null ? searchParams.get("tag") : "all";
+const Tags = ({ categories, activeTag }: CategoryType) => {
+
 
   return (
     <div className="flex flex-col gap-4 w-full items-center justify-center ">
@@ -19,7 +17,7 @@ const Tags = ({ categories }: CategoryType) => {
           <Link
             key={category._id}
             href={"/process?tag=" + category.title}
-            className={category.title === tag ? "active-tag" : "inactive-tag"}
+            className={category.title === activeTag ? "active-tag" : "inactive-tag"}
           >
             {category.title}
           </Link>
@@ -28,7 +26,7 @@ const Tags = ({ categories }: CategoryType) => {
       <Link
         href={"/process"}
         className={
-          tag == null || tag != "all"
+          activeTag == null || activeTag != "all"
             ? "rounded-full py-1 px-3 bg-accent hover:text-white flex items-center text-sm"
             : "opacity-0 rounded-full py-1 px-3 text-sm"
         }
