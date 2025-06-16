@@ -1,7 +1,6 @@
 
 'use client'
 import React from 'react'
-import { useSearchParams } from 'next/navigation';
 import PostCard from "@/components/PostCard";
 
 type PostCardWrapperProps = {

@@ -3,8 +3,6 @@ import React from "react";
 import Link from "next/link";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 
-import { useSearchParams } from "next/navigation";
-
 type CategoryType = { categories: { _id: string; title: string }[]; activeTag: string };
 
 const Tags = ({ categories, activeTag }: CategoryType) => {
