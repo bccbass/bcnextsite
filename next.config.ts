@@ -2,9 +2,11 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  swcMinify: true, // Enable SWC minification
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
+  },
+  experimental: {
+    optimizeCss: true, // Keep this if you added it
   },
   images: {
     formats: ["image/webp", "image/avif"],
