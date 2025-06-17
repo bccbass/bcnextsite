@@ -4,9 +4,10 @@ import "./globals.css";
 import "lenis/dist/lenis.css";
 import { ReactLenis } from "@/lib/lenis";
 
-
 const roboto = Roboto({
   variable: "--font-sans",
+  display: "swap", // Important for LCP
+  preload: true,
   subsets: ["latin"],
   weight: ["400", "700"],
   style: ["normal", "italic"],
@@ -14,6 +15,8 @@ const roboto = Roboto({
 
 const juliusSans = Julius_Sans_One({
   variable: "--font-feature",
+  display: "swap", // Important for LCP
+  preload: true,
   subsets: ["latin"],
   weight: ["400"],
   style: ["normal"],
@@ -21,6 +24,8 @@ const juliusSans = Julius_Sans_One({
 
 const rubik = Rubik_Pixels({
   variable: "--font-rubik",
+  display: "swap", // Important for LCP
+  preload: true,
   subsets: ["latin"],
   weight: ["400"],
   style: ["normal"],
