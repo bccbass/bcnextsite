@@ -18,9 +18,9 @@ const BadgeAnimationWrapper = ({ children }:{children: React.ReactNode}) => {
     <div ref={ref} className="fixed h-screen top-0 flex items-center justify-center">
       <motion.div
         className="w-screen flex justify-center pb-42"
-        // initial={{ opacity: 0 }}
-        // animate={{ opacity: 1 }}
-        // transition={{ duration: 1.3, delay: 0.5 }}
+        initial={{scale: .94, y: 12}}
+        animate={{scale: 1, y: 0 }}
+        transition={{ duration: .6 }}
         style={{
           opacity: badgeOpacity,
           scale,
