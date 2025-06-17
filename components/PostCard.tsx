@@ -51,8 +51,7 @@ const PostCard = ({
             className=" rounded-button self-center "
             href={"/process/" + slug}
           >
-            {" "}
-            More
+            See Post
           </Link>
         </div>
       </div>
