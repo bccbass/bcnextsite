@@ -44,9 +44,9 @@ const Hero = () => {
 
           <HeroAnimationWrapper />
 
-          {/* <BadgeAnimationWrapper> */}
+          <BadgeAnimationWrapper>
             <Badge />
-          {/* </BadgeAnimationWrapper> */}
+          </BadgeAnimationWrapper>
         </div>
       {/* </FadeIn> */}
     </div>

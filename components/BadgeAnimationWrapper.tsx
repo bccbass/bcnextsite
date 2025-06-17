@@ -15,8 +15,8 @@ const BadgeAnimationWrapper = ({ children }:{children: React.ReactNode}) => {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.7]);
 
   return (
-    <div ref={ref} className="fixed h-screen top-0 flex items-center justify-center">
-      <motion.div
+    <div ref={ref} className="fixed h-screen w-full top-0 flex items-center justify-center">
+      {/* <motion.div
         className="w-screen flex justify-center pb-42"
         // initial={{ opacity: 0 }}
         // animate={{ opacity: 1 }}
@@ -29,9 +29,9 @@ const BadgeAnimationWrapper = ({ children }:{children: React.ReactNode}) => {
           backfaceVisibility: "hidden",
           WebkitFontSmoothing: "antialiased",
         }}
-      >
+      > */}
         {children}
-      </motion.div>
+      {/* </motion.div> */}
     </div>
   );
 };
