@@ -1,6 +1,6 @@
 import Badge from "@/components/Badge";
 import HeroAnimationWrapper from "@/components/HeroAnimationWrapper";
-import FadeIn from "../FadeIn";
+// import FadeIn from "../FadeIn";
 import BadgeAnimationWrapper from "../BadgeAnimationWrapper";
 
 const Hero = () => {

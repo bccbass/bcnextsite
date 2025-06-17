@@ -1,8 +1,7 @@
 "use client";
 import React, { useRef } from "react";
-import Badge from "@/components/Badge";
-import FadeIn from "./FadeIn";
-// import Spinner from "../Spinner";
+// import Badge from "@/components/Badge";
+// import FadeIn from "./FadeIn";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const HeroAnimationWrapper = () => {
