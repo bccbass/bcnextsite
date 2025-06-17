@@ -47,7 +47,7 @@ export default function RootLayout({
       <ReactLenis root>
         <body
           draggable="false"
-          className={`flex ${roboto.variable} ${juliusSans.variable} antialiased`}
+          className={`${roboto.variable} ${juliusSans.variable} antialiased`}
         >
           {children}
         </body>
