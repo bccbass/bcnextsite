@@ -4,6 +4,7 @@ import AlbumLinks from "./AlbumLinks";
 import DiscogModal from "./DiscogModal";
 
 type DiscogCardProps = {
+  index: number;
   album: {
     title: string;
     artist: string;
@@ -15,8 +16,7 @@ type DiscogCardProps = {
     links: { platform: string; url: string }[];
   };
 };
-const DiscogCard = ({ album }: DiscogCardProps) => {
-
+const DiscogCard = ({ album, index }: DiscogCardProps) => {
   return (
     <DiscogModal image={album.image} alt={`Image for ${album.title}`}>
       {/* Modal Contents -> */}
@@ -36,7 +36,14 @@ const DiscogCard = ({ album }: DiscogCardProps) => {
           <h2 className="text-center text-md font-semibold text-neutral-400 pb-2">
             {album.label}
           </h2>
-          <SanityImage image={album.image} alt={`Image for ${album.title}`} height={400} width={400} />
+          <SanityImage
+            priority={index <= 6}
+            loading={index <= 6 ? 'eager' : 'lazy'}
+            image={album.image}
+            alt={`Image for ${album.title}`}
+            height={400}
+            width={400}
+          />
         </div>
 
         <h2 className="text-center max-w-lg text-lg py-4 text-neutral-700 capitalize font-semibold">

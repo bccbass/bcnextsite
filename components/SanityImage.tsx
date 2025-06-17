@@ -8,21 +8,26 @@ const SanityImage = ({
   alt,
   width = 1000,
   height = 1000,
+  priority = false,
+  loading ="lazy"
 }: {
   image: string;
   alt: string;
   width?: number;
   height?: number;
+  priority?: boolean;
+  loading?: 'lazy' | 'eager' | undefined
 }) => {
   if (!image) return null;
 
   return (
     <Image
-      loading="lazy"
+      loading={loading}
       src={urlFor(image).width(width).height(height).url()} // Adjust width & height
       alt={alt}
       width={width}
       height={height}
+      priority={priority}
     />
   );
 };
