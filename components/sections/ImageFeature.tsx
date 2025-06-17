@@ -1,6 +1,7 @@
 "use client";
 import { useRef } from "react";
 import useMedia from "@/hooks/useMedia";
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const ImageFeature = ({ imgUrl }: { imgUrl: string }) => {
@@ -34,9 +35,11 @@ const ImageFeature = ({ imgUrl }: { imgUrl: string }) => {
           duration: 0, // Let scroll drive the animation completely
         }}
       >
-        <img
+        <Image
           src={imgUrl}
-          alt=""
+          width={1280}
+          height={980}
+          alt="parallax image feature for homepage - bc plays bass"
           className={`
             w-full h-full object-center saturate-100 filter contrast-150
             ${isSmScreen ? "object-contain" : "object-cover"}
