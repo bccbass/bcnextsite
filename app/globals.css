@@ -19,7 +19,7 @@
   --color-accent: #f93fb0;
   --font-sans: var(--font-sans);
   --font-feature: var(--font-feature);
-  --font-rubik: var(--font-rubik);
+  /* --font-rubik: var(--font-rubik); */
 }
 
 /* @media (prefers-color-scheme: dark) {

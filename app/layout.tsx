@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto, Julius_Sans_One, Rubik_Pixels } from "next/font/google";
+import { Roboto, Julius_Sans_One } from "next/font/google";
 import "./globals.css";
 import "lenis/dist/lenis.css";
 import { ReactLenis } from "@/lib/lenis";
@@ -22,14 +22,14 @@ const juliusSans = Julius_Sans_One({
   style: ["normal"],
 });
 
-const rubik = Rubik_Pixels({
-  variable: "--font-rubik",
-  display: "swap", // Important for LCP
-  preload: true,
-  subsets: ["latin"],
-  weight: ["400"],
-  style: ["normal"],
-});
+// const rubik = Rubik_Pixels({
+//   variable: "--font-rubik",
+//   display: "swap", // Important for LCP
+//   preload: true,
+//   subsets: ["latin"],
+//   weight: ["400"],
+//   style: ["normal"],
+// });
 
 export const metadata: Metadata = {
   title: "Benjamin Campbell",
@@ -47,7 +47,7 @@ export default function RootLayout({
       <ReactLenis root>
         <body
           draggable="false"
-          className={`flex${roboto.variable} ${juliusSans.variable} ${rubik.variable}  antialiased`}
+          className={`flex ${roboto.variable} ${juliusSans.variable} antialiased`}
         >
           {children}
         </body>
