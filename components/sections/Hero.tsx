@@ -44,9 +44,11 @@ const Hero = () => {
 
           <HeroAnimationWrapper />
 
-          <BadgeAnimationWrapper>
+          {/* <BadgeAnimationWrapper> */}
+          <div className="w-full h-screen flex items-center justify-center -z-20 fixed top-0">
             <Badge />
-          </BadgeAnimationWrapper>
+            </div>
+          {/* </BadgeAnimationWrapper> */}
         </div>
       {/* </FadeIn> */}
     </div>
