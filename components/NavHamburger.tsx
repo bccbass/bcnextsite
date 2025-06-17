@@ -1,12 +1,14 @@
 "use client";
 import React from "react";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import NavMenu from "./NavMenu";
 import { Cross as Hamburger } from "hamburger-react";
 
 function NavHamburger({ homePage = false }: { homePage?: boolean }) {
   const [isOpen, setOpen] = useState(false);
-
+  const handleSetOpen = useCallback((value: boolean) => {
+    setOpen(value);
+  }, []);
   return (
     <>
       <div
@@ -25,7 +27,7 @@ function NavHamburger({ homePage = false }: { homePage?: boolean }) {
           color={isOpen ? "white" : "var(--color-neutral-200)"}
         />
       </div>
-      {isOpen && <NavMenu setOpen={setOpen} isOpen={isOpen} />}
+      {isOpen && <NavMenu handleSetOpen={handleSetOpen} isOpen={isOpen} />}
     </>
   );
 }

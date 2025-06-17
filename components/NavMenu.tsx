@@ -4,17 +4,16 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 import NavMenuItems from "./NavMenuItems";
 const NavMenu = ({
-  setOpen,
+  handleSetOpen,
   isOpen,
 }: {
   isOpen: boolean;
-  setOpen: (arg0: boolean) => void;
+  handleSetOpen: (value: boolean) => void;
 }) => {
-
   // Combined approach for both overflow and Lenis
   useEffect(() => {
     const handleEscKey = (event: KeyboardEvent) => {
-      if (event.key == "Escape") setOpen(false);
+      if (event.key == "Escape") handleSetOpen(false);
     };
     if (isOpen) {
       // Stop scrolling using both methods
@@ -35,7 +34,7 @@ const NavMenu = ({
       document.body.style.touchAction = "";
       document.removeEventListener("keyup", handleEscKey);
     };
-  }, [isOpen]);
+  }, [isOpen, handleSetOpen]);
 
   return (
     <motion.div
@@ -47,7 +46,7 @@ const NavMenu = ({
       <div className="flex flex-col items-center  z-50 justify-between h-1/2 my-20 text-3xl text-slate-100 font-light cursor-default">
         <div className="flex justify-around mx-auto px-10 md:px-20 py-16 md:py-20 gap-16 flex-wrap max-w-7xl ">
           <div className="flex flex-col gap-4 lg:gap-8 uppercase font-semibold ">
-    <NavMenuItems setOpen={setOpen} />
+            <NavMenuItems handleSetOpen={handleSetOpen} />
           </div>
         </div>
       </div>
