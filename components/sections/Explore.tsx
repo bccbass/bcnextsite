@@ -9,7 +9,7 @@ const Explore = async () => {
     const sections = await getSections()
 
     return (
-    <div className='pt-12 px-6 pb-30 md:pb-48 flex flex-wrap justify-center gap-16 md:gap-2
+    <div className='pt-12 px-6 pb-30 md:pb-48 flex flex-wrap justify-center gap-x-16 gap-y-8
     4 xl:gap-32'>
       {  sections.map((section) => <FeatureCard key={section._id} title={section.title} slug={section.slug.current} image={section.imageUrl} 
       // description={section.description} 
