@@ -11,12 +11,11 @@ import Link from "next/link";
 import ProjectBody from "@/components/ProjectBody";
 import ProjectBodySecondary from "@/components/ProjectBodySecondary";
 import { urlForMedImg } from "@/lib/sanityImage";
-import type { Metadata, ResolvingMetadata } from 'next'
- 
+import type { Metadata } from "next";
+
 type Props = {
-  params: Promise<{ slug: string }>
-  // searchParams: Promise<{ [key: string]: string | string[] | undefined }>
-}
+  params: Promise<{ slug: string }>;
+};
 
 export async function generateStaticParams() {
   const posts = await sanityClient.fetch(`*[_type == "posts"]{ slug }`);
@@ -26,12 +25,8 @@ export async function generateStaticParams() {
   }));
 }
 
-
-export async function generateMetadata(
-  { params }: Props,
-): Promise<Metadata> {
-
-  const { slug } = await params
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
   const post = await sanityClient.fetch(
     `*[_type == "post" && slug.current == $slug][0]{
     _id,
@@ -41,9 +36,9 @@ export async function generateMetadata(
   }`,
     { slug: slug }
   );
-  if (!post) return notFound()
+  if (!post) return notFound();
 
-    const imgUrl = urlForMedImg(post?.mainImage)
+  const imgUrl = urlForMedImg(post?.mainImage);
   return {
     title: post.title,
     description: post.description,
@@ -60,10 +55,10 @@ export async function generateMetadata(
         },
       ],
     },
-  }
-
-
+  };
 }
+
+
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params;
 

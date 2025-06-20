@@ -5,12 +5,52 @@ import PageWrapper from "@/components/PageWrapper";
 import MediaCarousel from "@/components/MediaCarousel";
 import Albums from "@/components/Albums";
 import MediaModal from "@/components/MediaModal";
-
-// import ProjectExpo from "@/components/ProjectExpo";
 import PDFContainer from "@/components/PDFContainer";
 import Link from "next/link";
 import ProjectBody from "@/components/ProjectBody";
 import ProjectBodySecondary from "@/components/ProjectBodySecondary";
+import { urlForMedImg } from "@/lib/sanityImage";
+import type { Metadata } from "next";
+
+type Props = {
+  params: Promise<{ slug: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const project = await sanityClient.fetch(
+    `*[_type == "project" && slug.current == $slug][0]{
+    _id,
+    title,
+    description,
+    mainImage
+  }`,
+    { slug: slug }
+  );
+  if (!project) return notFound();
+
+  const imgUrl = urlForMedImg(project?.mainImage);
+  return {
+    title: `Benjamin Campbell | ${project.title}`,
+    description:
+      project.description || "Sydney based bassist, composer and educator",
+    openGraph: {
+      title: project.title,
+      description:
+        project.description || "Sydney based bassist, composer and educator",
+      url: `https://benjamincampbell.com/project/${slug}`,
+      images: [
+        {
+          url: imgUrl,
+          width: 800,
+          height: 800,
+          alt: project.title,
+        },
+      ],
+    },
+  };
+}
+
 
 export async function generateStaticParams() {
   const projects = await getSlugs("project");
@@ -56,7 +96,6 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   return (
     <PageWrapper title={section.title}>
       <div className=" flex w-full flex-col items-center justify-between">
-
         <ProjectBody
           title={section.title}
           description={section.description}

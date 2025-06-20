@@ -10,6 +10,46 @@ import PDFContainer from "@/components/PDFContainer";
 import Link from "next/link";
 import ProjectBody from "@/components/ProjectBody";
 import ProjectBodySecondary from "@/components/ProjectBodySecondary";
+import type { Metadata } from "next";
+
+type Props = {
+  params: Promise<{ slug: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await sanityClient.fetch(
+    `*[_type == "section" && slug.current == $slug][0]{
+    _id,
+    title,
+    description,
+    mainImage
+  }`,
+    { slug: slug }
+  );
+  if (!post) return notFound();
+
+  // const imgUrl = urlForMedImg(post?.mainImage);
+  return {
+    title: `Benjamin Campbell | ${post.title}`,
+    description:
+      post.description || "Sydney based bassist, composer and educator",
+    openGraph: {
+      title: post.title,
+      description:
+        post.description || "Sydney based bassist, composer and educator",
+      url: `https://benjamincampbell.com/${slug}`,
+      // images: [
+      //   {
+      //     url: imgUrl,
+      //     width: 800,
+      //     height: 800,
+      //     alt: post.title,
+      //   },
+      // ],
+    },
+  };
+}
 
 export async function generateStaticParams() {
   const sections = await getSlugs("section");
@@ -78,7 +118,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             <Link
               href={section.projectWebsite}
               target="_blank"
-            className="theme-button max-w-xl"
+              className="theme-button max-w-xl"
             >
               {`${section.title} Website`}
             </Link>
