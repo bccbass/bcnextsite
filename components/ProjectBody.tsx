@@ -26,7 +26,7 @@ const ProjectBody = ({
         </div>
       </div> */}
       <div
-        className={`prose prose-md  sm:prose-xl w-full border-neutral-400 px-4 sm:px-12 text-white`}
+        className={`prose prose-lg  sm:prose-xl w-full border-neutral-400  sm:px-12 text-white`}
       >
         {typeof body === "string" ? (
           <p>{body}</p>

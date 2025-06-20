@@ -31,16 +31,14 @@ const ProjectExpo = ({ mainImage, title, description }: ProjectProps) => {
       {/* Image */}
       <motion.figure
         className="w-full md:w-1/2 max-w-lg "
-        initial={{ opacity: 0}}
-        whileInView={{ opacity: 1}}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         transition={{
           once: true,
           duration: 0.5,
           ease: "easeInOut",
         }}
       >
-
-
         <Image
           className="w-full shadow-2xl border border-neutral-400 rounded-2xl"
           alt={mainImage.alt ? mainImage.alt : title}
@@ -48,26 +46,28 @@ const ProjectExpo = ({ mainImage, title, description }: ProjectProps) => {
           height={800}
           src={`${urlForMedImg(mainImage)}`}
         />
-        <figcaption className="hidden md:block w-full text-center mt-1 text-sm">{mainImage.alt ? mainImage.alt : ''}</figcaption>
+        <figcaption className="hidden md:block w-full text-center mt-1 text-sm">
+          {mainImage.alt ? mainImage.alt : ""}
+        </figcaption>
       </motion.figure>
 
       {/* Title and Description */}
       <motion.div
-        className="w-full md:w-1/2 h-full mx-6"
+        className="w-full md:w-1/2 h-full "
         initial={{ opacity: 0, y: 1 }}
-        whileInView={{ opacity: 1, y: 0}}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{
           once: true,
           duration: 0.5,
           ease: "easeInOut",
         }}
       >
-        <div className="relative flex w-full items-start h-full justify-center py-8  md:items-center">
-          <div className="mx-8 flex w-full max-w-xl flex-col items-center justify-center  border-neutral-400 py-4 text-center md:my-10 lg:mx-20 lg:py-8">
+        <div className="relative flex w-full items-start h-full justify-center py-6 sm:py-8  md:items-center">
+          <div className="mx-8 flex w-full max-w-xl flex-col items-center justify-center  border-neutral-400 text-center md:my-10 lg:mx-20 lg:py-8">
             <h3 className="text-center text-3xl page-title text-neutral-300 md:text-4xl lg:text-5xl">
               {title}
             </h3>
-            <p className="block w-full px-2 pt-5 text-xl leading-9 font-light text-neutral-400 italic md:text-2xl">
+            <p className="block w-full px-2 pt-2  text-xl leading-9 font-light text-neutral-400 italic md:text-2xl">
               {description}
             </p>
           </div>

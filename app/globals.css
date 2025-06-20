@@ -69,7 +69,7 @@ body {
 
 
 .page-section {
-  @apply w-full px-8  pb-28 md:pb-48  pt-20 md:pt-16  lg:pt-24 mx-auto sm:px-16;
+  @apply w-full px-4  pb-28 md:pb-48  pt-20 md:pt-16  lg:pt-24 mx-auto sm:px-16;
 }
 
 .page-title {

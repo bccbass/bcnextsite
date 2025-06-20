@@ -18,7 +18,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const post = await sanityClient.fetch(
+  const section = await sanityClient.fetch(
     `*[_type == "section" && slug.current == $slug][0]{
     _id,
     title,
@@ -27,22 +27,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }`,
     { slug: slug }
   );
-  if (!post) return notFound();
+  if (!section) return notFound();
 
-  // const imgUrl = urlForMedImg(post?.mainImage);
+  // const imgUrl = urlForMedImg(section?.mainImage);
   return {
-    title: `Benjamin Campbell | ${post.title}`,
+    title: `Benjamin Campbell | ${section.title}`,
     description:
-      post.description || "Sydney based bassist, composer and educator",
+      section.description || "Sydney based bassist, composer and educator",
     openGraph: {
-    title: `Benjamin Campbell | ${post.title}`,
+    title: `Benjamin Campbell | ${section.title}`,
       description:
          "Sydney based bassist, composer and educator",
       url: `https://benjamincampbell.com/${slug}`,
 
       images: [
         {
-          url: "https://benjamincampbell.com/welcome_poster.webp",
+          url: "https://benjamincampbell.com/welcome_posterer.webp",
           width: 1200,
           height: 630,
           alt: "Welcome Photo",
