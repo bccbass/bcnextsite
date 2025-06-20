@@ -35,9 +35,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description:
       post.description || "Sydney based bassist, composer and educator",
     openGraph: {
-      title: post.title || "Sydney based bassist, composer and educator",
+    title: `Benjamin Campbell | ${post.title}`,
       description:
-        post.description || "Sydney based bassist, composer and educator",
+         "Sydney based bassist, composer and educator",
       url: `https://benjamincampbell.com/${slug}`,
 
       images: [
