@@ -9,7 +9,7 @@ import PDFContainer from "@/components/PDFContainer";
 import Link from "next/link";
 import ProjectBody from "@/components/ProjectBody";
 import ProjectBodySecondary from "@/components/ProjectBodySecondary";
-import { urlForMedImg } from "@/lib/sanityImage";
+import { urlForSocialMediaImg } from "@/lib/sanityImage";
 import type { Metadata } from "next";
 
 type Props = {
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   );
   if (!project) return notFound();
 
-  const imgUrl = urlForMedImg(project?.mainImage);
+  const imgUrl = urlForSocialMediaImg(project?.mainImage);
   return {
     title: `Benjamin Campbell | ${project.title}`,
     description:
@@ -39,18 +39,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description:
         project.description || "Sydney based bassist, composer and educator",
       url: `https://benjamincampbell.com/project/${slug}`,
+      type: 'article',
       images: [
         {
           url: imgUrl,
-          width: 800,
-          height: 800,
+          width: 1200,
+          height: 630,
           alt: project.title,
         },
       ],
     },
   };
 }
-
 
 export async function generateStaticParams() {
   const projects = await getSlugs("project");

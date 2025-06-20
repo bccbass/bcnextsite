@@ -24,3 +24,6 @@ export function urlForFullScreen(source: SanityImageSource) {
 export function urlForMedImg(source: SanityImageSource) {
   return builder.image(source).width(1420).height(1420).url();
 }
+export function urlForSocialMediaImg(source: SanityImageSource) {
+  return builder.image(source).width(1200).height(630).url();
+}

@@ -10,7 +10,7 @@ import PDFContainer from "@/components/PDFContainer";
 import Link from "next/link";
 import ProjectBody from "@/components/ProjectBody";
 import ProjectBodySecondary from "@/components/ProjectBodySecondary";
-import { urlForMedImg } from "@/lib/sanityImage";
+import { urlForSocialMediaImg } from "@/lib/sanityImage";
 import type { Metadata } from "next";
 
 type Props = {
@@ -38,26 +38,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   );
   if (!post) return notFound();
 
-  const imgUrl = urlForMedImg(post?.mainImage);
+  const imgUrl = urlForSocialMediaImg(post?.mainImage);
   return {
     title: post.title,
     description: post.description,
     openGraph: {
       title: post.title,
       description: post.description,
+      type: "article",
       url: `https://benjamincampbell.com/process/${slug}`,
       images: [
         {
           url: imgUrl,
-          width: 800,
-          height: 800,
+          width: 1200,
+          height: 630,
           alt: post.title,
         },
       ],
     },
   };
 }
-
 
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params;
