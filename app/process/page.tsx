@@ -37,7 +37,7 @@ export async function generateMetadata({
 
   // Default metadata when no search params
   return {
-    title: "Process",
+    title: "Benjamin Campbell | Process",
     description: "Bass transcriptions and analysis",
     // Add other default metadata here
     keywords: ["bass transcriptions", "bass lessons"],
