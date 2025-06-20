@@ -10,6 +10,13 @@ import PDFContainer from "@/components/PDFContainer";
 import Link from "next/link";
 import ProjectBody from "@/components/ProjectBody";
 import ProjectBodySecondary from "@/components/ProjectBodySecondary";
+import { urlForMedImg } from "@/lib/sanityImage";
+import type { Metadata, ResolvingMetadata } from 'next'
+ 
+type Props = {
+  params: Promise<{ slug: string }>
+  // searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}
 
 export async function generateStaticParams() {
   const posts = await sanityClient.fetch(`*[_type == "posts"]{ slug }`);
@@ -17,6 +24,46 @@ export async function generateStaticParams() {
   return posts.map((post: { slug: { current: string } }) => ({
     slug: post.slug.current, // Ensures proper structure
   }));
+}
+
+
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+
+  const { slug } = await params
+  const post = await sanityClient.fetch(
+    `*[_type == "post" && slug.current == $slug][0]{
+    _id,
+		title,
+		description,
+		mainImage
+  }`,
+    { slug: slug }
+  );
+  if (!post) return notFound()
+
+    const imgUrl = urlForMedImg(post?.mainImage)
+  return {
+    title: post.title,
+    description: post.description,
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      url: `https://benjamincampbell.com/process/${slug}`,
+      images: [
+        {
+          url: imgUrl,
+          width: 800,
+          height: 800,
+          alt: post.title,
+        },
+      ],
+    },
+  }
+
+
 }
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params;
@@ -47,14 +94,9 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   if (!post) {
     return notFound();
   }
-  // console.log(project);
-  // const totalAlbums = post.albums ? 1: 0
-  // const videoEmbed = post.mediaLinks && !post.displayBodySecondary ? 1 : 0;
-  // const totalMediaElements =  totalAlbums + videoEmbed
 
   return (
-    <PageWrapper        
->
+    <PageWrapper>
       <div className=" flex w-full flex-col items-center justify-between">
         <ProjectExpo
           mainImage={post.mainImage}
@@ -90,12 +132,9 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           )}
         </div>
       </div>
-                  <Link
-              href={'/process'}
-              className="theme-button max-w-xl mt-32"
-            >
-              Back to Posts
-            </Link>
+      <Link href={"/process"} className="theme-button max-w-xl mt-32">
+        Back to Posts
+      </Link>
     </PageWrapper>
   );
 };
