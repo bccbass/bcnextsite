@@ -38,9 +38,25 @@ export async function generateMetadata({
   // Default metadata when no search params
   return {
     title: "Benjamin Campbell | Process",
-    description: "Bass transcriptions and analysis",
+    description: "A space to share transcriptions, musings and musical process",
     // Add other default metadata here
     keywords: ["bass transcriptions", "bass lessons"],
+    openGraph: {
+      title: "Benjamin Campbell | Process",
+      description:
+        "A space to share transcriptions, musings and musical process",
+      url: "https://benjamincampbell.com",
+      siteName: "Benjamin Campbell",
+      images: [
+        {
+          url: "https://benjamincampbell.com/welcome_poster.webp",
+          width: 1200,
+          height: 630,
+          alt: "Welcome Photo",
+        },
+      ],
+      type: "website",
+    },
   };
 }
 

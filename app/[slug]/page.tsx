@@ -39,14 +39,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description:
         post.description || "Sydney based bassist, composer and educator",
       url: `https://benjamincampbell.com/${slug}`,
-      // images: [
-      //   {
-      //     url: imgUrl,
-      //     width: 800,
-      //     height: 800,
-      //     alt: post.title,
-      //   },
-      // ],
+
+      images: [
+        {
+          url: "https://benjamincampbell.com/welcome_poster.webp",
+          width: 1200,
+          height: 630,
+          alt: "Welcome Photo",
+        },
+      ],
+      type: "website",
     },
   };
 }

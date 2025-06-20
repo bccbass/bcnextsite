@@ -20,14 +20,14 @@ export const metadata = {
     description: "Learn upright or electric bass in-person or online. Lessons tailored to your goals and skill level.",
     url: "https://benjamincampbell.com",
     siteName: "Benjamin Campbell",
-    // images: [
-    //   {
-    //     url: "https://yourdomain.com/images/bass-lessons-og.jpg",
-    //     width: 1200,
-    //     height: 630,
-    //     alt: "Bass Lessons with Your Name",
-    //   },
-    // ],
+    images: [
+      {
+        url: 'https://benjamincampbell.com/welcome_poster.webp',
+        width: 1200,
+        height: 630,
+        alt: "Welcome waterfall",
+      },
+    ],
     type: "website",
   },
 };
