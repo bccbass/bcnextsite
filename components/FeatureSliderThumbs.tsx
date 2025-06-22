@@ -15,6 +15,8 @@ const FeatureSliderThumbs = ({
     <div className="flex gap-4 mx-4 lg:mt-12 justify-center">
       {posts.map((post) => (
         <button
+          aria-label={post.title}
+
           className={`pt-2 lg:border-t-4 ${post._id == activeID ? " border-accent " : "border-neutral-600"} lg:w-1/5 z-10 text-neutral-600 flex `}
           onClick={() => handleClick(post._id)}
           key={post._id}

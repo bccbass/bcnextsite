@@ -53,6 +53,7 @@ const FeatureSlider = ({ posts }: SliderProps) => {
       <div className="z-10 flex flex-col h-screen sm:h-fit items-center justify-between lg:justify-center ">
         <div className="flex justify-between items-center w-full h-fit mt-4 sm:mt-12">
           <button
+          aria-label="previous post"
             onClick={() => handleBackArrowClick()}
             className="text-8xl text-secondary flex-1/12 hidden md:block"
           >
@@ -69,6 +70,8 @@ const FeatureSlider = ({ posts }: SliderProps) => {
             />
           </div>
           <button
+          aria-label="next post"
+
             onClick={() => handleFwdArrowClick()}
             className="text-8xl text-secondary flex-1/12 hidden md:block"
           >
@@ -83,7 +86,9 @@ const FeatureSlider = ({ posts }: SliderProps) => {
             handleClick={handleClick}
           />
 
-          <Link className="theme-button w-fit " href={"/process"}>
+          <Link 
+          aria-label="See all posts"
+           className="theme-button w-fit " href={"/process"}>
             See All Posts
           </Link>
         </div>
