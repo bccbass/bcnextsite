@@ -69,7 +69,7 @@ export default function Modal({
   return (
     <>
       <button
-        className={`${pdfBtn ? "pdf-button" : "theme-button"} max-w-2xl`}
+        className={`${pdfBtn ? "pdf-button" : "text-2xl uppercase rounded-button"} max-w-2xl`}
         onClick={() => setIsOpen(true)}
       >
         {title ? title : "Open"}
@@ -95,7 +95,7 @@ export default function Modal({
             <div
               id="modalInner"
               ref={contentRef}
-              className={`${isPdf ? "" : "max-w-lg"} flex h-[82vh] w-[95vw] flex-col items-center gap-y-6 rounded bg-white p-4 shadow-lg sm:h-[96vh] sm:w-[90vw] md:w-[80vw] lg:w-[70vw]`}
+              className={`${isPdf ? "" : "max-w-lg"} flex h-[82vh] w-[95vw] flex-col items-center gap-y-6 rounded  p-4 shadow-lg sm:h-[96vh] sm:w-[90vw] md:w-[80vw] lg:w-[70vw]`}
             >
               <button
                 className="absolute top-4 right-4 z-40 m-0 hidden rounded-full bg-neutral-800 p-0 text-white sm:block"

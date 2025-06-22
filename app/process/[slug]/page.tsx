@@ -4,6 +4,7 @@ import { sanityClient } from "@/lib/fetch";
 import PageWrapper from "@/components/PageWrapper";
 import MediaCarousel from "@/components/MediaCarousel";
 import Albums from "@/components/Albums";
+import ContactCTA from "@/components/ContactCTA";
 import MediaModal from "@/components/MediaModal";
 import ProjectExpo from "@/components/ProjectExpo";
 import PDFContainer from "@/components/PDFContainer";
@@ -126,7 +127,8 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           )}
         </div>
       </div>
-      <Link href={"/process"} className="theme-button max-w-xl mt-32">
+      <ContactCTA />
+      <Link href={"/process"} className="theme-button max-w-xl mt-16">
         Back to Posts
       </Link>
     </PageWrapper>

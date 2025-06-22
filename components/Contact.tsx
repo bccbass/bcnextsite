@@ -6,14 +6,14 @@ import { useForm } from "react-hook-form";
 import FadeInOut from "./FadeInOut";
 import useWeb3Forms from "@web3forms/react";
 
-const Contact = () => {
+const Contact = ({formFirst=false}:{formFirst?: boolean}) => {
   const inputClassStyle =
     "bg-secondary  font-semibold text-white border-gray-400  outline-none p-1 border-b-4 border-white backdrop-blur-lg";
   const { register, reset, handleSubmit } = useForm();
 
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [result, setResult] = useState<string | null>(null);
-  const [showForm, setShowForm] = useState<boolean>(false);
+  const [showForm, setShowForm] = useState<boolean>(formFirst);
 
   const accessKey = "31670424-2432-4e48-8002-d7c5e175702e";
 
@@ -89,12 +89,12 @@ const Contact = () => {
               </button>
             </form>
             <div className="pt-6 flex flex-col items-center gap-8 w-full">
-              <button
+             {!formFirst && <button
                 className="text-xl font-semibold underline"
                 onClick={() => setShowForm(false)}
               >
                 cancel
-              </button>
+              </button>}
               <p className="text-center">we respect your privacy</p>
             </div>
           </div>

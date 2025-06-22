@@ -1,6 +1,5 @@
 import React from "react";
 import { getPostsPreview } from "@/lib/fetch";
-import Link from "next/link";
 import FeatureSlider from "../FeatureSlider";
 
 const ProcessWIP = async () => {
