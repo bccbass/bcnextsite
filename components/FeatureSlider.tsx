@@ -43,7 +43,7 @@ const FeatureSlider = ({ posts }: SliderProps) => {
       }}
     >
       <div
-        className="w-full h-full -z-10 absolute top-0 bg-white/40 p-6"
+        className="w-full h-full -z-10 absolute top-0 bg-white/60 p-6"
         style={{
           WebkitBackdropFilter: "blur(50px)",
           backdropFilter: "blur(50px)",
