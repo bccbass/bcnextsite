@@ -2,6 +2,7 @@ import React from "react";
 import SanityImage from "./SanityImage";
 import FadeIn from "./FadeIn";
 import Link from "next/link";
+
 type PostCardProps = {
   title: string;
   image: string;

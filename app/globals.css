@@ -55,6 +55,13 @@ body {
   @apply drop-shadow-[1px_1px_1px_rgba(0,0,0,0.5)];
 }
 
+.universal-backrop-blur {
+  -webkit-backdrop-filter: blur(
+    50px
+  ); /* Add this line first, it fixes blur for Safari*/
+  backdrop-filter: blur(50px); /* This line activates blur*/
+}
+
 .text-outline-accent {
   @apply drop-shadow-[0_.8px_.8px_rgba(249,63,176)];
 }
@@ -67,19 +74,18 @@ body {
   @apply w-full px-6 xl:px-0 pb-28 lg:pb-28 pt-28  max-w-7xl mx-auto;
 }
 
-
 .page-section {
   @apply w-full px-4  pb-28 md:pb-48  pt-20 md:pt-16  lg:pt-24 mx-auto sm:px-16;
 }
 
 .page-title {
-  @apply drop-shadow-[3px_3px_1px_rgba(37,150,190)] text-neutral-300 font-bold  uppercase ;
+  @apply drop-shadow-[3px_3px_1px_rgba(37,150,190)] text-neutral-300 font-bold  uppercase;
 }
 .title-primary {
-  @apply drop-shadow-[3px_3px_1px_rgba(37,150,190)] text-neutral-300 font-bold  uppercase ;
+  @apply drop-shadow-[3px_3px_1px_rgba(37,150,190)] text-neutral-300 font-bold  uppercase;
 }
 .title-accent {
-  @apply drop-shadow-[3px_3px_1px_rgba(249,63,176)] text-neutral-300 font-bold  uppercase ;
+  @apply drop-shadow-[3px_3px_1px_rgba(249,63,176)] text-neutral-300 font-bold  uppercase;
 }
 .section-title {
   @apply drop-shadow-[3px_3px_1px_rgba(37,150,190)] text-neutral-300 font-bold text-5xl  uppercase md:text-6xl lg:text-7xl;
@@ -101,7 +107,7 @@ body {
 }
 
 .close-button {
-  @apply text-lg text-neutral-400 md:hidden
+  @apply text-lg text-neutral-400 md:hidden;
 }
 .theme-button {
   @apply bg-accent/90 font-semibold hover:bg-primary  border-0 transition-colors duration-300 ease-in-out rounded-full px-6 py-2 text-neutral-100;
@@ -112,7 +118,7 @@ body {
 }
 
 .rounded-button {
-  @apply bg-primary hover:bg-secondary  transition-colors font-semibold duration-300 ease-in-out rounded-2xl my-2 px-3 py-1 text-neutral-100;
+  @apply shadow-md bg-primary hover:bg-secondary  transition-colors font-semibold duration-300 ease-in-out rounded-4xl my-2 px-6 py-2 text-neutral-100;
 }
 
 .pdf-button {
@@ -138,7 +144,6 @@ body {
 .inset-menu-item {
   @apply text-3xl  border-b-4 text-accent border-background hover:border-accent hover:text-secondary w-fit transition-all duration-300 ease-in-out;
 }
-
 
 .row-centered {
   @apply flex items-center justify-center;

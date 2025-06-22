@@ -34,7 +34,6 @@ export const metadata = {
 
 const page = async () => {
   const discographyData = await getDiscographyData();
-  console.log("discog", discographyData.albums);
   return (
     <PageWrapper title="studio">
       <DiscogAlbums albums={discographyData.albums} />

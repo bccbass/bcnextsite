@@ -3,7 +3,9 @@ import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import Explore from "@/components/sections/Explore";
 import Projects from "@/components/sections/Projects";
-import Process from "@/components/sections/Process";
+// import Process from "@/components/sections/Process";
+// import DividerGrunge from "@/components/sections/DividerGrunge";
+import ProcessWIP from "@/components/sections/ProcessWIP";
 import ImageFeature from "@/components/sections/ImageFeature";
 import Hello from "@/components/sections/Hello";
 import NavHamburger from "@/components/NavHamburger";
@@ -49,7 +51,11 @@ const page = async () => {
       {/* <div className="rotate-180">
         <DividerGrunge topColor="background" bottomColor="secondary" />
       </div> */}
-      <Process />
+      <ProcessWIP />
+      {/* <Process /> */}
+      {/* <div className="rotate-180 -mt-12">
+      < DividerGrunge topColor="secondary" bottomColor="secondary/0" />
+</div> */}
       <Hello />
       <Footer />
     </div>
