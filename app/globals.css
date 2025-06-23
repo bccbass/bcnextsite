@@ -120,6 +120,9 @@ body {
 .rounded-button {
   @apply shadow-md bg-primary hover:bg-secondary  transition-colors font-semibold duration-300 ease-in-out rounded-4xl my-2 px-6 py-2 text-neutral-100;
 }
+.cta-button {
+  @apply shadow-md bg-primary hover:bg-cyan-600 hover:outline-accent  transition-colors font-semibold duration-300 ease-in-out rounded-4xl my-2 px-6 py-2 text-neutral-100 outline;
+}
 
 .pdf-button {
   @apply w-full my-4 mb-1 px-6 rounded-xs text-neutral-100 bg-inherit py-1 text-center   transition-all duration-300 hover:bg-primary  border-2 border-neutral-200  hover:border-cyan-500 hover:outline-cyan-700 lg:text-xl;

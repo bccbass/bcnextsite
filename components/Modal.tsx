@@ -69,7 +69,7 @@ export default function Modal({
   return (
     <>
       <button
-        className={`${pdfBtn ? "pdf-button" : "text-2xl uppercase rounded-button"} max-w-2xl`}
+        className={`${pdfBtn ? "pdf-button" : "text-2xl cta-button"} max-w-2xl`}
         onClick={() => setIsOpen(true)}
       >
         {title ? title : "Open"}
