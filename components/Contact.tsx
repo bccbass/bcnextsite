@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import FadeInOut from "./FadeInOut";
 import useWeb3Forms from "@web3forms/react";
 
-const Contact = ({formFirst=false}:{formFirst?: boolean}) => {
+const Contact = ({ formFirst = false }: { formFirst?: boolean }) => {
   const inputClassStyle =
     "bg-secondary  font-semibold text-white border-gray-400  outline-none p-1 border-b-4 border-white backdrop-blur-lg";
   const { register, reset, handleSubmit } = useForm();
@@ -89,12 +89,14 @@ const Contact = ({formFirst=false}:{formFirst?: boolean}) => {
               </button>
             </form>
             <div className="pt-6 flex flex-col items-center gap-8 w-full">
-             {!formFirst && <button
-                className="text-xl font-semibold underline"
-                onClick={() => setShowForm(false)}
-              >
-                cancel
-              </button>}
+              {!formFirst && (
+                <button
+                  className="text-xl font-semibold underline"
+                  onClick={() => setShowForm(false)}
+                >
+                  cancel
+                </button>
+              )}
               <p className="text-center">we respect your privacy</p>
             </div>
           </div>
@@ -114,7 +116,7 @@ const Contact = ({formFirst=false}:{formFirst?: boolean}) => {
         <FadeInOut>
           <div key={"statusCard"} className="flex flex-col items-center">
             <div className="flex flex-col items-center border border-secondary   rounded-2xl overflow-hidden m-4  ">
-              <h2 className="text-3xl md:text-4xl backdrop-blur-sm bg-white/30 w-full text-center p-2 text-neutral-100 text-outline py-4 px-6">
+              <h2 className="text-3xl md:text-4xl bg-secondary/90 w-full text-outline text-neutral-100 py-6 px-8">
                 {result}
               </h2>
             </div>
