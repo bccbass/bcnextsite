@@ -1,6 +1,7 @@
 import React from "react";
-import Modal from "@/components/Modal";
-import Contact from "@/components/Contact";
+// import Modal from "@/components/Modal";
+// import Contact from "@/components/Contact";
+import Link from "next/link";
 
 const ContactCTA = () => {
   return (
@@ -10,10 +11,15 @@ const ContactCTA = () => {
         I always love chatting about music, so feel free to...
       </p>
 
-      <Modal title="Drop me a line">
+      {/* <Modal title="Drop me a line">
         <Contact formFirst={true}/>
-      </Modal>
-
+      </Modal> */}
+      <Link
+        href="/#hello"
+        className="cta-button max-w-md w-full text-center uppercase"
+      >
+        Drop me a line
+      </Link>
     </div>
   );
 };
