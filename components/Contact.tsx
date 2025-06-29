@@ -3,9 +3,12 @@
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { motion } from "framer-motion";
 import FadeInOut from "./FadeInOut";
 import useWeb3Forms from "@web3forms/react";
 
+const helloStyle =
+  "drop-shadow-[3px_3px_1px_rgba(37,150,190)] text-neutral-300 font-bold uppercase text-8xl mb-4";
 const Contact = ({ formFirst = false }: { formFirst?: boolean }) => {
   const inputClassStyle =
     "bg-secondary  font-semibold text-white border-gray-400  outline-none p-1 border-b-4 border-white backdrop-blur-lg";
@@ -38,7 +41,7 @@ const Contact = ({ formFirst = false }: { formFirst?: boolean }) => {
   return (
     <div
       id="hello"
-      className="flex drop-shadow-2xl border border-neutral-400 flex-col h-fit min-h-146 items-center w-full max-w-xl mb-12 py-12 sm:px-12 px-4 rounded-2xl"
+      className="flex flex-col h-[110vh] items-center justify-center w-screen"
       style={{
         backgroundImage:
           "url('https://res.cloudinary.com/dyb9ascpy/image/upload/v1724818853/possumpark/bhchbbx8x1xdawpse9ih.webp')",
@@ -47,64 +50,73 @@ const Contact = ({ formFirst = false }: { formFirst?: boolean }) => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <h2 className="section-title">Hello</h2>
-      {!showForm && (
-        <button
-          key={"showFormButton" + showForm}
-          className="theme-button  my-auto"
-          onClick={() => setShowForm(true)}
+      <div className="flex flex-col items-center justify-center w-full h-fit">
+        <motion.div
+        key='helloBanner'
+        layout
+          className="w-fit"
+
+          transition={{ duration: .5, ease: "easeInOut" }}
         >
-          <span className="text-outline text-3xl "> Send a message</span>
-        </button>
-      )}
+        <h2 className={helloStyle}>Hello</h2>
+        </motion.div>
+        {!showForm && (
+          <button
+            key={"showFormButton" + showForm}
+            className="theme-button  my-auto"
+            onClick={() => setShowForm(true)}
+          >
+            <span className="text-outline text-3xl "> Send a message</span>
+          </button>
+        )}
 
-      <FadeInOut>
-        {!isSuccess && showForm ? (
-          <div key={"form"} className="centered-col w-full relative">
-            <form
-              className="flex flex-col space-y-4 my-2 p-4 text-lg w-full max-w-lg "
-              onSubmit={handleSubmit(onSubmit)}
-            >
-              <input
-                className={inputClassStyle}
-                placeholder="Full Name"
-                type="text"
-                {...register("name", { required: true })}
-              />
-              <input
-                className={inputClassStyle}
-                placeholder="Email"
-                type="email"
-                {...register("email", { required: true })}
-              />
-              <textarea
-                className={inputClassStyle}
-                placeholder="Type your message"
-                rows={2}
-                {...register("message", { required: true })}
-              ></textarea>
+        <FadeInOut>
+          {!isSuccess && showForm ? (
+            <div key={"form"} className="centered-col  w-full relative">
+              <form
+                className="flex flex-col space-y-4 mx-auto my-2 p-4 text-lg w-full max-w-lg "
+                onSubmit={handleSubmit(onSubmit)}
+              >
+                <input
+                  className={inputClassStyle}
+                  placeholder="Full Name"
+                  type="text"
+                  {...register("name", { required: true })}
+                />
+                <input
+                  className={inputClassStyle}
+                  placeholder="Email"
+                  type="email"
+                  {...register("email", { required: true })}
+                />
+                <textarea
+                  className={inputClassStyle}
+                  placeholder="Type your message"
+                  rows={2}
+                  {...register("message", { required: true })}
+                ></textarea>
 
-              <button className="theme-button mt-4" type="submit">
-                Send Message
-              </button>
-            </form>
-            <div className="pt-6 flex flex-col items-center gap-8 w-full">
-              {!formFirst && (
-                <button
-                  className="text-xl font-semibold underline"
-                  onClick={() => setShowForm(false)}
-                >
-                  cancel
+                <button className="theme-button mt-4" type="submit">
+                  Send Message
                 </button>
-              )}
-              <p className="text-center">we respect your privacy</p>
+              </form>
+              <div className="pt-6 flex flex-col items-center gap-8 w-full">
+                {!formFirst && (
+                  <button
+                    className="text-xl font-semibold underline"
+                    onClick={() => setShowForm(false)}
+                  >
+                    cancel
+                  </button>
+                )}
+                <p className="text-center">we respect your privacy</p>
+              </div>
             </div>
-          </div>
-        ) : null}
-      </FadeInOut>
+          ) : null}
+        </FadeInOut>
 
-      {/* SENDING PROGRESS CARD */}
-      {/* {isClicked && (
+        {/* SENDING PROGRESS CARD */}
+        {/* {isClicked && (
         <div className="flex flex-col items-center  w-full h-full bg-red-600 py-16 text-neutral-100">
           <h2 className="julius-sans-one-regular text-2xl animate-pulse p-2 m-16">
             Sending message...
@@ -112,17 +124,18 @@ const Contact = ({ formFirst = false }: { formFirst?: boolean }) => {
         </div>
       )} */}
 
-      {isSuccess && (
-        <FadeInOut>
-          <div key={"statusCard"} className="flex flex-col items-center">
-            <div className="flex flex-col items-center border border-secondary   rounded-2xl overflow-hidden m-4  ">
-              <h2 className="text-3xl md:text-4xl bg-secondary/90 w-full text-outline text-neutral-100 py-6 px-8">
-                {result}
-              </h2>
+        {isSuccess && (
+          <FadeInOut>
+            <div key={"statusCard"} className="flex flex-col items-center">
+              <div className="flex flex-col items-center border border-secondary   rounded-2xl overflow-hidden m-4  ">
+                <h2 className="text-3xl md:text-4xl bg-secondary/90 w-full text-outline text-neutral-100 py-6 px-8">
+                  {result}
+                </h2>
+              </div>
             </div>
-          </div>
-        </FadeInOut>
-      )}
+          </FadeInOut>
+        )}
+      </div>
     </div>
   );
 };

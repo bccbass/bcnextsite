@@ -9,7 +9,7 @@ import FooterExploreItems from "./FooterExploreItems";
 const Footer = async () => {
   return (
     <>
-      <div className="rotate-180 z-10  -mt-30 drop-shadow-xl   drop-shadow-primary -mb-10">
+      {/* <div className="rotate-180 z-10  -mt-30 drop-shadow-xl   drop-shadow-primary -mb-10">
         <div className="w-full min-w-[105rem]">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100">
             <path
@@ -18,7 +18,7 @@ const Footer = async () => {
             ></path>
           </svg>
         </div>
-      </div>
+      </div> */}
       <footer className="w-screen bg-primary text-white">
         <div className="flex justify-around mx-auto px-10 md:px-20 py-16 md:py-20 gap-16 flex-wrap max-w-7xl ">
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-8 flex-1  ">
