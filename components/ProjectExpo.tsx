@@ -34,7 +34,7 @@ const ProjectExpo = ({ mainImage, title, description }: ProjectProps) => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{
-          once: true,
+          // once: true,
           duration: 0.5,
           ease: "easeInOut",
         }}
@@ -57,7 +57,7 @@ const ProjectExpo = ({ mainImage, title, description }: ProjectProps) => {
         initial={{ opacity: 0, y: 1 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
-          once: true,
+          // once: true,
           duration: 0.5,
           ease: "easeInOut",
         }}
