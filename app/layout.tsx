@@ -3,6 +3,7 @@ import { Roboto, Julius_Sans_One } from "next/font/google";
 import "./globals.css";
 import "lenis/dist/lenis.css";
 import { ReactLenis } from "@/lib/lenis";
+import { Analytics } from '@vercel/analytics/next'
 
 const roboto = Roboto({
   variable: "--font-sans",
@@ -50,6 +51,7 @@ export default function RootLayout({
           className={`${roboto.variable} ${juliusSans.variable} antialiased`}
         >
           {children}
+          <Analytics />
         </body>
       </ReactLenis>
     </html>
